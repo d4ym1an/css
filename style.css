@@ -1,0 +1,69 @@
+@import url(fonts/stylesheet.css);
+
+body{
+    background: rgb(136, 156, 102);
+    color: whitesmoke;
+    font-family: 'kirka';
+    font-weight: lighter;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.css {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.css h2 {
+    margin: 20px 0;
+}
+
+.images{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.images img {
+    margin: 5px;
+    width: 40%;
+}
+
+.css img:hover::after {
+    content: attr(data-hover);
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 10;
+}
+
+footer{
+    margin-top: 100px;
+}
+
+.popup {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    z-index: 1000;
+    white-space: nowrap;
+}
+
+.copy:hover{
+    cursor: pointer;
+}
