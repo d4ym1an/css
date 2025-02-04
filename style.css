@@ -1,15 +1,36 @@
 @import url(fonts/stylesheet.css);
 
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #3c4b68 rgba(0, 0, 0, .4);
+    box-sizing: border-box;
+    
+}
+
 body{
-    background: rgb(136, 156, 102);
+    background: linear-gradient(103.28deg, #262f4b 7.06%, #202639 90.75%);
+    background-color: #202639;
     color: whitesmoke;
     font-family: 'kirka';
     font-weight: lighter;
     text-align: center;
 }
 
+header h4 {
+    background-color: red;
+}
+
+h1 {
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
 a{
     text-decoration: none;
+    color: #ffb914;
 }
 
 .css {
@@ -35,18 +56,15 @@ a{
     width: 40%;
 }
 
-.css img:hover::after {
-    content: attr(data-hover);
-    position: absolute;
-    background-color: black;
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    z-index: 10;
+.images img:hover{
+    width: 43%;
+    border: 3px solid #ffb914
+}
+
+.code:hover, .download:hover {
+    background-color:#ffb914;
+    border-radius: 1em;
+
 }
 
 footer{

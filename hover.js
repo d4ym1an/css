@@ -19,15 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     copies.forEach(copy => {
         copy.addEventListener('mouseenter', () => {
-            showPopup(copy, 'Copy CSS to clipboard');
+            showPopup(copy, 'COPY FEATURE CURRENTLY DISABLED');
         });
         copy.addEventListener('mouseleave', hidePopup);
         copy.addEventListener('click', () => {
-            fetch('css/nizzq2.css')
+            fetch('copy.html')
                 .then(response => response.text())
                 .then(text => {
                     navigator.clipboard.writeText(text).then(() => {
-                        alert('CSS code copied to clipboard');
+                        alert('COPY FEATURE CURRENTLY DISABLED');
                     });
                 });
         });
