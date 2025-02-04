@@ -67,3 +67,11 @@ footer{
 .copy:hover{
     cursor: pointer;
 }
+
+.css h2{
+    margin-right: 10px;
+}
+
+.part{
+    margin-top: 5em;
+}
