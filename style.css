@@ -17,7 +17,8 @@ body{
 }
 
 header h4 {
-    background-color: red;
+    background-color: rgb(0, 255, 0);
+    color: black;
 }
 
 h1 {
@@ -61,10 +62,10 @@ a{
     border: 3px solid #ffb914
 }
 
-.code:hover, .download:hover {
+.code:hover, .download:hover, .copy:hover {
     background-color:#ffb914;
     border-radius: 1em;
-
+    cursor: pointer;
 }
 
 footer{
@@ -82,14 +83,10 @@ footer{
     white-space: nowrap;
 }
 
-.copy:hover{
-    cursor: pointer;
-}
-
 .css h2{
     margin-right: 10px;
 }
 
 .part{
     margin-top: 5em;
-}
+}   
