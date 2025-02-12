@@ -7,13 +7,26 @@
     
 }
 
+.pattern::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    opacity: 0.2;
+    z-index: -1;
+}
+
 body{
-    background: linear-gradient(103.28deg, #262f4b 7.06%, #202639 90.75%);
+ background:   radial-gradient(74.74% 74.74% at 51.12% 51.68%, rgba(23, 73, 197, .9) 0, rgba(28, 46, 113, 0) 100%);
     background-color: #202639;
     color: whitesmoke;
     font-family: 'kirka';
     font-weight: lighter;
     text-align: center;
+    margin:0;
 }
 
 header h4 {
@@ -59,7 +72,8 @@ a{
 
 .images img:hover{
     width: 43%;
-    border: 3px solid #ffb914
+    border: 3px solid #ffb914;
+    box-shadow: 0 0 15px #ffb914;
 }
 
 .code:hover, .download:hover, .copy:hover {
@@ -89,4 +103,4 @@ footer{
 
 .part{
     margin-top: 5em;
-}   
+}
