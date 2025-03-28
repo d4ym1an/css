@@ -4,7 +4,7 @@
     scrollbar-width: thin;
     scrollbar-color: #3c4b68 rgba(0, 0, 0, .4);
     box-sizing: border-box;
-    
+    scroll-behavior: smooth;
 }
 
 .pattern::before {
@@ -27,6 +27,7 @@ body{
     font-weight: lighter;
     text-align: center;
     margin:0;
+    margin-left: 220px; /* Adjust for sidebar width */
 }
 
 header h4 {
@@ -68,12 +69,14 @@ a{
 .images img {
     margin: 5px;
     width: 40%;
+    transition: all 0.3s ease;
 }
 
 .images img:hover{
     width: 43%;
     border: 3px solid #ffb914;
     box-shadow: 0 0 15px #ffb914;
+    transition: all 0.3s ease;
 }
 
 .code:hover, .download:hover, .copy:hover {
@@ -103,4 +106,38 @@ footer{
 
 .part{
     margin-top: 5em;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #202639;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #ffb914;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
 }
