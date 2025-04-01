@@ -48,6 +48,11 @@ a{
     color: #ffb914;
 }
 
+a:focus {
+    outline: 2px dashed #ffb914;
+    outline-offset: 2px;
+}
+
 .css {
     display: flex;
     flex-direction: row;
@@ -106,6 +111,7 @@ footer{
 
 .part{
     margin-top: 5em;
+    border: #202639 5px dotted;
 }
 
 .sidebar {
@@ -114,7 +120,7 @@ footer{
     left: 0;
     width: 200px;
     height: 100%;
-    background-color: #202639;
+    background-color: #61759c;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     overflow-y: auto;
@@ -140,4 +146,6 @@ footer{
 
 .sidebar ul li a:hover {
     text-decoration: underline;
+    color: #ffb914;
 }
+
