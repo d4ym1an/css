@@ -7,6 +7,11 @@
     <meta name="description" content="Explore a collection of free Kirka CSS files for customization. Download, preview, and enhance your Kirka.io experience.">
     <meta name="keywords" content="Kirka CSS, free CSS, Kirka.io, CSS customization, download CSS, Kirka styles">
     <meta name="author" content="Daymian">
+    <meta property="og:title" content="Free Kirka CSS Files - Download & Customize">
+    <meta property="og:description" content="Explore a collection of free Kirka CSS files for customization. Download, preview, and enhance your Kirka.io experience.">
+    <meta property="og:image" content="/imgs/icon.png">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Free Kirka CSS Files - Download & Customize</title>
     <link rel="icon" href="/imgs/icon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
@@ -14,457 +19,396 @@
 </head>
 
 <body>
-    <div class="sidebar">
-        <img src="imgs/icon.png" alt="Logo" class="logo" height="100px">
+    <aside class="sidebar">
+        <img src="imgs/icon.png" alt="Kirka CSS Logo" class="logo" height="100px">
         <h2>CSS Files</h2>
-        <ul>
-            <li><a href="#5hours">5hours</a></li>
-            <li><a href="#anime">anime</a></li>
-            <li><a href="#blue">blue</a></li>
-            <li><a href="#egirl">egirl</a></li>
-            <li><a href="#green">Green</a></li>
-            <li><a href="#grey">Grey</a></li>
-            <li><a href="#hover">hover</a></li>
-            <li><a href="#japan-town">Japan Town</a></li>
-            <li><a href="#jett">jett</a></li>
-            <li><a href="#pink">pink</a></li>
-            <li><a href="#plink">plink</a></li>
-            <li><a href="#uwu">UwU</a></li>
-            <li><a href="#wolfey">Wolfey</a></li>
-            <li><a href="#zenith">Zenith</a></li>
-            <li><a href="#blackandwhite">Black & White</a></li>
-            <li><a href="#glaive">glaive</a></li>
-        </ul>
-    </div>
+        <nav>
+            <ul>
+                <li><a href="#5hours">5hours</a></li>
+                <li><a href="#anime">anime</a></li>
+                <li><a href="#blue">blue</a></li>
+                <li><a href="#egirl">egirl</a></li>
+                <li><a href="#green">Green</a></li>
+                <li><a href="#grey">Grey</a></li>
+                <li><a href="#hover">hover</a></li>
+                <li><a href="#japan-town">Japan Town</a></li>
+                <li><a href="#jett">jett</a></li>
+                <li><a href="#pink">pink</a></li>
+                <li><a href="#plink">plink</a></li>
+                <li><a href="#uwu">UwU</a></li>
+                <li><a href="#wolfey">Wolfey</a></li>
+                <li><a href="#zenith">Zenith</a></li>
+                <li><a href="#blackandwhite">Black & White</a></li>
+                <li><a href="#glaive">glaive</a></li>
+            </ul>
+        </nav>
+    </aside>
 
     <header>
         <h1>Free Kirka CSS Files</h1>
-        <b>Feel free to fix any of the CSS and send it to me via Discord (@d4ym1an). Once tested, I will compensate you with 10,000 coins.</b>
-        <p>CSS being loaded into <a href="https://juice.irrvlo.xyz" target="_blank" style="text-decoration: underline;">Juice Client</a></p>
-        <p>I ALSO DIDNT MAKE ANY OF THESE (I made two, but I ain't saying which 2 I made) SO NO I CAN'T FIX THEM</p>
+        <p><strong>Feel free to fix any of the CSS and send it to me via Discord (@d4ym1an). Once tested, I will compensate you with 10,000 coins.</strong></p>
+        <p>CSS being loaded into <a href="https://juice.irrvlo.xyz" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Juice Client</a></p>
+        <p><em>I ALSO DIDN'T MAKE ANY OF THESE (I made two, but I ain't saying which 2 I made) SO NO I CAN'T FIX THEM</em></p>
     </header>
 
-    <div class="search-bar">
-        <input type="text" id="search" placeholder="Search CSS files..." onkeyup="filterCSS()">
-    </div>
-
-    <div class="color-filter">
-        <label for="color-select">Filter by Color:</label>
-        <select id="color-select" onchange="filterByColor()">
-            <option value="">All Colors</option>
-            <option value="red">Red</option>
-            <option value="orange">Orange</option>
-            <option value="yellow">Yellow</option>
-            <option value="green">Green</option>
-            <option value="blue">Blue</option>
-            <option value="purple">Purple</option>
-            <option value="black">Black</option>
-            <option value="white">White</option>
-            <option value="pink">Pink</option>
-        </select>
-    </div>
-
-    <script>
-        function filterCSS() {
-            const query = document.getElementById('search').value.toLowerCase();
-            const parts = document.querySelectorAll('.part');
-
-            parts.forEach(part => {
-                const title = part.querySelector('h2').textContent.toLowerCase();
-                if (title.includes(query)) {
-                    part.style.display = '';
-                } else {
-                    part.style.display = 'none';
-                }
-            });
-        }
-
-        function filterByColor() {
-            const selectedColor = document.getElementById('color-select').value.toLowerCase();
-            const parts = document.querySelectorAll('.part');
-
-            parts.forEach(part => {
-                const filters = part.getAttribute('data-filters').split(',');
-                if (!selectedColor || filters.includes(selectedColor)) {
-                    part.style.display = '';
-                } else {
-                    part.style.display = 'none';
-                }
-            });
-        }
-    </script>
-
-    <style>
-        .search-bar {
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .search-bar input {
-            width: 80%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .color-filter {
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .color-filter select {
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .sidebar ul li {
-            margin: 10px 0;
-        }
-
-        .sidebar ul li a {
-            text-decoration: none;
-            color: #ffffff;
-        }
-    </style>
-
-    <div class="part" id="5hours" data-filters="black">
-        <section class="images">
-            <img src="css/CSS/5hours/image_2025-02-03_193406064.png">
-            <img src="css/CSS/5hours/image_2025-02-03_193316431.png">
+    <main>
+        <section class="search-bar">
+            <label for="search" class="visually-hidden">Search CSS files</label>
+            <input type="text" id="search" placeholder="Search CSS files..." onkeyup="filterCSS()" aria-label="Search CSS files">
         </section>
-        <section class="css">
-            <h2>5hours</h2>
-            <a href="/css/CSS/5hours/5hours.css">
-                <img src="code.svg" height="50px" class="code">
-            </a>
-            <a>
-                <a href="css/CSS/5hours/5hours.css" download="5hours.css">
-                    <img src="download.svg" height="50px" class="download">
-                </a>
-                <a >
-                    <img src="copy.svg" height="50px" class="copy"> 
-                </a>
-        </section>
-    </div>
 
-    <div class="part" id="anime" data-filters="blue">
-        <section class="images">
-            <img src="css/CSS/anime/animelobby.png">
-            <img src="css/CSS/anime/animehud.png">
+        <section class="color-filter">
+            <label for="color-select">Filter by Color:</label>
+            <select id="color-select" onchange="filterByColor()" aria-label="Filter CSS files by color">
+                <option value="">All Colors</option>
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="purple">Purple</option>
+                <option value="black">Black</option>
+                <option value="white">White</option>
+                <option value="pink">Pink</option>
+            </select>
         </section>
-        <section class="css">
-            <h2>anime</h2>
-            <a href="/css/CSS/anime/anime.css">
-                <img src="code.svg" height="50px" class="code">
-            </a>
-            <a>
-                <a href="css/CSS/anime/anime.css" download="anime.css">
-                    <img src="download.svg" height="50px" class="download">
-                </a>
-                <a >
-                    <img src="copy.svg" height="50px" class="copy"> 
-                </a>
-        </section>
-    </div>
 
-    <div class="part" id="blue" data-filters="blue">
-        <section class="images">
-            <img src="css/CSS/Blue/bluelobby.png">
-            <img src="css/CSS/Blue/bluehud.png">
-        </section>
-        <section class="css">
-            <h2>blue</h2>
-            <a href="/css/CSS/Blue/Blue.css">
-                <img src="code.svg" height="50px" class="code">
-            </a>
-            <a>
-                <a href="css/CSS/Blue/Blue.css" download="Blue.css">
-                    <img src="download.svg" height="50px" class="download">
-                </a>
-                <a >
-                    <img src="copy.svg" height="50px" class="copy"> 
-                </a>
-        </section>
-    </div>
+        <section id="css-files">
+            <div class="part" id="5hours" data-filters="black">
+                <section class="images">
+                    <img src="css/CSS/5hours/image_2025-02-03_193406064.png">
+                    <img src="css/CSS/5hours/image_2025-02-03_193316431.png">
+                </section>
+                <section class="css">
+                    <h2>5hours</h2>
+                    <a href="/css/CSS/5hours/5hours.css">
+                        <img src="code.svg" height="50px" class="code">
+                    </a>
+                    <a>
+                        <a href="css/CSS/5hours/5hours.css" download="5hours.css">
+                            <img src="download.svg" height="50px" class="download">
+                        </a>
+                        <a >
+                            <img src="copy.svg" height="50px" class="copy"> 
+                        </a>
+                </section>
+            </div>
 
-    <div class="part" id="egirl" data-filters="pink,white">
-        <section class="images">
-            <img src="css/CSS/Egirl/egirllobby.png">
-            <img src="css/CSS/Egirl/egirlhud.png">
-        </section>
-        <section class="css">
-            <h2>egirl</h2>
-            <a href="/css/CSS/Egirl/egirl.css">
-                <img src="code.svg" height="50px" class="code">
-            </a>
-            <a>
-                <a href="css/CSS/Egirl/egirl.css" download="egirl.css">
-                    <img src="download.svg" height="50px" class="download">
-                </a>
-                <a >
-                    <img src="copy.svg" height="50px" class="copy"> 
-                </a>
-        </section>
-    </div>
+            <div class="part" id="anime" data-filters="blue">
+                <section class="images">
+                    <img src="css/CSS/anime/animelobby.png">
+                    <img src="css/CSS/anime/animehud.png">
+                </section>
+                <section class="css">
+                    <h2>anime</h2>
+                    <a href="/css/CSS/anime/anime.css">
+                        <img src="code.svg" height="50px" class="code">
+                    </a>
+                    <a>
+                        <a href="css/CSS/anime/anime.css" download="anime.css">
+                            <img src="download.svg" height="50px" class="download">
+                        </a>
+                        <a >
+                            <img src="copy.svg" height="50px" class="copy"> 
+                        </a>
+                </section>
+            </div>
 
-    <div class="part" id="green" data-filters="green,black">
-        <section class="images">
-            <img src="css/CSS/Green/image_2025-02-03_201945486.png">
-            <img src="css/CSS/Green/image_2025-02-03_202006017.png">
-        </section>
-        <section class="css">
-            <h2>Green</h2>
-            <a href="/css/CSS/Green/green.css">
-                <img src="code.svg" height="50px" class="code">
-            </a>
-            <a>
-                <a href="css/CSS/Green/green.css" download="green.css">
-                    <img src="download.svg" height="50px" class="download">
-                </a>
-                <a >
-                    <img src="copy.svg" height="50px" class="copy"> 
-                </a>
-        </section>
-    </div>
+            <div class="part" id="blue" data-filters="blue">
+                <section class="images">
+                    <img src="css/CSS/Blue/bluelobby.png">
+                    <img src="css/CSS/Blue/bluehud.png">
+                </section>
+                <section class="css">
+                    <h2>blue</h2>
+                    <a href="/css/CSS/Blue/Blue.css">
+                        <img src="code.svg" height="50px" class="code">
+                    </a>
+                    <a>
+                        <a href="css/CSS/Blue/Blue.css" download="Blue.css">
+                            <img src="download.svg" height="50px" class="download">
+                        </a>
+                        <a >
+                            <img src="copy.svg" height="50px" class="copy"> 
+                        </a>
+                </section>
+            </div>
 
-    <div class="part" id="grey" data-filters="black">
-        <section class="images">
-            <img src="css/CSS/Grey/image_2025-02-03_201339055.png">
-            <img src="css/CSS/Grey/image_2025-02-03_201322613.png">
-        </section>
-        <section class="css">
-            <h2>Grey</h2>
-            <a href="/css/CSS/Grey/grey.css">
-                <img src="code.svg" height="50px" class="code">
-            </a>
-            <a>
-                <a href="css/CSS/Grey/grey.css" download="grey.css">
-                    <img src="download.svg" height="50px" class="download">
-                </a>
-                <a >
-                    <img src="copy.svg" height="50px" class="copy"> 
-                </a>
-        </section>
-    </div>
+            <div class="part" id="egirl" data-filters="pink,white">
+                <section class="images">
+                    <img src="css/CSS/Egirl/egirllobby.png">
+                    <img src="css/CSS/Egirl/egirlhud.png">
+                </section>
+                <section class="css">
+                    <h2>egirl</h2>
+                    <a href="/css/CSS/Egirl/egirl.css">
+                        <img src="code.svg" height="50px" class="code">
+                    </a>
+                    <a>
+                        <a href="css/CSS/Egirl/egirl.css" download="egirl.css">
+                            <img src="download.svg" height="50px" class="download">
+                        </a>
+                        <a >
+                            <img src="copy.svg" height="50px" class="copy"> 
+                        </a>
+                </section>
+            </div>
 
-    <div class="part" id="hover" data-filters="blue">
-        <section class="images">
-            <img src="css/CSS/hover/image_2025-02-03_203642444.png">
-            <img src="css/CSS/hover/image_2025-02-03_203625001.png">
-        </section>
-        <section class="css">
-            <h2>hover</h2>
-            <a href="/css/CSS/hover/hover.css">
-                <img src="code.svg" height="50px" class="code">
-            </a>
-            <a>
-                <a href="css/CSS/hover/hover.css" download="hover.css">
-                    <img src="download.svg" height="50px" class="download">
-                </a>
-                <a >
-                    <img src="copy.svg" height="50px" class="copy"> 
-                </a>
-        </section>
-    </div>
+            <div class="part" id="green" data-filters="green,black">
+                <section class="images">
+                    <img src="css/CSS/Green/image_2025-02-03_201945486.png">
+                    <img src="css/CSS/Green/image_2025-02-03_202006017.png">
+                </section>
+                <section class="css">
+                    <h2>Green</h2>
+                    <a href="/css/CSS/Green/green.css">
+                        <img src="code.svg" height="50px" class="code">
+                    </a>
+                    <a>
+                        <a href="css/CSS/Green/green.css" download="green.css">
+                            <img src="download.svg" height="50px" class="download">
+                        </a>
+                        <a >
+                            <img src="copy.svg" height="50px" class="copy"> 
+                        </a>
+                </section>
+            </div>
 
-    <div class="part" id="japan-town" data-filters="red,white,pink">
-        <section class="images">
-            <img src="css/CSS/Japan-Town/image_2025-02-03_193717030.png">
-            <img src="css/CSS/Japan-Town/image_2025-02-03_193755273.png">
-        </section>
-        <section class="css">
-            <h2>Japan Town</h2>
-            <a href="/css/CSS/Japan-Town/japan-town.css">
-                <img src="code.svg" height="50px" class="code">
-            </a>
-            <a>
-                <a href="css/CSS/Japan-Town/japan-town.css" download="japan-town.css">
-                    <img src="download.svg" height="50px" class="download">
-                </a>
-                <a >
-                    <img src="copy.svg" height="50px" class="copy"> 
-                </a>
-        </section>
-    </div>
+            <div class="part" id="grey" data-filters="black">
+                <section class="images">
+                    <img src="css/CSS/Grey/image_2025-02-03_201339055.png">
+                    <img src="css/CSS/Grey/image_2025-02-03_201322613.png">
+                </section>
+                <section class="css">
+                    <h2>Grey</h2>
+                    <a href="/css/CSS/Grey/grey.css">
+                        <img src="code.svg" height="50px" class="code">
+                    </a>
+                    <a>
+                        <a href="css/CSS/Grey/grey.css" download="grey.css">
+                            <img src="download.svg" height="50px" class="download">
+                        </a>
+                        <a >
+                            <img src="copy.svg" height="50px" class="copy"> 
+                        </a>
+                </section>
+            </div>
 
-    <div class="part" id="jett" data-filters="blue,black">
-        <section class="images">
-            <img src="css/CSS/Jett/image_2025-02-03_203940844.png">
-            <img src="css/CSS/Jett/image_2025-02-03_204009826.png">
-        </section>
-        <section class="css">
-            <h2>jett</h2>
-            <a href="/css/CSS/Jett/jett.css">
-                <img src="code.svg" height="50px" class="code">
-            </a>
-            <a>
-                <a href="css/CSS/Jett/jett.css" download="jett.css">
-                    <img src="download.svg" height="50px" class="download">
-                </a>
-                <a >
-                    <img src="copy.svg" height="50px" class="copy"> 
-                </a>
-        </section>
-    </div>
+            <div class="part" id="hover" data-filters="blue">
+                <section class="images">
+                    <img src="css/CSS/hover/image_2025-02-03_203642444.png">
+                    <img src="css/CSS/hover/image_2025-02-03_203625001.png">
+                </section>
+                <section class="css">
+                    <h2>hover</h2>
+                    <a href="/css/CSS/hover/hover.css">
+                        <img src="code.svg" height="50px" class="code">
+                    </a>
+                    <a>
+                        <a href="css/CSS/hover/hover.css" download="hover.css">
+                            <img src="download.svg" height="50px" class="download">
+                        </a>
+                        <a >
+                            <img src="copy.svg" height="50px" class="copy"> 
+                        </a>
+                </section>
+            </div>
 
-    <div class="part" id="pink" data-filters="pink,white">
-        <section class="images">
-            <img src="css/CSS/pink/image_2025-02-03_204325675.png">
-            <img src="css/CSS/pink/image_2025-02-03_204402274.png">
-        </section>
-        <section class="css">
-            <h2>pink</h2>
-            <a href="/css/CSS/pink/pink.css">
-                <img src="code.svg" height="50px" class="code">
-            </a>
-            <a>
-                <a href="css/CSS/pink/pink.css" download="pink.css">
-                    <img src="download.svg" height="50px" class="download">
-                </a>
-                <a >
-                    <img src="copy.svg" height="50px" class="copy"> 
-                </a>
-        </section>
-    </div>
+            <div class="part" id="japan-town" data-filters="red,white,pink">
+                <section class="images">
+                    <img src="css/CSS/Japan-Town/image_2025-02-03_193717030.png">
+                    <img src="css/CSS/Japan-Town/image_2025-02-03_193755273.png">
+                </section>
+                <section class="css">
+                    <h2>Japan Town</h2>
+                    <a href="/css/CSS/Japan-Town/japan-town.css">
+                        <img src="code.svg" height="50px" class="code">
+                    </a>
+                    <a>
+                        <a href="css/CSS/Japan-Town/japan-town.css" download="japan-town.css">
+                            <img src="download.svg" height="50px" class="download">
+                        </a>
+                        <a >
+                            <img src="copy.svg" height="50px" class="copy"> 
+                        </a>
+                </section>
+            </div>
 
-    <div class="part" id="plink" data-filters="purple,blue,black">
-        <section class="images">
-            <img src="css/CSS/plink/image_2025-02-03_201459409.png">
-            <img src="css/CSS/plink/image_2025-02-03_201524413.png">
-        </section>
-        <section class="css">
-            <h2>plink</h2>
-            <a href="/css/CSS/plink/plink.css">
-                <img src="code.svg" height="50px" class="code">
-            </a>
-            <a>
-                <a href="css/CSS/plink/plink.css" download="plink.css">
-                    <img src="download.svg" height="50px" class="download">
-                </a>
-                <a >
-                    <img src="copy.svg" height="50px" class="copy"> 
-                </a>
-        </section>
-    </div>
+            <div class="part" id="jett" data-filters="blue,black">
+                <section class="images">
+                    <img src="css/CSS/Jett/image_2025-02-03_203940844.png">
+                    <img src="css/CSS/Jett/image_2025-02-03_204009826.png">
+                </section>
+                <section class="css">
+                    <h2>jett</h2>
+                    <a href="/css/CSS/Jett/jett.css">
+                        <img src="code.svg" height="50px" class="code">
+                    </a>
+                    <a>
+                        <a href="css/CSS/Jett/jett.css" download="jett.css">
+                            <img src="download.svg" height="50px" class="download">
+                        </a>
+                        <a >
+                            <img src="copy.svg" height="50px" class="copy"> 
+                        </a>
+                </section>
+            </div>
 
-    <div class="part" id="uwu" data-filters="pink,white">
-        <section class="images">
-            <img src="css/CSS/UwU/image_2025-02-03_201655485.png">
-            <img src="css/CSS/UwU/image_2025-02-03_201721030.png">
-        </section>
-        <section class="css">
-            <h2>UwU</h2>
-            <a href="/css/CSS/UwU/uwu.css">
-                <img src="code.svg" height="50px" class="code">
-            </a>
-            <a>
-                <a href="css/CSS/UwU/uwu.css" download="uwu.css">
-                    <img src="download.svg" height="50px" class="download">
-                </a>
-                <a >
-                    <img src="copy.svg" height="50px" class="copy"> 
-                </a>
-        </section>
-    </div>
+            <div class="part" id="pink" data-filters="pink,white">
+                <section class="images">
+                    <img src="css/CSS/pink/image_2025-02-03_204325675.png">
+                    <img src="css/CSS/pink/image_2025-02-03_204402274.png">
+                </section>
+                <section class="css">
+                    <h2>pink</h2>
+                    <a href="/css/CSS/pink/pink.css">
+                        <img src="code.svg" height="50px" class="code">
+                    </a>
+                    <a>
+                        <a href="css/CSS/pink/pink.css" download="pink.css">
+                            <img src="download.svg" height="50px" class="download">
+                        </a>
+                        <a >
+                            <img src="copy.svg" height="50px" class="copy"> 
+                        </a>
+                </section>
+            </div>
 
-    <div class="part" id="wolfey" data-filters="purple">
-        <section class="images">
-            <img src="css/CSS/Wolfey/image_2025-02-03_204500385.png">
-            <img src="css/CSS/Wolfey/image_2025-02-03_204553245.png">
-        </section>
-        <section class="css">
-            <h2>Wolfey</h2>
-            <a href="/css/CSS/Wolfey/Wolfey.css">
-                <img src="code.svg" height="50px" class="code">
-            </a>
-            <a>
-                <a href="css/CSS/Wolfey/Wolfey.css" download="Wolfey.css">
-                    <img src="download.svg" height="50px" class="download">
-                </a>
-                <a >
-                    <img src="copy.svg" height="50px" class="copy"> 
-                </a>
-        </section>
-    </div>
+            <div class="part" id="plink" data-filters="purple,blue,black">
+                <section class="images">
+                    <img src="css/CSS/plink/image_2025-02-03_201459409.png">
+                    <img src="css/CSS/plink/image_2025-02-03_201524413.png">
+                </section>
+                <section class="css">
+                    <h2>plink</h2>
+                    <a href="/css/CSS/plink/plink.css">
+                        <img src="code.svg" height="50px" class="code">
+                    </a>
+                    <a>
+                        <a href="css/CSS/plink/plink.css" download="plink.css">
+                            <img src="download.svg" height="50px" class="download">
+                        </a>
+                        <a >
+                            <img src="copy.svg" height="50px" class="copy"> 
+                        </a>
+                </section>
+            </div>
 
-    <div class="part" id="zenith" data-filters="black,white">
-        <section class="images">
-            <img src="css/CSS/Zenith/image_2025-02-03_201151720.png">
-            <img src="css/CSS/Zenith/image_2025-02-03_201123416.png">
-        </section>
-        <section class="css">
-            <h2>Zenith</h2>
-            <a href="/css/CSS/Zenith/Zenith.css">
-                <img src="code.svg" height="50px" class="code">
-            </a>
-            <a>
-                <a href="/css/CSS/Zenith/Zenith.css" download="Zenith.css">
-                    <img src="download.svg" height="50px" class="download">
-                </a>
-                <a >
-                    <img src="copy.svg" height="50px" class="copy"> 
-                </a>
-        </section>
-    </div>
+            <div class="part" id="uwu" data-filters="pink,white">
+                <section class="images">
+                    <img src="css/CSS/UwU/image_2025-02-03_201655485.png">
+                    <img src="css/CSS/UwU/image_2025-02-03_201721030.png">
+                </section>
+                <section class="css">
+                    <h2>UwU</h2>
+                    <a href="/css/CSS/UwU/uwu.css">
+                        <img src="code.svg" height="50px" class="code">
+                    </a>
+                    <a>
+                        <a href="css/CSS/UwU/uwu.css" download="uwu.css">
+                            <img src="download.svg" height="50px" class="download">
+                        </a>
+                        <a >
+                            <img src="copy.svg" height="50px" class="copy"> 
+                        </a>
+                </section>
+            </div>
 
-<div class="part" id="blackandwhite" data-filters="black,white">
-    <section class="images">
-        <img src="css/CSS/blackandwhite/Screenshot 2025-04-01 185127.png">
-        <img src="css/CSS/blackandwhite/Screenshot 2025-04-01 185240.png">
-    </section>
-    <section class="css">
-        <h2>Black & White</h2>
-        <a href="/css/CSS/blackandwhite/blackandwhite.css">
-            <img src="code.svg" height="50px" class="code">
-        </a>
-        <a>
-            <a href="/css/CSS/blackandwhite/blackandwhite.css" download="blackandwhite.css">
-                <img src="download.svg" height="50px" class="download">
-            </a>
-            <a >
-                <img src="copy.svg" height="50px" class="copy"> 
-            </a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWTI-LOJVU4Hf7QClJEmSTtsmALlyxz-KFkUdr1GTj3aQjGw/viewform?usp=sf_link" target="_blank">
-                <img src="creds.svg" height="50px" class="creds">
-            </a>
-    </section>
-</div>
-<div class="part" id="glaive" data-filters="blue,white,black">
-    <section class="images">
-        <img src="css/CSS/glaive/Screenshot 2025-04-01 185330.png">
-        <img src="css/CSS/glaive/Screenshot 2025-04-01 185539.png">
-    </section>
-    <section class="css">
-        <h2>glaive</h2>
-        <a href="/css/CSS/glaive/glaive.css">
-            <img src="code.svg" height="50px" class="code">
-        </a>
-        <a>
-            <a href="/css/CSS/glaive/glaive.css" download="glaive.css">
-                <img src="download.svg" height="50px" class="download">
-            </a>
-            <a >
-                <img src="copy.svg" height="50px" class="copy"> 
-            </a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWTI-LOJVU4Hf7QClJEmSTtsmALlyxz-KFkUdr1GTj3aQjGw/viewform?usp=sf_link" target="_blank">
-                <img src="creds.svg" height="50px" class="creds">
-            </a>
-    </section>
-</div>
+            <div class="part" id="wolfey" data-filters="purple">
+                <section class="images">
+                    <img src="css/CSS/Wolfey/image_2025-02-03_204500385.png">
+                    <img src="css/CSS/Wolfey/image_2025-02-03_204553245.png">
+                </section>
+                <section class="css">
+                    <h2>Wolfey</h2>
+                    <a href="/css/CSS/Wolfey/Wolfey.css">
+                        <img src="code.svg" height="50px" class="code">
+                    </a>
+                    <a>
+                        <a href="css/CSS/Wolfey/Wolfey.css" download="Wolfey.css">
+                            <img src="download.svg" height="50px" class="download">
+                        </a>
+                        <a >
+                            <img src="copy.svg" height="50px" class="copy"> 
+                        </a>
+                </section>
+            </div>
 
-<footer>
+            <div class="part" id="zenith" data-filters="black,white">
+                <section class="images">
+                    <img src="css/CSS/Zenith/image_2025-02-03_201151720.png">
+                    <img src="css/CSS/Zenith/image_2025-02-03_201123416.png">
+                </section>
+                <section class="css">
+                    <h2>Zenith</h2>
+                    <a href="/css/CSS/Zenith/Zenith.css">
+                        <img src="code.svg" height="50px" class="code">
+                    </a>
+                    <a>
+                        <a href="/css/CSS/Zenith/Zenith.css" download="Zenith.css">
+                            <img src="download.svg" height="50px" class="download">
+                        </a>
+                        <a >
+                            <img src="copy.svg" height="50px" class="copy"> 
+                        </a>
+                </section>
+            </div>
+
+            <div class="part" id="blackandwhite" data-filters="black,white">
+                <section class="images">
+                    <img src="css/CSS/blackandwhite/Screenshot 2025-04-01 185127.png">
+                    <img src="css/CSS/blackandwhite/Screenshot 2025-04-01 185240.png">
+                </section>
+                <section class="css">
+                    <h2>Black & White</h2>
+                    <a href="/css/CSS/blackandwhite/blackandwhite.css">
+                        <img src="code.svg" height="50px" class="code">
+                    </a>
+                    <a>
+                        <a href="/css/CSS/blackandwhite/blackandwhite.css" download="blackandwhite.css">
+                            <img src="download.svg" height="50px" class="download">
+                        </a>
+                        <a >
+                            <img src="copy.svg" height="50px" class="copy"> 
+                        </a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWTI-LOJVU4Hf7QClJEmSTtsmALlyxz-KFkUdr1GTj3aQjGw/viewform?usp=sf_link" target="_blank">
+                            <img src="creds.svg" height="50px" class="creds">
+                        </a>
+                </section>
+            </div>
+
+            <div class="part" id="glaive" data-filters="blue,white,black">
+                <section class="images">
+                    <img src="css/CSS/glaive/Screenshot 2025-04-01 185330.png">
+                    <img src="css/CSS/glaive/Screenshot 2025-04-01 185539.png">
+                </section>
+                <section class="css">
+                    <h2>glaive</h2>
+                    <a href="/css/CSS/glaive/glaive.css">
+                        <img src="code.svg" height="50px" class="code">
+                    </a>
+                    <a>
+                        <a href="/css/CSS/glaive/glaive.css" download="glaive.css">
+                            <img src="download.svg" height="50px" class="download">
+                        </a>
+                        <a >
+                            <img src="copy.svg" height="50px" class="copy"> 
+                        </a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWTI-LOJVU4Hf7QClJEmSTtsmALlyxz-KFkUdr1GTj3aQjGw/viewform?usp=sf_link" target="_blank">
+                            <img src="creds.svg" height="50px" class="creds">
+                        </a>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer>
         <p>I, Daymian, am not affiliated with Kirka (Kirka.io), nor were these CSS files created by other people. These CSS files are either publicly available or have been provided to me for the purpose of uploading here.</p>
-        <h5>If you recognize a CSS file here that you have created and would like to keep private, please contact me via Discord (@d4ym1an) and provide proof of ownership.</h5>
+        <p>If you recognize a CSS file here that you have created and would like to keep private, please contact me via Discord (@d4ym1an) and provide proof of ownership.</p>
     </footer>
+
     <script src="hover.js"></script>
+    <script src="filter.js"></script>
 </body>
 
 </html>
