@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".css").forEach((item) => {
         item.children[4].children[0].dataset["url"] = item.children[1].href;
@@ -7,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const codes = document.querySelectorAll(".code");
     const downloads = document.querySelectorAll(".download");
     const copies = document.querySelectorAll(".copy");
+    const cred = document.querySelectorAll(".creds");
 
     codes.forEach((code) => {
         code.addEventListener("mouseenter", () => {
@@ -31,12 +30,19 @@ document.addEventListener("DOMContentLoaded", () => {
             copyToClipboard(copy.dataset["url"]);
         });
     });
+
+    cred.forEach((creds) => {
+        creds.addEventListener("mouseenter", () => {
+            showPopup(creds, "Thank you to mitsuha.me for making this css! (discord)<br>Click the pencil to get a custom css of your own!");
+        });    creds.addEventListener("mouseleave", hidePopup);
+    });
+
 });
 
 function showPopup(element, message) {
     const popup = document.createElement("div");
     popup.className = "popup";
-    popup.textContent = message;
+    popup.innerHTML = message; // Changed from textContent to innerHTML
     document.body.appendChild(popup);
 
     const rect = element.getBoundingClientRect();

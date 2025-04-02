@@ -32,6 +32,8 @@
             <li><a href="#uwu">UwU</a></li>
             <li><a href="#wolfey">Wolfey</a></li>
             <li><a href="#zenith">Zenith</a></li>
+            <li><a href="#blackandwhite">Black & White</a></li>
+            <li><a href="#glaive">glaive</a></li>
         </ul>
     </div>
 
@@ -46,6 +48,22 @@
         <input type="text" id="search" placeholder="Search CSS files..." onkeyup="filterCSS()">
     </div>
 
+    <div class="color-filter">
+        <label for="color-select">Filter by Color:</label>
+        <select id="color-select" onchange="filterByColor()">
+            <option value="">All Colors</option>
+            <option value="red">Red</option>
+            <option value="orange">Orange</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="purple">Purple</option>
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="pink">Pink</option>
+        </select>
+    </div>
+
     <script>
         function filterCSS() {
             const query = document.getElementById('search').value.toLowerCase();
@@ -54,6 +72,20 @@
             parts.forEach(part => {
                 const title = part.querySelector('h2').textContent.toLowerCase();
                 if (title.includes(query)) {
+                    part.style.display = '';
+                } else {
+                    part.style.display = 'none';
+                }
+            });
+        }
+
+        function filterByColor() {
+            const selectedColor = document.getElementById('color-select').value.toLowerCase();
+            const parts = document.querySelectorAll('.part');
+
+            parts.forEach(part => {
+                const filters = part.getAttribute('data-filters').split(',');
+                if (!selectedColor || filters.includes(selectedColor)) {
                     part.style.display = '';
                 } else {
                     part.style.display = 'none';
@@ -76,6 +108,18 @@
             border-radius: 5px;
         }
 
+        .color-filter {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .color-filter select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
         .sidebar ul {
             list-style: none;
             padding: 0;
@@ -91,7 +135,7 @@
         }
     </style>
 
-    <div class="part" id="5hours">
+    <div class="part" id="5hours" data-filters="black">
         <section class="images">
             <img src="css/CSS/5hours/image_2025-02-03_193406064.png">
             <img src="css/CSS/5hours/image_2025-02-03_193316431.png">
@@ -111,7 +155,7 @@
         </section>
     </div>
 
-    <div class="part" id="anime">
+    <div class="part" id="anime" data-filters="blue">
         <section class="images">
             <img src="css/CSS/anime/animelobby.png">
             <img src="css/CSS/anime/animehud.png">
@@ -131,7 +175,7 @@
         </section>
     </div>
 
-    <div class="part" id="blue">
+    <div class="part" id="blue" data-filters="blue">
         <section class="images">
             <img src="css/CSS/Blue/bluelobby.png">
             <img src="css/CSS/Blue/bluehud.png">
@@ -151,7 +195,7 @@
         </section>
     </div>
 
-    <div class="part" id="egirl">
+    <div class="part" id="egirl" data-filters="pink,white">
         <section class="images">
             <img src="css/CSS/Egirl/egirllobby.png">
             <img src="css/CSS/Egirl/egirlhud.png">
@@ -171,7 +215,7 @@
         </section>
     </div>
 
-    <div class="part" id="green">
+    <div class="part" id="green" data-filters="green,black">
         <section class="images">
             <img src="css/CSS/Green/image_2025-02-03_201945486.png">
             <img src="css/CSS/Green/image_2025-02-03_202006017.png">
@@ -191,7 +235,7 @@
         </section>
     </div>
 
-    <div class="part" id="grey">
+    <div class="part" id="grey" data-filters="black">
         <section class="images">
             <img src="css/CSS/Grey/image_2025-02-03_201339055.png">
             <img src="css/CSS/Grey/image_2025-02-03_201322613.png">
@@ -211,7 +255,7 @@
         </section>
     </div>
 
-    <div class="part" id="hover">
+    <div class="part" id="hover" data-filters="blue">
         <section class="images">
             <img src="css/CSS/hover/image_2025-02-03_203642444.png">
             <img src="css/CSS/hover/image_2025-02-03_203625001.png">
@@ -231,7 +275,7 @@
         </section>
     </div>
 
-    <div class="part" id="japan-town">
+    <div class="part" id="japan-town" data-filters="red,white,pink">
         <section class="images">
             <img src="css/CSS/Japan-Town/image_2025-02-03_193717030.png">
             <img src="css/CSS/Japan-Town/image_2025-02-03_193755273.png">
@@ -251,7 +295,7 @@
         </section>
     </div>
 
-    <div class="part" id="jett">
+    <div class="part" id="jett" data-filters="blue,black">
         <section class="images">
             <img src="css/CSS/Jett/image_2025-02-03_203940844.png">
             <img src="css/CSS/Jett/image_2025-02-03_204009826.png">
@@ -271,7 +315,7 @@
         </section>
     </div>
 
-    <div class="part" id="pink">
+    <div class="part" id="pink" data-filters="pink,white">
         <section class="images">
             <img src="css/CSS/pink/image_2025-02-03_204325675.png">
             <img src="css/CSS/pink/image_2025-02-03_204402274.png">
@@ -291,7 +335,7 @@
         </section>
     </div>
 
-    <div class="part" id="plink">
+    <div class="part" id="plink" data-filters="purple,blue,black">
         <section class="images">
             <img src="css/CSS/plink/image_2025-02-03_201459409.png">
             <img src="css/CSS/plink/image_2025-02-03_201524413.png">
@@ -311,7 +355,7 @@
         </section>
     </div>
 
-    <div class="part" id="uwu">
+    <div class="part" id="uwu" data-filters="pink,white">
         <section class="images">
             <img src="css/CSS/UwU/image_2025-02-03_201655485.png">
             <img src="css/CSS/UwU/image_2025-02-03_201721030.png">
@@ -331,7 +375,7 @@
         </section>
     </div>
 
-    <div class="part" id="wolfey">
+    <div class="part" id="wolfey" data-filters="purple">
         <section class="images">
             <img src="css/CSS/Wolfey/image_2025-02-03_204500385.png">
             <img src="css/CSS/Wolfey/image_2025-02-03_204553245.png">
@@ -351,7 +395,7 @@
         </section>
     </div>
 
-    <div class="part" id="zenith">
+    <div class="part" id="zenith" data-filters="black,white">
         <section class="images">
             <img src="css/CSS/Zenith/image_2025-02-03_201151720.png">
             <img src="css/CSS/Zenith/image_2025-02-03_201123416.png">
@@ -371,7 +415,52 @@
         </section>
     </div>
 
-    <footer>
+<div class="part" id="blackandwhite" data-filters="black,white">
+    <section class="images">
+        <img src="css/CSS/blackandwhite/Screenshot 2025-04-01 185127.png">
+        <img src="css/CSS/blackandwhite/Screenshot 2025-04-01 185240.png">
+    </section>
+    <section class="css">
+        <h2>Black & White</h2>
+        <a href="/css/CSS/blackandwhite/blackandwhite.css">
+            <img src="code.svg" height="50px" class="code">
+        </a>
+        <a>
+            <a href="/css/CSS/blackandwhite/blackandwhite.css" download="blackandwhite.css">
+                <img src="download.svg" height="50px" class="download">
+            </a>
+            <a >
+                <img src="copy.svg" height="50px" class="copy"> 
+            </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWTI-LOJVU4Hf7QClJEmSTtsmALlyxz-KFkUdr1GTj3aQjGw/viewform?usp=sf_link" target="_blank">
+                <img src="creds.svg" height="50px" class="creds">
+            </a>
+    </section>
+</div>
+<div class="part" id="glaive" data-filters="blue,white,black">
+    <section class="images">
+        <img src="css/CSS/glaive/Screenshot 2025-04-01 185330.png">
+        <img src="css/CSS/glaive/Screenshot 2025-04-01 185539.png">
+    </section>
+    <section class="css">
+        <h2>glaive</h2>
+        <a href="/css/CSS/glaive/glaive.css">
+            <img src="code.svg" height="50px" class="code">
+        </a>
+        <a>
+            <a href="/css/CSS/glaive/glaive.css" download="glaive.css">
+                <img src="download.svg" height="50px" class="download">
+            </a>
+            <a >
+                <img src="copy.svg" height="50px" class="copy"> 
+            </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWTI-LOJVU4Hf7QClJEmSTtsmALlyxz-KFkUdr1GTj3aQjGw/viewform?usp=sf_link" target="_blank">
+                <img src="creds.svg" height="50px" class="creds">
+            </a>
+    </section>
+</div>
+
+<footer>
         <p>I, Daymian, am not affiliated with Kirka (Kirka.io), nor were these CSS files created by other people. These CSS files are either publicly available or have been provided to me for the purpose of uploading here.</p>
         <h5>If you recognize a CSS file here that you have created and would like to keep private, please contact me via Discord (@d4ym1an) and provide proof of ownership.</h5>
     </footer>
