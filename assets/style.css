@@ -1,0 +1,106 @@
+@import url(/fonts/stylesheet.css);
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #3c4b68 rgba(0, 0, 0, .4);
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::selection{
+    background: #000000;
+    color: #ffb914;
+}
+
+.pattern::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+body {
+    background: radial-gradient(74.74% 74.74% at 51.12% 51.68%, rgba(23, 73, 197, .9) 0, rgba(28, 46, 113, 0) 100%);
+    background-color: #202639;
+    color: whitesmoke;
+    font-family: 'kirka';
+    font-weight: lighter;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header h4 {
+    color: black;
+}
+
+h1 {
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+a {
+    text-decoration: none;
+    color: #ffb914;
+}
+
+a:focus {
+    outline: 2px dashed #ffb914;
+    outline-offset: 2px;
+}
+
+.content-btn {
+    background-color: #ffb914;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin: 0.5em;
+}
+
+.content-btn:hover {
+    background-color: black;
+    color: #ff9f00;
+}
+
+.downloads {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffb914;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.home-btn:hover {
+    background-color: black;
+    color: #ffb914;
+}

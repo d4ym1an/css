@@ -7,6 +7,11 @@
     scroll-behavior: smooth;
 }
 
+::selection{
+    background: #000000;
+    color: #ffb914;
+}
+
 .pattern::before {
     content: "";
     position: absolute;
@@ -173,4 +178,3 @@ footer{
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-

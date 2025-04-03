@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download Kirka.io assets including GLB files, images, and media files.">
+    <meta name="keywords" content="Kirka.io, assets, GLB files, image files, media files, downloads">
+    <meta name="author" content="Kirka.io">
+    <title>Download Kirka.io Assets - GLB, Images, Media</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="icon" href="../icon.png" type="image/png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+
+<body class="downloads">
+    <header class="header-downloads">
+        <a href="/" class="home-btn" aria-label="Go to Home Page">Home</a>
+        <h1>Download Kirka.io Assets</h1>
+    </header>
+    <main>
+        <section class="content">
+            <a href="/assets/glb.zip" download="glb.zip" class="content-btn" aria-label="Download GLB Files">Download GLB Files</a>
+            <a href="/assets/img.zip" download="img.zip" class="content-btn" aria-label="Download Image Files">Download Image Files</a>
+            <a href="/assets/media.zip" download="media.zip" class="content-btn" aria-label="Download Media Files">Download Media Files</a>
+            <a id="download-all" class="content-btn" aria-label="Download All Files">Download All Files</a>
+        </section>
+    </main>
+    <script>
+        document.getElementById('download-all').addEventListener('click', () => {
+            const files = [
+                '/assets/glb.zip',
+                '/assets/img.zip',
+                '/assets/media.zip'
+            ];
+            files.forEach(file => {
+                const a = document.createElement('a');
+                a.href = file;
+                a.download = file.split('/').pop();
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            });
+        });
+    </script>
+</body>
+
+</html>
