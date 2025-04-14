@@ -19,7 +19,9 @@
 </head>
 
 <body>
+    <button id="toggle-sidebar" aria-label="Toggle Sidebar">☰</button>
     <aside class="sidebar">
+        <button id="close-sidebar" aria-label="Close Sidebar">✖</button>
         <img src="imgs/icon.png" alt="Kirka CSS Logo" class="logo" height="100px">
         <h2>CSS Files</h2>
         <nav>
@@ -40,8 +42,10 @@
                 <li><a href="#zenith">Zenith</a></li>
                 <li><a href="#blackandwhite">Black & White</a></li>
                 <li><a href="#glaive">glaive</a></li>
+                <li><a href="#ayaka ganyu">ayaka & ganyu</a></li>
+                <li><a href="#enwa">enwa</a></li>
             </ul>
-            <a href="/assets/index.html">Download Kirka Assets</a>
+            <a href="/assets/index.html" style="text-decoration: underline;">Download Kirka Assets</a>
 
             <ul>
                 <li><a href="https://sheriffcarry.github.io">Carry Sheriff CSS List</a></li>
@@ -58,7 +62,7 @@
 
     <main>
         <section class="search-bar">
-            <label for="search" class="visually-hidden">Search CSS files</label>
+            <label for="search" class="visually-hidden"></label>
             <input type="text" id="search" placeholder="Search CSS files..." onkeyup="filterCSS()" aria-label="Search CSS files">
         </section>
 
@@ -404,6 +408,48 @@
                         </a>
                 </section>
             </div>
+
+            <div class="part" id="ayaka ganyu" data-filters="red,white,pink">
+                <section class="images">
+                    <img src="css/CSS/ayaka-and-ganyu/Screenshot 2025-04-13 221506.png">
+                    <img src="css/CSS/ayaka-and-ganyu/Screenshot 2025-04-13 221722.png">
+                </section>
+                <section class="css">
+                    <h2>ayaka & ganyu</h2>
+                    <a href="/css/CSS/ayaka-and-ganyu/ayaka-ganyu.css">
+                        <img src="code.svg" height="50px" class="code">
+                    </a>
+                    <a>
+                        <a href="/css/CSS/ayaka-and-ganyu/ayaka-ganyu.css" download="ayaka-ganyu.css">
+                            <img src="download.svg" height="50px" class="download">
+                        </a>
+                        <a >
+                            <img src="copy.svg" height="50px" class="copy"> 
+                        </a>
+                </section>
+            </div>
+
+            <div class="part" id="enwa" data-filters="blue">
+                <section class="images">
+                    <img src="css/CSS/enwa/Screenshot 2025-04-13 221849.png">
+                    <img src="css/CSS/enwa/Screenshot 2025-04-13 221952.png">
+                </section>
+                <section class="css">
+                    <h2>enwa</h2>
+                    <a href="/css/CSS/enwa/enwa.css">
+                        <img src="code.svg" height="50px" class="code">
+                    </a>
+                    <a>
+                        <a href="/css/CSS/enwa/enwa.css" download="enwa.css">
+                            <img src="download.svg" height="50px" class="download">
+                        </a>
+                        <a >
+                            <img src="copy.svg" height="50px" class="copy"> 
+                        </a>
+                </section>
+            </div>
+
+            
         </section>
     </main>
 
@@ -414,6 +460,19 @@
 
     <script src="hover.js"></script>
     <script src="filter.js"></script>
+    <script>
+        const toggleButton = document.getElementById('toggle-sidebar');
+        const closeButton = document.getElementById('close-sidebar');
+        const sidebar = document.querySelector('.sidebar');
+
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('visible');
+        });
+
+        closeButton.addEventListener('click', () => {
+            sidebar.classList.remove('visible');
+        });
+    </script>
 </body>
 
 </html>

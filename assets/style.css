@@ -104,3 +104,30 @@ a:focus {
     background-color: black;
     color: #ffb914;
 }
+
+@media (max-width: 450px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        align-items: flex-start;
+    }
+    .content-btn {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .downloads {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    .home-btn {
+        position: static;
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+}
