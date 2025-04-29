@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cred.forEach((creds) => {
         creds.addEventListener("mouseenter", () => {
-            showPopup(creds, "Thank you to mitsuha.me for making this css! (discord)<br>Click the pencil to get a custom css of your own!");
+            showPopup(creds, "Thank you to mitsuha.me for making this css! (discord)");
         });    creds.addEventListener("mouseleave", hidePopup);
     });
 
