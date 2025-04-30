@@ -11,178 +11,99 @@
     <title>Free Kirka CSS Files - Download & Customize</title>
     <link rel="icon" href="/imgs/icon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
 
-        .sidebar {
-            width: 250px;
-            background-color: #333;
-            color: white;
-            height: 100vh;
-            transition: width 0.3s ease;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .sidebar.closed {
-            width: 60px;
-        }
-
-        .sidebar .logo {
-            display: block;
-            margin: 20px auto;
-            width: 80%;
-            transition: opacity 0.3s ease;
-        }
-
-        .sidebar.closed .logo {
-            opacity: 0;
-        }
-
-        .sidebar h2 {
-            text-align: center;
-            margin: 10px 0;
-            font-size: 18px;
-            transition: opacity 0.3s ease;
-        }
-
-        .sidebar.closed h2 {
-            opacity: 0;
-        }
-
-        .sidebar nav {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .sidebar nav a {
-            color: white;
-            text-decoration: none;
-            margin: 10px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: opacity 0.3s ease;
-        }
-
-        .sidebar nav a i {
-            font-size: 20px;
-        }
-
-        .sidebar.closed nav a span {
-            display: none;
-        }
-
-        .toggle-sidebar {
-            position: absolute;
-            top: 20px;
-            right: -20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .main-content {
-            flex: 1;
-            padding: 20px;
-        }
-
-        .headerText {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .search-bar,
-        .color-filter {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        #css-files {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .css-card {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 15px;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
-
-        .css-card img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-
-        .css-card h2 {
-            margin: 10px 0;
-        }
-
-        .rating,
-        .favorite {
-            margin: 10px 0;
-        }
-
-        .rating input {
-            display: none;
-        }
-
-        .rating label {
-            font-size: 20px;
-            color: #ccc;
-            cursor: pointer;
-        }
-
-        .rating input:checked~label,
-        .rating label:hover,
-        .rating label:hover~label {
-            color: gold;
-        }
-
-        .favorite button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .favorite button.active {
-            background-color: #28a745;
-        }
     </style>
 </head>
 
 <body>
-    <aside class="sidebar" id="sidebar">
-
-        <nav>
-            <button class="toggle-sidebar" onclick="toggleSidebar()">☰</button>
-            <img src="imgs/icon.png" alt="Kirka CSS Logo" class="logo">
-            <a href="/assets/index.html"><i>📂</i><span>Download Kirka Assets</span></a>
-            <a href="https://sheriffcarry.github.io"><i>🌐</i><span>Carry Sheriff CSS List</span></a>
-            <a href="https://kirkacommunityhub.netlify.app/css"><i>📋</i><span>Kinor & Hoshiko CSS List</span></a>
-        </nav>
-    </aside>
-
-    <div class="main-content">
+    <nav id="sidebar" class="close">
+        <ul>
+            <li>
+                <span class="logo">Free Kirka Assets</span>
+                <button onclick="toggleSidebar()" id="toggle-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z" />
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M240-200h120v-200q0-17 11.5-28.5T400-440h160q17 0 28.5 11.5T600-400v200h120v-360L480-740 240-560v360Zm-80 0v-360q0-19 8.5-36t23.5-28l240-180q21-16 48-16t48 16l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H560q-17 0-28.5-11.5T520-160v-200h-80v200q0 17-11.5 28.5T400-120H240q-33 0-56.5-23.5T160-200Zm320-270Z" />
+                    </svg>
+                    <span id="sidebarText">Home</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M520-640v-160q0-17 11.5-28.5T560-840h240q17 0 28.5 11.5T840-800v160q0 17-11.5 28.5T800-600H560q-17 0-28.5-11.5T520-640ZM120-480v-320q0-17 11.5-28.5T160-840h240q17 0 28.5 11.5T440-800v320q0 17-11.5 28.5T400-440H160q-17 0-28.5-11.5T120-480Zm400 320v-320q0-17 11.5-28.5T560-520h240q17 0 28.5 11.5T840-480v320q0 17-11.5 28.5T800-120H560q-17 0-28.5-11.5T520-160Zm-400 0v-160q0-17 11.5-28.5T160-360h240q17 0 28.5 11.5T440-320v160q0 17-11.5 28.5T400-120H160q-17 0-28.5-11.5T120-160Zm80-360h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z" />
+                    </svg>
+                    <span id="sidebarText">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z" />
+                    </svg>
+                    <span id="sidebarText">More Lists</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z" />
+                    </svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="https://sheriffcarry.github.io/" target="_blank" id="sidebarText">CarrySheriff List</a></li>
+                        <li><a href="https://kirkacommunityhub.netlify.app/css" id="sidebarText" target="_blank">Kirka Community Hub</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z" />
+                    </svg>
+                    <span id="sidebarText">Tools n Stuff</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z" />
+                    </svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="https://kirka.lukeskywalk.com/" id="sidebarText">Skywalks Tools</a></li>
+                        <li><a href="/assets/index.html" id="sidebarText">Kirka Assets</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <a href="https://forms.gle/9YpvtfGa8ZEnUkpL9" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                    </svg>
+                    <span>Upload</span>
+                </a>
+            </li>
+        </ul>
+    </nav> 
+    <main>
         <header>
             <div class="headerText">
                 <h1>Free Kirka CSS Files</h1>
@@ -193,412 +114,412 @@
             </div>
         </header>
 
-        <main>
-            <h1 style="color: red;">SITE UNDER MAINTNANCE</h1>
-            <section class="search-bar">
-                <label for="search" class="visually-hidden"></label>
-                <input type="text" id="search" placeholder="Search CSS files..." onkeyup="filterCSS()"
-                    aria-label="Search CSS files">
-            </section>
+        <h1 style="color: red;">SITE UNDER MAINTENANCE</h1>
+        <section class="search-bar">
+            <label for="search" class="visually-hidden"></label>
+            <input type="text" id="search" placeholder="Search CSS files..." onkeyup="filterCSS()"
+                aria-label="Search CSS files">
+        </section>
 
-            <section class="color-filter">
-                <label for="color-select">Filter by Color:</label>
-                <select id="color-select" onchange="filterByColor()" aria-label="Filter CSS files by color">
-                    <option value="">All Colors</option>
-                    <option value="red">Red</option>
-                    <option value="orange">Orange</option>
-                    <option value="yellow">Yellow</option>
-                    <option value="green">Green</option>
-                    <option value="blue">Blue</option>
-                    <option value="purple">Purple</option>
-                    <option value="black">Black</option>
-                    <option value="white">White</option>
-                    <option value="pink">Pink</option>
-                </select>
-            </section>
+        <section class="color-filter">
+            <label for="color-select">Filter</label>
+            <select id="color-select" onchange="filterByColor()" aria-label="Filter CSS files by color">
+                <option value="">All</option>
+                <option value="favorite">Favorites</option>
+                <option value="classic">Classic</option>
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="purple">Purple</option>
+                <option value="black">Black</option>
+                <option value="white">White</option>
+                <option value="pink">Pink</option>
+            </select>
+        </section>
 
-            <section id="css-files">
-                <div class="css-card" data-filters="black, grey">
-                    <img src="css/CSS/5hours/image_2025-02-03_193406064.png" alt="5hours Preview">
-                    <h2>5hours</h2>
-                    <div class="rating">
-                        <input type="radio" id="5hours-star5" name="5hours-rating" value="5">
-                        <label for="5hours-star5">★</label>
-                        <input type="radio" id="5hours-star4" name="5hours-rating" value="4">
-                        <label for="5hours-star4">★</label>
-                        <input type="radio" id="5hours-star3" name="5hours-rating" value="3">
-                        <label for="5hours-star3">★</label>
-                        <input type="radio" id="5hours-star2" name="5hours-rating" value="2">
-                        <label for="5hours-star2">★</label>
-                        <input type="radio" id="5hours-star1" name="5hours-rating" value="1">
-                        <label for="5hours-star1">★</label>
-                    </div>
-                    <div class="favorite">
-                        <button onclick="toggleFavorite(this)">Favorite</button>
-                    </div>
-                    <a href="/css/CSS/5hours/5hours.css" download="5hours.css">Download</a>
+        <section id="css-files">
+            <div class="css-card" data-filters="black, grey">
+                <img src="css/CSS/5hours/image_2025-02-03_193406064.png" alt="5hours Preview">
+                <h2>5hours</h2>
+                <div class="rating">
+                    <input type="radio" id="5hours-star5" name="5hours-rating" value="5">
+                    <label for="5hours-star5">★</label>
+                    <input type="radio" id="5hours-star4" name="5hours-rating" value="4">
+                    <label for="5hours-star4">★</label>
+                    <input type="radio" id="5hours-star3" name="5hours-rating" value="3">
+                    <label for="5hours-star3">★</label>
+                    <input type="radio" id="5hours-star2" name="5hours-rating" value="2">
+                    <label for="5hours-star2">★</label>
+                    <input type="radio" id="5hours-star1" name="5hours-rating" value="1">
+                    <label for="5hours-star1">★</label>
                 </div>
-
-                <div class="css-card" data-filters="blue">
-                    <img src="css/CSS/anime/animelobby.png" alt="anime Preview">
-                    <h2>anime</h2>
-                    <div class="rating">
-                        <input type="radio" id="anime-star5" name="anime-rating" value="5">
-                        <label for="anime-star5">★</label>
-                        <input type="radio" id="anime-star4" name="anime-rating" value="4">
-                        <label for="anime-star4">★</label>
-                        <input type="radio" id="anime-star3" name="anime-rating" value="3">
-                        <label for="anime-star3">★</label>
-                        <input type="radio" id="anime-star2" name="anime-rating" value="2">
-                        <label for="anime-star2">★</label>
-                        <input type="radio" id="anime-star1" name="anime-rating" value="1">
-                        <label for="anime-star1">★</label>
-                    </div>
-                    <div class="favorite">
-                        <button onclick="toggleFavorite(this)">Favorite</button>
-                    </div>
-                    <a href="/css/CSS/anime/anime.css" download="anime.css">Download</a>
+                <div class="favorite">
+                    <button onclick="toggleFavorite(this)">Favorite</button>
                 </div>
+                <a href="/css/CSS/5hours/5hours.css" download="5hours.css">Download</a>
+            </div>
 
-                <div class="css-card" data-filters="blue">
-                    <img src="css/CSS/Blue/bluelobby.png" alt="blue Preview">
-                    <h2>blue</h2>
-                    <div class="rating">
-                        <input type="radio" id="blue-star5" name="blue-rating" value="5">
-                        <label for="blue-star5">★</label>
-                        <input type="radio" id="blue-star4" name="blue-rating" value="4">
-                        <label for="blue-star4">★</label>
-                        <input type="radio" id="blue-star3" name="blue-rating" value="3">
-                        <label for="blue-star3">★</label>
-                        <input type="radio" id="blue-star2" name="blue-rating" value="2">
-                        <label for="blue-star2">★</label>
-                        <input type="radio" id="blue-star1" name="blue-rating" value="1">
-                        <label for="blue-star1">★</label>
-                    </div>
-                    <div class="favorite">
-                        <button onclick="toggleFavorite(this)">Favorite</button>
-                    </div>
-                    <a href="/css/CSS/Blue/Blue.css" download="Blue.css">Download</a>
+            <div class="css-card" data-filters="blue">
+                <img src="css/CSS/anime/animelobby.png" alt="anime Preview">
+                <h2>anime</h2>
+                <div class="rating">
+                    <input type="radio" id="anime-star5" name="anime-rating" value="5">
+                    <label for="anime-star5">★</label>
+                    <input type="radio" id="anime-star4" name="anime-rating" value="4">
+                    <label for="anime-star4">★</label>
+                    <input type="radio" id="anime-star3" name="anime-rating" value="3">
+                    <label for="anime-star3">★</label>
+                    <input type="radio" id="anime-star2" name="anime-rating" value="2">
+                    <label for="anime-star2">★</label>
+                    <input type="radio" id="anime-star1" name="anime-rating" value="1">
+                    <label for="anime-star1">★</label>
                 </div>
-
-                <div class="css-card" data-filters="pink,white">
-                    <img src="css/CSS/Egirl/egirllobby.png" alt="egirl Preview">
-                    <h2>egirl</h2>
-                    <div class="rating">
-                        <input type="radio" id="egirl-star5" name="egirl-rating" value="5">
-                        <label for="egirl-star5">★</label>
-                        <input type="radio" id="egirl-star4" name="egirl-rating" value="4">
-                        <label for="egirl-star4">★</label>
-                        <input type="radio" id="egirl-star3" name="egirl-rating" value="3">
-                        <label for="egirl-star3">★</label>
-                        <input type="radio" id="egirl-star2" name="egirl-rating" value="2">
-                        <label for="egirl-star2">★</label>
-                        <input type="radio" id="egirl-star1" name="egirl-rating" value="1">
-                        <label for="egirl-star1">★</label>
-                    </div>
-                    <div class="favorite">
-                        <button onclick="toggleFavorite(this)">Favorite</button>
-                    </div>
-                    <a href="/css/CSS/Egirl/egirl.css" download="egirl.css">Download</a>
+                <div class="favorite">
+                    <button onclick="toggleFavorite(this)">Favorite</button>
                 </div>
+                <a href="/css/CSS/anime/anime.css" download="anime.css">Download</a>
+            </div>
 
-                <div class="css-card" data-filters="green,black">
-                    <img src="css/CSS/Green/image_2025-02-03_201945486.png" alt="Green Preview">
-                    <h2>Green</h2>
-                    <div class="rating">
-                        <input type="radio" id="green-star5" name="green-rating" value="5">
-                        <label for="green-star5">★</label>
-                        <input type="radio" id="green-star4" name="green-rating" value="4">
-                        <label for="green-star4">★</label>
-                        <input type="radio" id="green-star3" name="green-rating" value="3">
-                        <label for="green-star3">★</label>
-                        <input type="radio" id="green-star2" name="green-rating" value="2">
-                        <label for="green-star2">★</label>
-                        <input type="radio" id="green-star1" name="green-rating" value="1">
-                        <label for="green-star1">★</label>
-                    </div>
-                    <div class="favorite">
-                        <button onclick="toggleFavorite(this)">Favorite</button>
-                    </div>
-                    <a href="/css/CSS/Green/green.css" download="green.css">Download</a>
+            <div class="css-card" data-filters="blue">
+                <img src="css/CSS/Blue/bluelobby.png" alt="blue Preview">
+                <h2>blue</h2>
+                <div class="rating">
+                    <input type="radio" id="blue-star5" name="blue-rating" value="5">
+                    <label for="blue-star5">★</label>
+                    <input type="radio" id="blue-star4" name="blue-rating" value="4">
+                    <label for="blue-star4">★</label>
+                    <input type="radio" id="blue-star3" name="blue-rating" value="3">
+                    <label for="blue-star3">★</label>
+                    <input type="radio" id="blue-star2" name="blue-rating" value="2">
+                    <label for="blue-star2">★</label>
+                    <input type="radio" id="blue-star1" name="blue-rating" value="1">
+                    <label for="blue-star1">★</label>
                 </div>
-
-                <div class="css-card" data-filters="black">
-                    <img src="css/CSS/Grey/image_2025-02-03_201339055.png" alt="Grey Preview">
-                    <h2>Grey</h2>
-                    <div class="rating">
-                        <input type="radio" id="grey-star5" name="grey-rating" value="5">
-                        <label for="grey-star5">★</label>
-                        <input type="radio" id="grey-star4" name="grey-rating" value="4">
-                        <label for="grey-star4">★</label>
-                        <input type="radio" id="grey-star3" name="grey-rating" value="3">
-                        <label for="grey-star3">★</label>
-                        <input type="radio" id="grey-star2" name="grey-rating" value="2">
-                        <label for="grey-star2">★</label>
-                        <input type="radio" id="grey-star1" name="grey-rating" value="1">
-                        <label for="grey-star1">★</label>
-                    </div>
-                    <div class="favorite">
-                        <button onclick="toggleFavorite(this)">Favorite</button>
-                    </div>
-                    <a href="/css/CSS/Grey/grey.css" download="grey.css">Download</a>
+                <div class="favorite">
+                    <button onclick="toggleFavorite(this)">Favorite</button>
                 </div>
+                <a href="/css/CSS/Blue/Blue.css" download="Blue.css">Download</a>
+            </div>
 
-                <div class="css-card" data-filters="blue">
-                    <img src="css/CSS/hover/image_2025-02-03_203642444.png" alt="hover Preview">
-                    <h2>hover</h2>
-                    <div class="rating">
-                        <input type="radio" id="hover-star5" name="hover-rating" value="5">
-                        <label for="hover-star5">★</label>
-                        <input type="radio" id="hover-star4" name="hover-rating" value="4">
-                        <label for="hover-star4">★</label>
-                        <input type="radio" id="hover-star3" name="hover-rating" value="3">
-                        <label for="hover-star3">★</label>
-                        <input type="radio" id="hover-star2" name="hover-rating" value="2">
-                        <label for="hover-star2">★</label>
-                        <input type="radio" id="hover-star1" name="hover-rating" value="1">
-                        <label for="hover-star1">★</label>
-                    </div>
-                    <div class="favorite">
-                        <button onclick="toggleFavorite(this)">Favorite</button>
-                    </div>
-                    <a href="/css/CSS/hover/hover.css" download="hover.css">Download</a>
+            <div class="css-card" data-filters="pink,white">
+                <img src="css/CSS/Egirl/egirllobby.png" alt="egirl Preview">
+                <h2>egirl</h2>
+                <div class="rating">
+                    <input type="radio" id="egirl-star5" name="egirl-rating" value="5">
+                    <label for="egirl-star5">★</label>
+                    <input type="radio" id="egirl-star4" name="egirl-rating" value="4">
+                    <label for="egirl-star4">★</label>
+                    <input type="radio" id="egirl-star3" name="egirl-rating" value="3">
+                    <label for="egirl-star3">★</label>
+                    <input type="radio" id="egirl-star2" name="egirl-rating" value="2">
+                    <label for="egirl-star2">★</label>
+                    <input type="radio" id="egirl-star1" name="egirl-rating" value="1">
+                    <label for="egirl-star1">★</label>
                 </div>
-
-                <div class="css-card" data-filters="red,white,pink">
-                    <img src="css/CSS/Japan-Town/image_2025-02-03_193717030.png" alt="Japan Town Preview">
-                    <h2>Japan Town</h2>
-                    <div class="rating">
-                        <input type="radio" id="japan-town-star5" name="japan-town-rating" value="5">
-                        <label for="japan-town-star5">★</label>
-                        <input type="radio" id="japan-town-star4" name="japan-town-rating" value="4">
-                        <label for="japan-town-star4">★</label>
-                        <input type="radio" id="japan-town-star3" name="japan-town-rating" value="3">
-                        <label for="japan-town-star3">★</label>
-                        <input type="radio" id="japan-town-star2" name="japan-town-rating" value="2">
-                        <label for="japan-town-star2">★</label>
-                        <input type="radio" id="japan-town-star1" name="japan-town-rating" value="1">
-                        <label for="japan-town-star1">★</label>
-                    </div>
-                    <div class="favorite">
-                        <button onclick="toggleFavorite(this)">Favorite</button>
-                    </div>
-                    <a href="/css/CSS/Japan-Town/japan-town.css" download="japan-town.css">Download</a>
+                <div class="favorite">
+                    <button onclick="toggleFavorite(this)">Favorite</button>
                 </div>
+                <a href="/css/CSS/Egirl/egirl.css" download="egirl.css">Download</a>
+            </div>
 
-                <div class="css-card" data-filters="blue,black">
-                    <img src="css/CSS/Jett/image_2025-02-03_203940844.png" alt="jett Preview">
-                    <h2>jett</h2>
-                    <div class="rating">
-                        <input type="radio" id="jett-star5" name="jett-rating" value="5">
-                        <label for="jett-star5">★</label>
-                        <input type="radio" id="jett-star4" name="jett-rating" value="4">
-                        <label for="jett-star4">★</label>
-                        <input type="radio" id="jett-star3" name="jett-rating" value="3">
-                        <label for="jett-star3">★</label>
-                        <input type="radio" id="jett-star2" name="jett-rating" value="2">
-                        <label for="jett-star2">★</label>
-                        <input type="radio" id="jett-star1" name="jett-rating" value="1">
-                        <label for="jett-star1">★</label>
-                    </div>
-                    <div class="favorite">
-                        <button onclick="toggleFavorite(this)">Favorite</button>
-                    </div>
-                    <a href="/css/CSS/Jett/jett.css" download="jett.css">Download</a>
+            <div class="css-card" data-filters="green,black">
+                <img src="css/CSS/Green/image_2025-02-03_201945486.png" alt="Green Preview">
+                <h2>Green</h2>
+                <div class="rating">
+                    <input type="radio" id="green-star5" name="green-rating" value="5">
+                    <label for="green-star5">★</label>
+                    <input type="radio" id="green-star4" name="green-rating" value="4">
+                    <label for="green-star4">★</label>
+                    <input type="radio" id="green-star3" name="green-rating" value="3">
+                    <label for="green-star3">★</label>
+                    <input type="radio" id="green-star2" name="green-rating" value="2">
+                    <label for="green-star2">★</label>
+                    <input type="radio" id="green-star1" name="green-rating" value="1">
+                    <label for="green-star1">★</label>
                 </div>
-
-                <div class="css-card" data-filters="pink,white">
-                    <img src="css/CSS/pink/image_2025-02-03_204325675.png" alt="pink Preview">
-                    <h2>pink</h2>
-                    <div class="rating">
-                        <input type="radio" id="pink-star5" name="pink-rating" value="5">
-                        <label for="pink-star5">★</label>
-                        <input type="radio" id="pink-star4" name="pink-rating" value="4">
-                        <label for="pink-star4">★</label>
-                        <input type="radio" id="pink-star3" name="pink-rating" value="3">
-                        <label for="pink-star3">★</label>
-                        <input type="radio" id="pink-star2" name="pink-rating" value="2">
-                        <label for="pink-star2">★</label>
-                        <input type="radio" id="pink-star1" name="pink-rating" value="1">
-                        <label for="pink-star1">★</label>
-                    </div>
-                    <div class="favorite">
-                        <button onclick="toggleFavorite(this)">Favorite</button>
-                    </div>
-                    <a href="/css/CSS/pink/pink.css" download="pink.css">Download</a>
+                <div class="favorite">
+                    <button onclick="toggleFavorite(this)">Favorite</button>
                 </div>
+                <a href="/css/CSS/Green/green.css" download="green.css">Download</a>
+            </div>
 
-                <div class="css-card" data-filters="purple,blue,black">
-                    <img src="css/CSS/plink/image_2025-02-03_201459409.png" alt="plink Preview">
-                    <h2>plink</h2>
-                    <div class="rating">
-                        <input type="radio" id="plink-star5" name="plink-rating" value="5">
-                        <label for="plink-star5">★</label>
-                        <input type="radio" id="plink-star4" name="plink-rating" value="4">
-                        <label for="plink-star4">★</label>
-                        <input type="radio" id="plink-star3" name="plink-rating" value="3">
-                        <label for="plink-star3">★</label>
-                        <input type="radio" id="plink-star2" name="plink-rating" value="2">
-                        <label for="plink-star2">★</label>
-                        <input type="radio" id="plink-star1" name="plink-rating" value="1">
-                        <label for="plink-star1">★</label>
-                    </div>
-                    <div class="favorite">
-                        <button onclick="toggleFavorite(this)">Favorite</button>
-                    </div>
-                    <a href="/css/CSS/plink/plink.css" download="plink.css">Download</a>
+            <div class="css-card" data-filters="black">
+                <img src="css/CSS/Grey/image_2025-02-03_201339055.png" alt="Grey Preview">
+                <h2>Grey</h2>
+                <div class="rating">
+                    <input type="radio" id="grey-star5" name="grey-rating" value="5">
+                    <label for="grey-star5">★</label>
+                    <input type="radio" id="grey-star4" name="grey-rating" value="4">
+                    <label for="grey-star4">★</label>
+                    <input type="radio" id="grey-star3" name="grey-rating" value="3">
+                    <label for="grey-star3">★</label>
+                    <input type="radio" id="grey-star2" name="grey-rating" value="2">
+                    <label for="grey-star2">★</label>
+                    <input type="radio" id="grey-star1" name="grey-rating" value="1">
+                    <label for="grey-star1">★</label>
                 </div>
-
-                <div class="css-card" data-filters="pink,white">
-                    <img src="css/CSS/UwU/image_2025-02-03_201655485.png" alt="UwU Preview">
-                    <h2>UwU</h2>
-                    <div class="rating">
-                        <input type="radio" id="uwu-star5" name="uwu-rating" value="5">
-                        <label for="uwu-star5">★</label>
-                        <input type="radio" id="uwu-star4" name="uwu-rating" value="4">
-                        <label for="uwu-star4">★</label>
-                        <input type="radio" id="uwu-star3" name="uwu-rating" value="3">
-                        <label for="uwu-star3">★</label>
-                        <input type="radio" id="uwu-star2" name="uwu-rating" value="2">
-                        <label for="uwu-star2">★</label>
-                        <input type="radio" id="uwu-star1" name="uwu-rating" value="1">
-                        <label for="uwu-star1">★</label>
-                    </div>
-                    <div class="favorite">
-                        <button onclick="toggleFavorite(this)">Favorite</button>
-                    </div>
-                    <a href="/css/CSS/UwU/uwu.css" download="uwu.css">Download</a>
+                <div class="favorite">
+                    <button onclick="toggleFavorite(this)">Favorite</button>
                 </div>
+                <a href="/css/CSS/Grey/grey.css" download="grey.css">Download</a>
+            </div>
 
-                <div class="css-card" data-filters="purple">
-                    <img src="css/CSS/Wolfey/image_2025-02-03_204500385.png" alt="Wolfey Preview">
-                    <h2>Wolfey</h2>
-                    <div class="rating">
-                        <input type="radio" id="wolfey-star5" name="wolfey-rating" value="5">
-                        <label for="wolfey-star5">★</label>
-                        <input type="radio" id="wolfey-star4" name="wolfey-rating" value="4">
-                        <label for="wolfey-star4">★</label>
-                        <input type="radio" id="wolfey-star3" name="wolfey-rating" value="3">
-                        <label for="wolfey-star3">★</label>
-                        <input type="radio" id="wolfey-star2" name="wolfey-rating" value="2">
-                        <label for="wolfey-star2">★</label>
-                        <input type="radio" id="wolfey-star1" name="wolfey-rating" value="1">
-                        <label for="wolfey-star1">★</label>
-                    </div>
-                    <div class="favorite">
-                        <button onclick="toggleFavorite(this)">Favorite</button>
-                    </div>
-                    <a href="/css/CSS/Wolfey/Wolfey.css" download="Wolfey.css">Download</a>
+            <div class="css-card" data-filters="blue">
+                <img src="css/CSS/hover/image_2025-02-03_203642444.png" alt="hover Preview">
+                <h2>hover</h2>
+                <div class="rating">
+                    <input type="radio" id="hover-star5" name="hover-rating" value="5">
+                    <label for="hover-star5">★</label>
+                    <input type="radio" id="hover-star4" name="hover-rating" value="4">
+                    <label for="hover-star4">★</label>
+                    <input type="radio" id="hover-star3" name="hover-rating" value="3">
+                    <label for="hover-star3">★</label>
+                    <input type="radio" id="hover-star2" name="hover-rating" value="2">
+                    <label for="hover-star2">★</label>
+                    <input type="radio" id="hover-star1" name="hover-rating" value="1">
+                    <label for="hover-star1">★</label>
                 </div>
-
-                <div class="css-card" data-filters="black,white">
-                    <img src="css/CSS/Zenith/image_2025-02-03_201151720.png" alt="Zenith Preview">
-                    <h2>Zenith</h2>
-                    <div class="rating">
-                        <input type="radio" id="zenith-star5" name="zenith-rating" value="5">
-                        <label for="zenith-star5">★</label>
-                        <input type="radio" id="zenith-star4" name="zenith-rating" value="4">
-                        <label for="zenith-star4">★</label>
-                        <input type="radio" id="zenith-star3" name="zenith-rating" value="3">
-                        <label for="zenith-star3">★</label>
-                        <input type="radio" id="zenith-star2" name="zenith-rating" value="2">
-                        <label for="zenith-star2">★</label>
-                        <input type="radio" id="zenith-star1" name="zenith-rating" value="1">
-                        <label for="zenith-star1">★</label>
-                    </div>
-                    <div class="favorite">
-                        <button onclick="toggleFavorite(this)">Favorite</button>
-                    </div>
-                    <a href="/css/CSS/Zenith/Zenith.css" download="Zenith.css">Download</a>
+                <div class="favorite">
+                    <button onclick="toggleFavorite(this)">Favorite</button>
                 </div>
+                <a href="/css/CSS/hover/hover.css" download="hover.css">Download</a>
+            </div>
 
-                <div class="css-card" data-filters="black,white">
-                    <img src="css/CSS/blackandwhite/Screenshot 2025-04-01 185127.png" alt="Black & White Preview">
-                    <h2>Black & White</h2>
-                    <div class="rating">
-                        <input type="radio" id="blackandwhite-star5" name="blackandwhite-rating" value="5">
-                        <label for="blackandwhite-star5">★</label>
-                        <input type="radio" id="blackandwhite-star4" name="blackandwhite-rating" value="4">
-                        <label for="blackandwhite-star4">★</label>
-                        <input type="radio" id="blackandwhite-star3" name="blackandwhite-rating" value="3">
-                        <label for="blackandwhite-star3">★</label>
-                        <input type="radio" id="blackandwhite-star2" name="blackandwhite-rating" value="2">
-                        <label for="blackandwhite-star2">★</label>
-                        <input type="radio" id="blackandwhite-star1" name="blackandwhite-rating" value="1">
-                        <label for="blackandwhite-star1">★</label>
-                    </div>
-                    <div class="favorite">
-                        <button onclick="toggleFavorite(this)">Favorite</button>
-                    </div>
-                    <a href="/css/CSS/blackandwhite/blackandwhite.css" download="blackandwhite.css">Download</a>
+            <div class="css-card" data-filters="red,white,pink">
+                <img src="css/CSS/Japan-Town/image_2025-02-03_193717030.png" alt="Japan Town Preview">
+                <h2>Japan Town</h2>
+                <div class="rating">
+                    <input type="radio" id="japan-town-star5" name="japan-town-rating" value="5">
+                    <label for="japan-town-star5">★</label>
+                    <input type="radio" id="japan-town-star4" name="japan-town-rating" value="4">
+                    <label for="japan-town-star4">★</label>
+                    <input type="radio" id="japan-town-star3" name="japan-town-rating" value="3">
+                    <label for="japan-town-star3">★</label>
+                    <input type="radio" id="japan-town-star2" name="japan-town-rating" value="2">
+                    <label for="japan-town-star2">★</label>
+                    <input type="radio" id="japan-town-star1" name="japan-town-rating" value="1">
+                    <label for="japan-town-star1">★</label>
                 </div>
-
-                <div class="css-card" data-filters="blue,white,black">
-                    <img src="css/CSS/glaive/Screenshot 2025-04-01 185330.png" alt="glaive Preview">
-                    <h2>glaive</h2>
-                    <div class="rating">
-                        <input type="radio" id="glaive-star5" name="glaive-rating" value="5">
-                        <label for="glaive-star5">★</label>
-                        <input type="radio" id="glaive-star4" name="glaive-rating" value="4">
-                        <label for="glaive-star4">★</label>
-                        <input type="radio" id="glaive-star3" name="glaive-rating" value="3">
-                        <label for="glaive-star3">★</label>
-                        <input type="radio" id="glaive-star2" name="glaive-rating" value="2">
-                        <label for="glaive-star2">★</label>
-                        <input type="radio" id="glaive-star1" name="glaive-rating" value="1">
-                        <label for="glaive-star1">★</label>
-                    </div>
-                    <div class="favorite">
-                        <button onclick="toggleFavorite(this)">Favorite</button>
-                    </div>
-                    <a href="/css/CSS/glaive/glaive.css" download="glaive.css">Download</a>
+                <div class="favorite">
+                    <button onclick="toggleFavorite(this)">Favorite</button>
                 </div>
+                <a href="/css/CSS/Japan-Town/japan-town.css" download="japan-town.css">Download</a>
+            </div>
 
-                <div class="css-card" data-filters="red,white,pink">
-                    <img src="css/CSS/ayaka-and-ganyu/Screenshot 2025-04-13 221506.png" alt="ayaka & ganyu Preview">
-                    <h2>ayaka & ganyu</h2>
-                    <div class="rating">
-                        <input type="radio" id="ayaka-ganyu-star5" name="ayaka-ganyu-rating" value="5">
-                        <label for="ayaka-ganyu-star5">★</label>
-                        <input type="radio" id="ayaka-ganyu-star4" name="ayaka-ganyu-rating" value="4">
-                        <label for="ayaka-ganyu-star4">★</label>
-                        <input type="radio" id="ayaka-ganyu-star3" name="ayaka-ganyu-rating" value="3">
-                        <label for="ayaka-ganyu-star3">★</label>
-                        <input type="radio" id="ayaka-ganyu-star2" name="ayaka-ganyu-rating" value="2">
-                        <label for="ayaka-ganyu-star2">★</label>
-                        <input type="radio" id="ayaka-ganyu-star1" name="ayaka-ganyu-rating" value="1">
-                        <label for="ayaka-ganyu-star1">★</label>
-                    </div>
-                    <div class="favorite">
-                        <button onclick="toggleFavorite(this)">Favorite</button>
-                    </div>
-                    <a href="/css/CSS/ayaka-and-ganyu/ayaka-ganyu.css" download="ayaka-ganyu.css">Download</a>
+            <div class="css-card" data-filters="blue,black">
+                <img src="css/CSS/Jett/image_2025-02-03_203940844.png" alt="jett Preview">
+                <h2>jett</h2>
+                <div class="rating">
+                    <input type="radio" id="jett-star5" name="jett-rating" value="5">
+                    <label for="jett-star5">★</label>
+                    <input type="radio" id="jett-star4" name="jett-rating" value="4">
+                    <label for="jett-star4">★</label>
+                    <input type="radio" id="jett-star3" name="jett-rating" value="3">
+                    <label for="jett-star3">★</label>
+                    <input type="radio" id="jett-star2" name="jett-rating" value="2">
+                    <label for="jett-star2">★</label>
+                    <input type="radio" id="jett-star1" name="jett-rating" value="1">
+                    <label for="jett-star1">★</label>
                 </div>
-
-                <div class="css-card" data-filters="blue">
-                    <img src="css/CSS/enwa/Screenshot 2025-04-13 221849.png" alt="enwa Preview">
-                    <h2>enwa</h2>
-                    <div class="rating">
-                        <input type="radio" id="enwa-star5" name="enwa-rating" value="5">
-                        <label for="enwa-star5">★</label>
-                        <input type="radio" id="enwa-star4" name="enwa-rating" value="4">
-                        <label for="enwa-star4">★</label>
-                        <input type="radio" id="enwa-star3" name="enwa-rating" value="3">
-                        <label for="enwa-star3">★</label>
-                        <input type="radio" id="enwa-star2" name="enwa-rating" value="2">
-                        <label for="enwa-star2">★</label>
-                        <input type="radio" id="enwa-star1" name="enwa-rating" value="1">
-                        <label for="enwa-star1">★</label>
-                    </div>
-                    <div class="favorite">
-                        <button onclick="toggleFavorite(this)">Favorite</button>
-                    </div>
-                    <a href="/css/CSS/enwa/enwa.css" download="enwa.css">Download</a>
+                <div class="favorite">
+                    <button onclick="toggleFavorite(this)">Favorite</button>
                 </div>
+                <a href="/css/CSS/Jett/jett.css" download="jett.css">Download</a>
+            </div>
 
-            </section>
-        </main>
-    </div>
+            <div class="css-card" data-filters="pink,white">
+                <img src="css/CSS/pink/image_2025-02-03_204325675.png" alt="pink Preview">
+                <h2>pink</h2>
+                <div class="rating">
+                    <input type="radio" id="pink-star5" name="pink-rating" value="5">
+                    <label for="pink-star5">★</label>
+                    <input type="radio" id="pink-star4" name="pink-rating" value="4">
+                    <label for="pink-star4">★</label>
+                    <input type="radio" id="pink-star3" name="pink-rating" value="3">
+                    <label for="pink-star3">★</label>
+                    <input type="radio" id="pink-star2" name="pink-rating" value="2">
+                    <label for="pink-star2">★</label>
+                    <input type="radio" id="pink-star1" name="pink-rating" value="1">
+                    <label for="pink-star1">★</label>
+                </div>
+                <div class="favorite">
+                    <button onclick="toggleFavorite(this)">Favorite</button>
+                </div>
+                <a href="/css/CSS/pink/pink.css" download="pink.css">Download</a>
+            </div>
+
+            <div class="css-card" data-filters="purple,blue,black">
+                <img src="css/CSS/plink/image_2025-02-03_201459409.png" alt="plink Preview">
+                <h2>plink</h2>
+                <div class="rating">
+                    <input type="radio" id="plink-star5" name="plink-rating" value="5">
+                    <label for="plink-star5">★</label>
+                    <input type="radio" id="plink-star4" name="plink-rating" value="4">
+                    <label for="plink-star4">★</label>
+                    <input type="radio" id="plink-star3" name="plink-rating" value="3">
+                    <label for="plink-star3">★</label>
+                    <input type="radio" id="plink-star2" name="plink-rating" value="2">
+                    <label for="plink-star2">★</label>
+                    <input type="radio" id="plink-star1" name="plink-rating" value="1">
+                    <label for="plink-star1">★</label>
+                </div>
+                <div class="favorite">
+                    <button onclick="toggleFavorite(this)">Favorite</button>
+                </div>
+                <a href="/css/CSS/plink/plink.css" download="plink.css">Download</a>
+            </div>
+
+            <div class="css-card" data-filters="pink,white">
+                <img src="css/CSS/UwU/image_2025-02-03_201655485.png" alt="UwU Preview">
+                <h2>UwU</h2>
+                <div class="rating">
+                    <input type="radio" id="uwu-star5" name="uwu-rating" value="5">
+                    <label for="uwu-star5">★</label>
+                    <input type="radio" id="uwu-star4" name="uwu-rating" value="4">
+                    <label for="uwu-star4">★</label>
+                    <input type="radio" id="uwu-star3" name="uwu-rating" value="3">
+                    <label for="uwu-star3">★</label>
+                    <input type="radio" id="uwu-star2" name="uwu-rating" value="2">
+                    <label for="uwu-star2">★</label>
+                    <input type="radio" id="uwu-star1" name="uwu-rating" value="1">
+                    <label for="uwu-star1">★</label>
+                </div>
+                <div class="favorite">
+                    <button onclick="toggleFavorite(this)">Favorite</button>
+                </div>
+                <a href="/css/CSS/UwU/uwu.css" download="uwu.css">Download</a>
+            </div>
+
+            <div class="css-card" data-filters="purple">
+                <img src="css/CSS/Wolfey/image_2025-02-03_204500385.png" alt="Wolfey Preview">
+                <h2>Wolfey</h2>
+                <div class="rating">
+                    <input type="radio" id="wolfey-star5" name="wolfey-rating" value="5">
+                    <label for="wolfey-star5">★</label>
+                    <input type="radio" id="wolfey-star4" name="wolfey-rating" value="4">
+                    <label for="wolfey-star4">★</label>
+                    <input type="radio" id="wolfey-star3" name="wolfey-rating" value="3">
+                    <label for="wolfey-star3">★</label>
+                    <input type="radio" id="wolfey-star2" name="wolfey-rating" value="2">
+                    <label for="wolfey-star2">★</label>
+                    <input type="radio" id="wolfey-star1" name="wolfey-rating" value="1">
+                    <label for="wolfey-star1">★</label>
+                </div>
+                <div class="favorite">
+                    <button onclick="toggleFavorite(this)">Favorite</button>
+                </div>
+                <a href="/css/CSS/Wolfey/Wolfey.css" download="Wolfey.css">Download</a>
+            </div>
+
+            <div class="css-card" data-filters="black,white">
+                <img src="css/CSS/Zenith/image_2025-02-03_201151720.png" alt="Zenith Preview">
+                <h2>Zenith</h2>
+                <div class="rating">
+                    <input type="radio" id="zenith-star5" name="zenith-rating" value="5">
+                    <label for="zenith-star5">★</label>
+                    <input type="radio" id="zenith-star4" name="zenith-rating" value="4">
+                    <label for="zenith-star4">★</label>
+                    <input type="radio" id="zenith-star3" name="zenith-rating" value="3">
+                    <label for="zenith-star3">★</label>
+                    <input type="radio" id="zenith-star2" name="zenith-rating" value="2">
+                    <label for="zenith-star2">★</label>
+                    <input type="radio" id="zenith-star1" name="zenith-rating" value="1">
+                    <label for="zenith-star1">★</label>
+                </div>
+                <div class="favorite">
+                    <button onclick="toggleFavorite(this)">Favorite</button>
+                </div>
+                <a href="/css/CSS/Zenith/Zenith.css" download="Zenith.css">Download</a>
+            </div>
+
+            <div class="css-card" data-filters="black,white">
+                <img src="css/CSS/blackandwhite/Screenshot 2025-04-01 185127.png" alt="Black & White Preview">
+                <h2>Black & White</h2>
+                <div class="rating">
+                    <input type="radio" id="blackandwhite-star5" name="blackandwhite-rating" value="5">
+                    <label for="blackandwhite-star5">★</label>
+                    <input type="radio" id="blackandwhite-star4" name="blackandwhite-rating" value="4">
+                    <label for="blackandwhite-star4">★</label>
+                    <input type="radio" id="blackandwhite-star3" name="blackandwhite-rating" value="3">
+                    <label for="blackandwhite-star3">★</label>
+                    <input type="radio" id="blackandwhite-star2" name="blackandwhite-rating" value="2">
+                    <label for="blackandwhite-star2">★</label>
+                    <input type="radio" id="blackandwhite-star1" name="blackandwhite-rating" value="1">
+                    <label for="blackandwhite-star1">★</label>
+                </div>
+                <div class="favorite">
+                    <button onclick="toggleFavorite(this)">Favorite</button>
+                </div>
+                <a href="/css/CSS/blackandwhite/blackandwhite.css" download="blackandwhite.css">Download</a>
+            </div>
+
+            <div class="css-card" data-filters="blue,white,black">
+                <img src="css/CSS/glaive/Screenshot 2025-04-01 185330.png" alt="glaive Preview">
+                <h2>glaive</h2>
+                <div class="rating">
+                    <input type="radio" id="glaive-star5" name="glaive-rating" value="5">
+                    <label for="glaive-star5">★</label>
+                    <input type="radio" id="glaive-star4" name="glaive-rating" value="4">
+                    <label for="glaive-star4">★</label>
+                    <input type="radio" id="glaive-star3" name="glaive-rating" value="3">
+                    <label for="glaive-star3">★</label>
+                    <input type="radio" id="glaive-star2" name="glaive-rating" value="2">
+                    <label for="glaive-star2">★</label>
+                    <input type="radio" id="glaive-star1" name="glaive-rating" value="1">
+                    <label for="glaive-star1">★</label>
+                </div>
+                <div class="favorite">
+                    <button onclick="toggleFavorite(this)">Favorite</button>
+                </div>
+                <a href="/css/CSS/glaive/glaive.css" download="glaive.css">Download</a>
+            </div>
+
+            <div class="css-card" data-filters="red,white,pink">
+                <img src="css/CSS/ayaka-and-ganyu/Screenshot 2025-04-13 221506.png" alt="ayaka & ganyu Preview">
+                <h2>ayaka & ganyu</h2>
+                <div class="rating">
+                    <input type="radio" id="ayaka-ganyu-star5" name="ayaka-ganyu-rating" value="5">
+                    <label for="ayaka-ganyu-star5">★</label>
+                    <input type="radio" id="ayaka-ganyu-star4" name="ayaka-ganyu-rating" value="4">
+                    <label for="ayaka-ganyu-star4">★</label>
+                    <input type="radio" id="ayaka-ganyu-star3" name="ayaka-ganyu-rating" value="3">
+                    <label for="ayaka-ganyu-star3">★</label>
+                    <input type="radio" id="ayaka-ganyu-star2" name="ayaka-ganyu-rating" value="2">
+                    <label for="ayaka-ganyu-star2">★</label>
+                    <input type="radio" id="ayaka-ganyu-star1" name="ayaka-ganyu-rating" value="1">
+                    <label for="ayaka-ganyu-star1">★</label>
+                </div>
+                <div class="favorite">
+                    <button onclick="toggleFavorite(this)">Favorite</button>
+                </div>
+                <a href="/css/CSS/ayaka-and-ganyu/ayaka-ganyu.css" download="ayaka-ganyu.css">Download</a>
+            </div>
+
+            <div class="css-card" data-filters="blue">
+                <img src="css/CSS/enwa/Screenshot 2025-04-13 221849.png" alt="enwa Preview">
+                <h2>enwa</h2>
+                <div class="rating">
+                    <input type="radio" id="enwa-star5" name="enwa-rating" value="5">
+                    <label for="enwa-star5">★</label>
+                    <input type="radio" id="enwa-star4" name="enwa-rating" value="4">
+                    <label for="enwa-star4">★</label>
+                    <input type="radio" id="enwa-star3" name="enwa-rating" value="3">
+                    <label for="enwa-star3">★</label>
+                    <input type="radio" id="enwa-star2" name="enwa-rating" value="2">
+                    <label for="enwa-star2">★</label>
+                    <input type="radio" id="enwa-star1" name="enwa-rating" value="1">
+                    <label for="enwa-star1">★</label>
+                </div>
+                <div class="favorite">
+                    <button onclick="toggleFavorite(this)">Favorite</button>
+                </div>
+                <a href="/css/CSS/enwa/enwa.css" download="enwa.css">Download</a>
+            </div>
+
+        </section>
+    </main>
 
     <footer>
         <p>I, Daymian, am not affiliated with Kirka (Kirka.io), nor were these CSS files created by other people. These
@@ -607,35 +528,7 @@
             Discord (@d4ym1an) and provide proof of ownership.</p>
     </footer>
 
-    <script>
-        function toggleFavorite(button) {
-            button.classList.toggle('active');
-            button.textContent = button.classList.contains('active') ? 'Favorited' : 'Favorite';
-        }
-
-        function filterCSS() {
-            const search = document.getElementById('search').value.toLowerCase();
-            const cards = document.querySelectorAll('.css-card');
-            cards.forEach(card => {
-                const title = card.querySelector('h2').textContent.toLowerCase();
-                card.style.display = title.includes(search) ? '' : 'none';
-            });
-        }
-
-        function filterByColor() {
-            const color = document.getElementById('color-select').value;
-            const cards = document.querySelectorAll('.css-card');
-            cards.forEach(card => {
-                const filters = card.getAttribute('data-filters').split(', ');
-                card.style.display = color === '' || filters.includes(color) ? '' : 'none';
-            });
-        }
-
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('closed');
-        }
-    </script>
+    <script src="app.js"></script>
 </body>
 
 </html>

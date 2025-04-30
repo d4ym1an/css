@@ -1,13 +1,255 @@
-@import url(fonts/stylesheet.css);
+@import url('fonts/stylesheet.css');
 
+/* General Reset and Base */
 * {
-    scrollbar-width: thin;
-    scrollbar-color: #3c4b68 rgba(0, 0, 0, .4);
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #3c4b68 rgba(0, 0, 0, 0.4);
 }
 
-::selection{
-    background: #000000;
-    color: #ffb914;
+html, body {
+    font-family: 'Poppins', 'Inter', sans-serif;
+    line-height: 1.5;
+    background-color: #000000; /* Black as the main background color */
+    color: var(--primary); /* White text */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0; /* Ensure no extra margin around the body */
+    padding: 0; /* Remove any default padding */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Theme Variables */
+:root {
+    --primary: #ffffff; /* White for text and highlights */
+    --secondary: #cccccc; /* Light gray for secondary text */
+    --card-bg: #000000; /* Dark gray for cards */
+    --accent: #ffffff; /* White for accents */
+    --hover: #333333; /* Slightly lighter black for hover effects */
+    --shadow: rgba(255, 255, 255, 0.1); /* Light shadow */
+    --highlight: #ffffff; /* White for icons and highlights */
+    --btn-bg: #333333; /* Dark gray for buttons */
+    --btn-hover: #555555; /* Lighter gray for button hover */
+}
+
+/* Header */
+.headerText {
+    text-align: center;
+    padding: 40px 20px;
+    padding-top: 20px; /* Reduce padding at the top */
+}
+
+.headerText h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #ffffff, #cccccc); /* White gradient for text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.headerText p {
+    color: var(--secondary);
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Card Grid */
+#css-files {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+/* Cards */
+.css-card {
+    background-color: var(--highlight); /* Dark gray for card background */
+    box-shadow: 0 8px 24px var(--shadow);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.css-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(255, 255, 255, 0.2); /* Light shadow on hover */
+}
+
+.css-card img {
+    max-width: 100%;
+    margin-bottom: 16px;
+}
+
+.css-card h2 {
+    font-size: 1.4rem;
+    color: var(--card-bg);
+    margin-bottom: 10px;
+}
+
+.css-card p {
+    color: var(--card-bg);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.css-card button {
+    background-color: var(--btn-bg);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.css-card button:hover {
+    background-color: var(--btn-hover);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111111; /* Slightly lighter black for footer */
+    color: var(--secondary); /* Light gray text */
+    font-size: 0.85rem;
+    border-top: 1px solid #333;
+}
+
+/* Selection */
+::selection {
+    background: #ffffff; /* White selection background */
+    color: #000000; /* Black text for selection */
+}
+
+/* Sidebar */
+#sidebar{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 250px;
+    padding: 5px 1em;
+    background: linear-gradient(to bottom, #000000, rgb(49, 49, 49)); /* Gradient from black to dark gray */
+    border-right: 1px solid var(--line-clr);
+  
+    position: sticky;
+    top: 0;
+    align-self: start;
+    transition: 300ms ease-in-out;
+    overflow: hidden;
+    text-wrap: nowrap;
+  }
+  #sidebar.close{
+    padding: 5px;
+    width: 60px;
+  }
+  #sidebar ul{
+    list-style: none;
+  }
+  #sidebar > ul > li:first-child{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+    .logo{
+      font-weight: 600;
+    }
+  }
+  #sidebar ul li.active a{
+    color: var(--btn-hover);
+  
+    svg{
+      fill: var(--btn-hover);
+    }
+  }
+  
+  #sidebar a, #sidebar .dropdown-btn, #sidebar .logo{
+    border-radius: .5em;
+    padding: .85em;
+    text-decoration: none;
+    color: var(--primary); /* White text */
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+  .dropdown-btn{
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+  }
+  #sidebar svg{
+    flex-shrink: 0;
+    fill: var(--highlight);
+  }
+  #sidebar a span, #sidebar .dropdown-btn span{
+    flex-grow: 1;
+  }
+  #sidebar a:hover, #sidebar .dropdown-btn:hover, #sidebar svg:hover {
+    background-color: white;
+    color: var(--card-bg);
+    fill: var(--card-bg);
+    transition: 200ms ease-in-out;
+  }
+  #sidebar .sub-menu{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 300ms ease-in-out;
+  
+    > div{
+      overflow: hidden;
+    }
+  }
+  #sidebar .sub-menu.show{
+    grid-template-rows: 1fr;
+  }
+  .dropdown-btn svg{
+    transition: 200ms ease;
+  }
+  .rotate svg:last-child{
+    rotate: 180deg;
+  }
+  #sidebar .sub-menu a{
+    padding-left: 2em;
+  }
+  #toggle-btn{
+    margin-left: auto;
+    padding: 1em;
+    border: none;
+    border-radius: .5em;
+    background: none;
+    cursor: pointer;
+  
+    svg{
+      transition: rotate 150ms ease;
+    }
+  }
+
+#sidebarText.close {
+    display: none; /* Hide text when sidebar is closed */
+}
+
+header {
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+main {
+    margin-left: 250px;
+    margin-top: 0; /* Ensure no extra space above the main content */
+    flex: 1;
+    padding: 40px;
+    transition: margin-left 0.3s ease;
+    padding-top: 0; /* Remove padding at the top of the main content */
+}
+
+#sidebar.close + main {
+    margin-left: 60px;
 }
