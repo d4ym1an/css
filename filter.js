@@ -1,27 +1,27 @@
 function filterCSS() {
     const query = document.getElementById('search').value.toLowerCase();
-    const parts = document.querySelectorAll('.part');
+    const cards = document.querySelectorAll('.css-card');
 
-    parts.forEach(part => {
-        const title = part.querySelector('h2').textContent.toLowerCase();
+    cards.forEach(card => {
+        const title = card.querySelector('h2').textContent.toLowerCase();
         if (title.includes(query)) {
-            part.style.display = '';
+            card.style.display = '';
         } else {
-            part.style.display = 'none';
+            card.style.display = 'none';
         }
     });
 }
 
 function filterByColor() {
     const selectedColor = document.getElementById('color-select').value.toLowerCase();
-    const parts = document.querySelectorAll('.part');
+    const cards = document.querySelectorAll('.css-card');
 
-    parts.forEach(part => {
-        const filters = part.getAttribute('data-filters').split(',');
+    cards.forEach(card => {
+        const filters = card.getAttribute('data-filters').toLowerCase().split(',');
         if (!selectedColor || filters.includes(selectedColor)) {
-            part.style.display = '';
+            card.style.display = '';
         } else {
-            part.style.display = 'none';
+            card.style.display = 'none';
         }
     });
 }
