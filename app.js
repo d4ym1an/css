@@ -29,3 +29,36 @@ function closeAllSubMenus(){
     ul.previousElementSibling.classList.remove('rotate')
   })
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  loadRatings();
+
+  document.querySelectorAll('.rating input').forEach(input => {
+    input.addEventListener('change', async (event) => {
+      const card = event.target.closest('.css-card');
+      const cssId = card.dataset.id;
+      const rating = event.target.value;
+
+      // Send the rating to the backend
+      await fetch('/api/rate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: cssId, rating: parseInt(rating) })
+      });
+
+      // Reload ratings after submission
+      loadRatings();
+    });
+  });
+});
+
+async function loadRatings() {
+  const response = await fetch('/api/ratings');
+  const ratings = await response.json();
+
+  document.querySelectorAll('.css-card').forEach(card => {
+    const cssId = card.dataset.id;
+    const averageRating = ratings[cssId]?.average || 0;
+    card.querySelector('.average-rating span').textContent = averageRating.toFixed(1);
+  });
+}

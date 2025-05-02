@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         copy.addEventListener("mouseleave", hidePopup);
         copy.addEventListener("click", () => {
             copyToClipboard(copy.dataset["url"]);
+            showPopup(copy, "CSS copied to clipboard!");
         });
     });
 
@@ -39,10 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });    creds.addEventListener("mouseleave", hidePopup);
     });
 
-    cred.forEach((favorites) => {
-        favorites.addEventListener("mouseenter", () => {
-            showPopup(favorites, "Favorite this CSS");
-        });    favorites.addEventListener("mouseleave", hidePopup);
+    favorites.forEach((favorite) => {
+        favorite.addEventListener("mouseenter", () => {
+            showPopup(favorite, "Favorite this CSS");
+        });    
+        favorite.addEventListener("mouseleave", hidePopup);
     });
 
     favoriteButtons.forEach((button) => {
@@ -76,6 +78,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function showPopup(element, message) {
+    // Remove any existing popup for this element to prevent duplicates
+    hidePopup({ target: element });
+
     const popup = document.createElement("div");
     popup.className = "popup";
     popup.innerHTML = message;
@@ -90,29 +95,33 @@ function showPopup(element, message) {
     popup.style.top = `${rect.bottom + window.scrollY + 10}px`; // Position below the element with some spacing
     popup.style.zIndex = "1000";
 
+    // Associate the popup with the element
+    element.dataset.popupId = popup.className;
+
     // Add the 'show' class to make the popup visible
     requestAnimationFrame(() => {
         popup.classList.add("show");
     });
 }
 
-function hidePopup() {
-    const popup = document.querySelector(".popup");
+function hidePopup(event) {
+    const element = event.target;
+    const popup = document.querySelector(`.${element.dataset.popupId}`);
     if (popup) {
-        popup.classList.remove("show");
-        popup.addEventListener("transitionend", () => popup.remove(), { once: true });
+        popup.remove(); // Immediately remove the popup to prevent lingering
+        delete element.dataset.popupId; // Clean up the association
     }
 }
 
-function copyToClipboard(text) {
-    navigator.clipboard.writeText(text).then(
-        () => {
-            alert("Copied CSS to clipboard!");
-        }, () => {
-            alert("Failed to copy CSS!");
-        }
-    );
-}
+// function copyToClipboard(text) {
+//     navigator.clipboard.writeText(text).then(
+//         () => {
+//             alert("Copied CSS to clipboard!");
+//         }, () => {
+//             alert("Failed to copy CSS!");
+//         }
+//     );
+// }
 
 
 // Stolen From CarrySheriff <333333333
