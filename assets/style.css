@@ -1,11 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-:root{
+@keyframes moveInCircle {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  50% {
+      transform: rotate(180deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes moveVertical {
+  0% {
+      transform: translateY(0%);
+  }
+
+  50% {
+      transform: translateY(100px);
+  }
+
+  100% {
+      transform: translateY(0%);
+  }
+}
+
+@keyframes moveHorizontal {
+  0% {
+      transform: translateX(0%) translateY(-5%);
+  }
+
+  50% {
+      transform: translateX(40%) translateY(5%);
+  }
+
+  100% {
+      transform: translateX(0%) translateY(-5%);
+  }
+}
+
+@keyframes fallDown {
+  0% {
+      top: -20%;
+      opacity: 0;
+  }
+
+  100% {
+      top: 0%;
+      opacity: 1;
+  }
+}
+
+:root {
   --base-clr: #000000;
   --line-clr: #42434a;
   --hover-clr: #222533;
   --text-clr: #ffffff;
   --accent-clr: #415bab;
   --secondary-text-clr: #b0b3c1;
+  --circle-size: 50%; /* Reduced size */
+  --blending: hard-light;
+  --color-bg1: #000000;
+  --color-bg2: #1b1b1b;
+  --color1: 0, 0, 0;
+  --color2: 41, 128, 185; /* Darker Blue */
+  --color3: 52, 73, 94;   /* Even Darker Blue */
+  --color4: 142, 68, 173; /* Purple */
+  --color5: 44, 62, 80;   /* Deep Blue */
 }
 *{
   margin: 0;
@@ -16,8 +79,10 @@ html{
   line-height: 1.5rem;
 }
 body{
-  min-height: 100vh;
-  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--base-clr);
   color: var(--text-clr);
   display: grid;
@@ -126,6 +191,16 @@ body{
 
 main{
   padding: min(30px, 7%);
+  width: 50%;
+  background-color: rgba(27, 27, 27, 0.8); /* Semi-transparent black */
+  border-radius: 0.5em; /* Optional: Add rounded corners for better aesthetics */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  left: 25%;
+  animation: fallDown 2s ease-out forwards;
 }
 main p{
   color: var(--secondary-text-clr);
@@ -195,6 +270,93 @@ main p{
   border: 3px solid;
   border-image: linear-gradient(to right, #ff932d, #edb846, #d3da5b, #acfa70) 1;
   background: #222533;
+}
+
+.gradient-bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+  top: 0;
+  left: 0;
+  z-index: -2; /* Lower z-index to ensure it stays behind all content */
+}
+
+.gradients-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  filter: url(#goo);
+}
+
+.gradients-container div {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0.8;
+  transition: transform 0.2s ease-out;
+}
+
+.g1 {
+  background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: 20%;
+  left: 15%;
+  animation: moveVertical 30s ease infinite;
+  opacity: 0.9;
+}
+
+.g2 {
+  background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: 60%;
+  left: 50%;
+  transform-origin: calc(50% - 400px);
+  animation: moveInCircle 20s reverse infinite;
+  opacity: 0.8;
+}
+
+.g3 {
+  background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: 40%;
+  left: 80%;
+  transform-origin: calc(50% + 400px);
+  animation: moveInCircle 40s linear infinite;
+  opacity: 0.85;
+}
+
+.g4 {
+  background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: 5%;
+  left: 25%;
+  transform-origin: calc(50% - 200px);
+  animation: moveHorizontal 40s ease infinite;
+  opacity: 0.75;
+}
+
+.g5 {
+  background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+  width: calc(var(--circle-size) * 1.2); /* Slightly larger for variation */
+  height: calc(var(--circle-size) * 1.2);
+  top: 30%;
+  left: 90%;
+  transform-origin: calc(50% - 800px) calc(50% + 200px);
+  animation: moveInCircle 20s ease infinite;
+  opacity: 0.8;
+}
+
+.gradients-container {
+  filter: url(#goo) blur(40px);
+  width: 100%;
+  height: 100%;
 }
 
 @media(max-width: 800px){

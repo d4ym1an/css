@@ -249,10 +249,6 @@ main p {
 
 }
 
-.hero p {
-    width: 50%;
-    line-height: 1.5em;
-}
 
 .hero a {
     padding: 1em 2em;
@@ -434,6 +430,19 @@ main p {
   font-weight: bold;
   cursor: pointer;
   color: #333;
+}
+
+.hero .execption{
+    background-color: transparent;
+    color: #337600;
+    text-decoration: underline;
+    padding: 16px;
+    margin-bottom: 10px;
+}
+
+.hero .execption:hover{
+    background-color: rgb(0, 0, 0);
+    color: #acfa70;
 }
 
 @media(max-width: 800px) {
