@@ -25,8 +25,8 @@
           </svg>
         </button>
       </li>
-      <li>
-        <a href="/index.html">
+      <li class="active">
+        <a href="index.html">
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
             <path
               d="M240-200h120v-200q0-17 11.5-28.5T400-440h160q17 0 28.5 11.5T600-400v200h120v-360L480-740 240-560v360Zm-80 0v-360q0-19 8.5-36t23.5-28l240-180q21-16 48-16t48 16l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H560q-17 0-28.5-11.5T520-160v-200h-80v200q0 17-11.5 28.5T400-120H240q-33 0-56.5-23.5T160-200Zm320-270Z" />
@@ -34,8 +34,8 @@
           <span id="sidebarText">Home</span>
         </a>
       </li>
-      <li class="active">
-        <a href="index.html">
+      <li>
+        <a href="/css">
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
             <path
               d="M520-640v-160q0-17 11.5-28.5T560-840h240q17 0 28.5 11.5T840-800v160q0 17-11.5 28.5T800-600H560q-17 0-28.5-11.5T520-640ZM120-480v-320q0-17 11.5-28.5T160-840h240q17 0 28.5 11.5T440-800v320q0 17-11.5 28.5T400-440H160q-17 0-28.5-11.5T120-480Zm400 320v-320q0-17 11.5-28.5T560-520h240q17 0 28.5 11.5T840-480v320q0 17-11.5 28.5T800-120H560q-17 0-28.5-11.5T520-160Zm-400 0v-160q0-17 11.5-28.5T160-360h240q17 0 28.5 11.5T440-320v160q0 17-11.5 28.5T400-120H160q-17 0-28.5-11.5T120-160Zm80-360h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z" />
@@ -57,9 +57,18 @@
         </button>
         <ul class="sub-menu">
           <div>
-            <li><a href="https://sheriffcarry.github.io/" target="_blank" id="sidebarText">CarrySheriff List</a></li>
-            <li><a href="https://kirkacommunityhub.netlify.app/css" id="sidebarText" target="_blank">Kirka Community
-                Hub</a></li>
+            <li><a href="https://sheriffcarry.github.io/" target="_blank" id="sidebarText">
+                <img src="/imgs/sheriff.png" width="16px" height="16px">
+                <span>CarrySheriff CSS</span>
+              </a></li>
+            <li>
+              <a href="https://kirkacommunityhub.netlify.app/css" id="sidebarText" target="_blank">
+                <img src="/imgs/kAssets.png" alt="Kirka Community Hub Icon"
+                  style="width: 16px; height: 16px; vertical-align: middle;">
+                <span>KCH CSS</span>
+              </a>
+              </a>
+            </li>
           </div>
         </ul>
       </li>
@@ -77,9 +86,18 @@
         </button>
         <ul class="sub-menu">
           <div>
-            <li><a href="https://kirka.lukeskywalk.com/" id="sidebarText">Skywalks Tools</a></li>
-            <li><a href="/assets/index.html" id="sidebarText">Kirka Assets</a></li>
-            <li class="juice"><a href="https://juice.irrvlo.xyz">Juice Client</a></li>
+            <li><a href="https://kirka.lukeskywalk.com/" id="sidebarText">
+                <img src="/imgs/skywalk.png" width="16px" height="16px">
+                <span>Skywalk Kirka Tools</span>
+              </a></li>
+            <li><a href="/assets/index.html" id="sidebarText">
+                <img src="/imgs/kirka-logo.png" width="16px" height="16px">
+                <span>Kirka Assets</span>
+              </a></li>
+            <li class="juice"><a href="https://juice.irrvlo.xyz">
+                <img src="/imgs/juice.png" width="16px" height="16px">
+                <span>Juice Client</span>
+              </a></li>
           </div>
         </ul>
       </li>
@@ -98,9 +116,9 @@
     <header>
       <div class="headerText">
         <div class="header">
-        <h1>Free Kirka CSS Files</h1>
-        <img src="/imgs/icon.png" alt="Kirka Icon" class="logo">
-      </div>
+          <h1>Free Kirka CSS Files</h1>
+          <img src="/imgs/icon.png" alt="Kirka Icon" class="logo">
+        </div>
         <p><strong>Feel free to fix any of the CSS and send it to me via Discord (@d4ym1an). Once tested, I will
             compensate you with 10,000 coins.</strong></p>
         <p>CSS being loaded into <a href="https://juice.irrvlo.xyz" target="_blank" rel="noopener noreferrer"
@@ -135,7 +153,7 @@
 
     <section id="css-files">
       <div class="css-card" data-id="5hours" data-filters="black, grey">
-        <img src="/css/CSS/5hours/image_2025-02-03_193406064.png" alt="5hours Preview">
+        <img src="/css/CSS/5hours/image_2025-02-03_193406064.png" alt="5hours Preview" onclick="openCarousel(this)">
         <h2>5hours</h2>
         <div class="rating">
           <input type="radio" id="5hours-star1" name="5hours-rating" value="1">
@@ -150,7 +168,7 @@
           <label for="5hours-star5">★</label>
         </div>
         <p class="average-rating">Average Rating: <span>0</span></p>
-        <div class="buttons" >
+        <div class="buttons">
           <button class="favorite" onclick="toggleFavorite(this)">
             <img src="/favorite.svg" alt="Favorite">
           </button>
@@ -165,7 +183,7 @@
       </div>
 
       <div class="css-card" data-id="anime" data-filters="blue">
-        <img src="/css/CSS/anime/animelobby.png" alt="anime Preview">
+        <img src="/css/CSS/anime/animelobby.png" alt="anime Preview" onclick="openCarousel(this)">
         <h2>anime</h2>
         <div class="rating">
           <input type="radio" id="anime-star1" name="anime-rating" value="1">
@@ -180,7 +198,7 @@
           <label for="anime-star5">★</label>
         </div>
         <p class="average-rating">Average Rating: <span>0</span></p>
-        <div class="buttons" >
+        <div class="buttons">
           <button class="favorite" onclick="toggleFavorite(this)">
             <img src="/favorite.svg" alt="Favorite">
           </button>
@@ -195,7 +213,7 @@
       </div>
 
       <div class="css-card" data-id="blue" data-filters="blue">
-        <img src="/css/CSS/Blue/bluelobby.png" alt="blue Preview">
+        <img src="/css/CSS/Blue/bluelobby.png" alt="blue Preview" onclick="openCarousel(this)">
         <h2>blue</h2>
         <div class="rating">
           <input type="radio" id="blue-star1" name="blue-rating" value="1">
@@ -210,7 +228,7 @@
           <label for="blue-star5">★</label>
         </div>
         <p class="average-rating">Average Rating: <span>0</span></p>
-        <div class="buttons" >
+        <div class="buttons">
           <button class="favorite" onclick="toggleFavorite(this)">
             <img src="/favorite.svg" alt="Favorite">
           </button>
@@ -225,7 +243,7 @@
       </div>
 
       <div class="css-card" data-id="egirl" data-filters="pink,white">
-        <img src="/css/CSS/Egirl/egirllobby.png" alt="egirl Preview">
+        <img src="/css/CSS/Egirl/egirllobby.png" alt="egirl Preview" onclick="openCarousel(this)">
         <h2>egirl</h2>
         <div class="rating">
           <input type="radio" id="egirl-star1" name="egirl-rating" value="1">
@@ -240,7 +258,7 @@
           <label for="egirl-star5">★</label>
         </div>
         <p class="average-rating">Average Rating: <span>0</span></p>
-        <div class="buttons" >
+        <div class="buttons">
           <button class="favorite" onclick="toggleFavorite(this)">
             <img src="/favorite.svg" alt="Favorite">
           </button>
@@ -255,7 +273,7 @@
       </div>
 
       <div class="css-card" data-id="green" data-filters="green,black">
-        <img src="/css/CSS/Green/image_2025-02-03_201945486.png" alt="Green Preview">
+        <img src="/css/CSS/Green/image_2025-02-03_201945486.png" alt="Green Preview" onclick="openCarousel(this)">
         <h2>Green</h2>
         <div class="rating">
           <input type="radio" id="green-star1" name="green-rating" value="1">
@@ -270,7 +288,7 @@
           <label for="green-star5">★</label>
         </div>
         <p class="average-rating">Average Rating: <span>0</span></p>
-        <div class="buttons" >
+        <div class="buttons">
           <button class="favorite" onclick="toggleFavorite(this)">
             <img src="/favorite.svg" alt="Favorite">
           </button>
@@ -285,7 +303,7 @@
       </div>
 
       <div class="css-card" data-id="grey" data-filters="black">
-        <img src="/css/CSS/Grey/image_2025-02-03_201339055.png" alt="Grey Preview">
+        <img src="/css/CSS/Grey/image_2025-02-03_201339055.png" alt="Grey Preview" onclick="openCarousel(this)">
         <h2>Grey</h2>
         <div class="rating">
           <input type="radio" id="grey-star1" name="grey-rating" value="1">
@@ -300,7 +318,7 @@
           <label for="grey-star5">★</label>
         </div>
         <p class="average-rating">Average Rating: <span>0</span></p>
-        <div class="buttons" >
+        <div class="buttons">
           <button class="favorite" onclick="toggleFavorite(this)">
             <img src="/favorite.svg" alt="Favorite">
           </button>
@@ -315,7 +333,7 @@
       </div>
 
       <div class="css-card" data-id="hover" data-filters="blue,classic">
-        <img src="/css/CSS/hover/image_2025-02-03_203642444.png" alt="hover Preview">
+        <img src="/css/CSS/hover/image_2025-02-03_203642444.png" alt="hover Preview" onclick="openCarousel(this)">
         <h2>hover</h2>
         <div class="rating">
           <input type="radio" id="hover-star1" name="hover-rating" value="1">
@@ -330,7 +348,7 @@
           <label for="hover-star5">★</label>
         </div>
         <p class="average-rating">Average Rating: <span>0</span></p>
-        <div class="buttons" >
+        <div class="buttons">
           <button class="favorite" onclick="toggleFavorite(this)">
             <img src="/favorite.svg" alt="Favorite">
           </button>
@@ -345,7 +363,7 @@
       </div>
 
       <div class="css-card" data-id="japan-town" data-filters="red,white,pink">
-        <img src="/css/CSS/Japan-Town/image_2025-02-03_193717030.png" alt="Japan Town Preview">
+        <img src="/css/CSS/Japan-Town/image_2025-02-03_193717030.png" alt="Japan Town Preview" onclick="openCarousel(this)">
         <h2>Japan Town</h2>
         <div class="rating">
           <input type="radio" id="japan-town-star1" name="japan-town-rating" value="1">
@@ -360,7 +378,7 @@
           <label for="japan-town-star5">★</label>
         </div>
         <p class="average-rating">Average Rating: <span>0</span></p>
-        <div class="buttons" >
+        <div class="buttons">
           <button class="favorite" onclick="toggleFavorite(this)">
             <img src="/favorite.svg" alt="Favorite">
           </button>
@@ -375,7 +393,7 @@
       </div>
 
       <div class="css-card" data-id="jett" data-filters="blue,black">
-        <img src="/css/CSS/Jett/image_2025-02-03_203940844.png" alt="jett Preview">
+        <img src="/css/CSS/Jett/image_2025-02-03_203940844.png" alt="jett Preview" onclick="openCarousel(this)">
         <h2>jett</h2>
         <div class="rating">
           <input type="radio" id="jett-star1" name="jett-rating" value="1">
@@ -390,7 +408,7 @@
           <label for="jett-star5">★</label>
         </div>
         <p class="average-rating">Average Rating: <span>0</span></p>
-        <div class="buttons" >
+        <div class="buttons">
           <button class="favorite" onclick="toggleFavorite(this)">
             <img src="/favorite.svg" alt="Favorite">
           </button>
@@ -405,7 +423,7 @@
       </div>
 
       <div class="css-card" data-id="pink" data-filters="pink white">
-        <img src="/css/CSS/pink/image_2025-02-03_204325675.png" alt="pink Preview">
+        <img src="/css/CSS/pink/image_2025-02-03_204325675.png" alt="pink Preview" onclick="openCarousel(this)">
         <h2>pink</h2>
         <div class="rating">
           <input type="radio" id="pink-star1" name="pink-rating" value="1">
@@ -420,7 +438,7 @@
           <label for="pink-star5">★</label>
         </div>
         <p class="average-rating">Average Rating: <span>0</span></p>
-        <div class="buttons" >
+        <div class="buttons">
           <button class="favorite" onclick="toggleFavorite(this)">
             <img src="/favorite.svg" alt="Favorite">
           </button>
@@ -435,7 +453,7 @@
       </div>
 
       <div class="css-card" data-id="plink" data-filters="purple,blue,black">
-        <img src="/css/CSS/plink/image_2025-02-03_201459409.png" alt="plink Preview">
+        <img src="/css/CSS/plink/image_2025-02-03_201459409.png" alt="plink Preview" onclick="openCarousel(this)">
         <h2>plink</h2>
         <div class="rating">
           <input type="radio" id="plink-star1" name="plink-rating" value="1">
@@ -450,7 +468,7 @@
           <label for="plink-star5">★</label>
         </div>
         <p class="average-rating">Average Rating: <span>0</span></p>
-        <div class="buttons" >
+        <div class="buttons">
           <button class="favorite" onclick="toggleFavorite(this)">
             <img src="/favorite.svg" alt="Favorite">
           </button>
@@ -465,7 +483,7 @@
       </div>
 
       <div class="css-card" data-id="uwu" data-filters="pink,white">
-        <img src="/css/CSS/UwU/image_2025-02-03_201655485.png" alt="UwU Preview">
+        <img src="/css/CSS/UwU/image_2025-02-03_201655485.png" alt="UwU Preview" onclick="openCarousel(this)">
         <h2>UwU</h2>
         <div class="rating">
           <input type="radio" id="uwu-star1" name="uwu-rating" value="1">
@@ -480,7 +498,7 @@
           <label for="uwu-star5">★</label>
         </div>
         <p class="average-rating">Average Rating: <span>0</span></p>
-        <div class="buttons" >
+        <div class="buttons">
           <button class="favorite" onclick="toggleFavorite(this)">
             <img src="/favorite.svg" alt="Favorite">
           </button>
@@ -495,7 +513,7 @@
       </div>
 
       <div class="css-card" data-id="wolfey" data-filters="purple">
-        <img src="/css/CSS/Wolfey/image_2025-02-03_204500385.png" alt="Wolfey Preview">
+        <img src="/css/CSS/Wolfey/image_2025-02-03_204500385.png" alt="Wolfey Preview" onclick="openCarousel(this)">
         <h2>Wolfey</h2>
         <div class="rating">
           <input type="radio" id="wolfey-star1" name="wolfey-rating" value="1">
@@ -510,7 +528,7 @@
           <label for="wolfey-star5">★</label>
         </div>
         <p class="average-rating">Average Rating: <span>0</span></p>
-        <div class="buttons" >
+        <div class="buttons">
           <button class="favorite" onclick="toggleFavorite(this)">
             <img src="/favorite.svg" alt="Favorite">
           </button>
@@ -525,7 +543,7 @@
       </div>
 
       <div class="css-card" data-id="zenith" data-filters="black,white">
-        <img src="/css/CSS/Zenith/image_2025-02-03_201151720.png" alt="Zenith Preview">
+        <img src="/css/CSS/Zenith/image_2025-02-03_201151720.png" alt="Zenith Preview" onclick="openCarousel(this)">
         <h2>Zenith</h2>
         <div class="rating">
           <input type="radio" id="zenith-star1" name="zenith-rating" value="1">
@@ -540,7 +558,7 @@
           <label for="zenith-star5">★</label>
         </div>
         <p class="average-rating">Average Rating: <span>0</span></p>
-        <div class="buttons" >
+        <div class="buttons">
           <button class="favorite" onclick="toggleFavorite(this)">
             <img src="/favorite.svg" alt="Favorite">
           </button>
@@ -555,7 +573,7 @@
       </div>
 
       <div class="css-card" data-id="blackandwhite" data-filters="black,white">
-        <img src="/css/CSS/blackandwhite/Screenshot 2025-04-01 185127.png" alt="Black & White Preview">
+        <img src="/css/CSS/blackandwhite/Screenshot 2025-04-01 185127.png" alt="Black & White Preview" onclick="openCarousel(this)">
         <h2>Black & White</h2>
         <div class="rating">
           <input type="radio" id="blackandwhite-star1" name="blackandwhite-rating" value="1">
@@ -570,7 +588,7 @@
           <label for="blackandwhite-star5">★</label>
         </div>
         <p class="average-rating">Average Rating: <span>0</span></p>
-        <div class="buttons" >
+        <div class="buttons">
           <button class="favorite" onclick="toggleFavorite(this)">
             <img src="/favorite.svg" alt="Favorite">
           </button>
@@ -585,7 +603,7 @@
       </div>
 
       <div class="css-card" data-id="glaive" data-filters="blue,white,black">
-        <img src="/css/CSS/glaive/Screenshot 2025-04-01 185330.png" alt="glaive Preview">
+        <img src="/css/CSS/glaive/Screenshot 2025-04-01 185330.png" alt="glaive Preview" onclick="openCarousel(this)">
         <h2>glaive</h2>
         <div class="rating">
           <input type="radio" id="glaive-star1" name="glaive-rating" value="1">
@@ -600,7 +618,7 @@
           <label for="glaive-star5">★</label>
         </div>
         <p class="average-rating">Average Rating: <span>0</span></p>
-        <div class="buttons" >
+        <div class="buttons">
           <button class="favorite" onclick="toggleFavorite(this)">
             <img src="/favorite.svg" alt="Favorite">
           </button>
@@ -615,7 +633,7 @@
       </div>
 
       <div class="css-card" data-id="ayaka-ganyu" data-filters="red,white,pink">
-        <img src="/css/CSS/ayaka-and-ganyu/Screenshot 2025-04-13 221506.png" alt="ayaka & ganyu Preview">
+        <img src="/css/CSS/ayaka-and-ganyu/Screenshot 2025-04-13 221506.png" alt="ayaka & ganyu Preview" onclick="openCarousel(this)">
         <h2>ayaka & ganyu</h2>
         <div class="rating">
           <input type="radio" id="ayaka-ganyu-star1" name="ayaka-ganyu-rating" value="1">
@@ -630,7 +648,7 @@
           <label for="ayaka-ganyu-star5">★</label>
         </div>
         <p class="average-rating">Average Rating: <span>0</span></p>
-        <div class="buttons" >
+        <div class="buttons">
           <button class="favorite" onclick="toggleFavorite(this)">
             <img src="/favorite.svg" alt="Favorite">
           </button>
@@ -645,7 +663,7 @@
       </div>
 
       <div class="css-card" data-id="enwa" data-filters="blue,classic">
-        <img src="/css/CSS/enwa/Screenshot 2025-04-13 221849.png" alt="enwa Preview">
+        <img src="/css/CSS/enwa/Screenshot 2025-04-13 221849.png" alt="enwa Preview" onclick="openCarousel(this)">
         <h2>enwa</h2>
         <div class="rating">
           <input type="radio" id="enwa-star1" name="enwa-rating" value="1">
@@ -660,7 +678,7 @@
           <label for="enwa-star5">★</label>
         </div>
         <p class="average-rating">Average Rating: <span>0</span></p>
-        <div class="buttons" >
+        <div class="buttons">
           <button class="favorite" onclick="toggleFavorite(this)">
             <img src="/favorite.svg" alt="Favorite">
           </button>
@@ -678,6 +696,19 @@
       <div class="popup-content">
         <button class="close-btn" onclick="closePopup()">X</button>
         <p>URL copied to clipboard!</p>
+      </div>
+    </div>
+    <!-- Image Carousel Modal -->
+    <div id="image-carousel-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeCarousel()">&times;</span>
+        <div class="carousel">
+          <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+          <div class="carousel-images">
+            <!-- Images will be dynamically inserted here -->
+          </div>
+          <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
       </div>
     </div>
     <footer>
@@ -759,6 +790,49 @@
       loadingScreen.style.display = 'none';
     });
   </script>
+  <script>
+    let currentSlideIndex = 0;
+
+    function openCarousel(imgElement) {
+      const card = imgElement.closest('.css-card');
+      const cardId = card.dataset.id;
+      const modal = document.getElementById('image-carousel-modal');
+      const carouselImages = modal.querySelector('.carousel-images');
+
+      // Clear previous images
+      carouselImages.innerHTML = '';
+
+      // Add images dynamically (example: replace with actual image paths)
+      const images = [
+        `/css/CSS/${cardId}/image1.png`,
+        `/css/CSS/${cardId}/image2.png`,
+        `/css/CSS/${cardId}/image3.png`
+      ];
+
+      images.forEach((src, index) => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.style.display = index === 0 ? 'block' : 'none';
+        carouselImages.appendChild(img);
+      });
+
+      modal.style.display = 'block';
+      currentSlideIndex = 0;
+    }
+
+    function closeCarousel() {
+      const modal = document.getElementById('image-carousel-modal');
+      modal.style.display = 'none';
+    }
+
+    function changeSlide(direction) {
+      const modal = document.getElementById('image-carousel-modal');
+      const images = modal.querySelectorAll('.carousel-images img');
+      images[currentSlideIndex].style.display = 'none';
+      currentSlideIndex = (currentSlideIndex + direction + images.length) % images.length;
+      images[currentSlideIndex].style.display = 'block';
+    }
+  </script>
   <style>
     #loading-screen {
       position: fixed;
@@ -788,9 +862,74 @@
       0% {
         transform: rotate(0deg);
       }
+
       100% {
         transform: rotate(360deg);
       }
+    }
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+    }
+
+    .modal-content {
+      position: relative;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 80%;
+      max-height: 80%;
+      overflow: hidden;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .carousel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .carousel-images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .carousel-images img {
+      max-width: 100%;
+      max-height: 100%;
+      display: none;
+    }
+
+    .prev, .next {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
     }
   </style>
 </body>
