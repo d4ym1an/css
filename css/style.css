@@ -185,6 +185,11 @@ main p{
   text-decoration: underline; /* Ensure underline remains on hover */
 }
 
+.juice img{
+  border: #000000 1px solid;
+  border-radius: 5px;
+}
+
 #css-files {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -490,11 +495,11 @@ button:hover img {
 /* Carousel Modal Styles */
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.9); /* Darker background for better focus */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -505,26 +510,28 @@ button:hover img {
   position: relative;
   background-color: var(--base-clr);
   padding: 20px;
-  border-radius: 8px;
-  max-width: 80%;
-  max-height: 80%;
+  border-radius: 12px;
+  max-width: 90%;
+  max-height: 90%;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Enhanced shadow for depth */
+  border: 1px solid var(--line-clr); /* Match site theme */
 }
 
 .close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 24px;
+  font-size: 40px;
   color: var(--text-clr);
   cursor: pointer;
   background: none;
   border: none;
+  transition: color 200ms ease;
 }
 
 .close-btn:hover {
-  color: var(--accent-clr);
+  color: var(--accent-clr); /* Accent color on hover */
 }
 
 .carousel {
@@ -564,18 +571,19 @@ button:hover img {
 }
 
 .prev, .next {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   color: var(--text-clr);
   border: none;
-  padding: 10px;
+  padding: 12px;
   cursor: pointer;
   font-size: 24px;
-  border-radius: 50%;
-  transition: background-color 200ms ease;
+  border-radius: 4px;
+  transition: background-color 200ms ease, transform 200ms ease;
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--hover-clr); /* Match hover color */
+  transform: scale(1.1); /* Slight zoom on hover */
 }
 
 .prev {
@@ -595,6 +603,6 @@ button:hover img {
 
   .prev, .next {
     font-size: 18px;
-    padding: 8px;
+    padding: 10px;
   }
 }

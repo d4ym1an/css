@@ -272,6 +272,11 @@ main p{
   background: #222533;
 }
 
+.juice img{
+  border: #000000 1px solid;
+  border-radius: 5px;
+}
+
 .gradient-bg {
   position: fixed;
   width: 100vw;

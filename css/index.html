@@ -152,7 +152,7 @@
     </section>
 
     <section id="css-files">
-      <div class="css-card" data-id="5hours" data-filters="black, grey">
+      <div class="css-card" data-id="fivehours" data-filters="black, grey">
         <img src="/css/CSS/5hours/image_2025-02-03_193406064.png" alt="5hours Preview" onclick="openCarousel(this)">
         <h2>5hours</h2>
         <div class="rating">
@@ -362,7 +362,7 @@
         <a href="/css/CSS/hover/hover.css" download="hover.css">Download</a>
       </div>
 
-      <div class="css-card" data-id="japan-town" data-filters="red,white,pink">
+      <div class="css-card" data-id="japantown" data-filters="red,white,pink">
         <img src="/css/CSS/Japan-Town/image_2025-02-03_193717030.png" alt="Japan Town Preview" onclick="openCarousel(this)">
         <h2>Japan Town</h2>
         <div class="rating">
@@ -632,7 +632,7 @@
         <a href="/css/CSS/glaive/glaive.css" download="glaive.css">Download</a>
       </div>
 
-      <div class="css-card" data-id="ayaka-ganyu" data-filters="red,white,pink">
+      <div class="css-card" data-id="ayakaganyu" data-filters="red,white,pink">
         <img src="/css/CSS/ayaka-and-ganyu/Screenshot 2025-04-13 221506.png" alt="ayaka & ganyu Preview" onclick="openCarousel(this)">
         <h2>ayaka & ganyu</h2>
         <div class="rating">
@@ -690,6 +690,35 @@
           </button>
         </div>
         <a href="/css/CSS/enwa/enwa.css" download="enwa.css">Download</a>
+      </div>
+      <div class="css-card" data-id="irrvlohween" data-filters="orange">
+        <img src="/css/CSS/hween2024irrvlo/Screenshot_2024-10-01_092835.png" alt="irrvlo hween Preview" onclick="openCarousel(this)">
+        <h2>Irrvlo Hween 2024</h2>
+        <div class="rating">
+          <input type="radio" id="enwa-star1" name="enwa-rating" value="1">
+          <label for="enwa-star1">★</label>
+          <input type="radio" id="enwa-star2" name="enwa-rating" value="2">
+          <label for="enwa-star2">★</label>
+          <input type="radio" id="enwa-star3" name="enwa-rating" value="3">
+          <label for="enwa-star3">★</label>
+          <input type="radio" id="enwa-star4" name="enwa-rating" value="4">
+          <label for="enwa-star4">★</label>
+          <input type="radio" id="enwa-star5" name="enwa-rating" value="5">
+          <label for="enwa-star5">★</label>
+        </div>
+        <p class="average-rating">Average Rating: <span>0</span></p>
+        <div class="buttons">
+          <button class="favorite" onclick="toggleFavorite(this)">
+            <img src="/favorite.svg" alt="Favorite">
+          </button>
+          <button onclick="viewCode(this)" class="code">
+            <img src="/code.svg" alt="View Code">
+          </button>
+          <button onclick="copyURL(this)" class="copy">
+            <img src="/copy.svg" alt="Copy URL">
+          </button>
+        </div>
+        <a href="/css/CSS/hween2024irrvlo/hween2024irrvlo.css" download="hween2024irrvlo.css">Download</a>
       </div>
     </section>
     <div id="popup-overlay" class="overlay-popup" style="display: none;">
@@ -802,19 +831,90 @@
       // Clear previous images
       carouselImages.innerHTML = '';
 
-      // Add images dynamically (example: replace with actual image paths)
-      const images = [
-        `/css/CSS/${cardId}/image1.png`,
-        `/css/CSS/${cardId}/image2.png`,
-        `/css/CSS/${cardId}/image3.png`
-      ];
+      // Add images dynamically based on the card ID
+      const images = {
+        glaive: [
+          '/css/CSS/glaive/Screenshot 2025-04-01 185330.png',
+          '/css/CSS/glaive/Screenshot 2025-04-01 185539.png'
+        ],
+        fivehours:[
+          '/css/CSS/5hours/image_2025-02-03_193316431.png',
+          '/css/CSS/5hours/image_2025-02-03_193406064.png'
+        ],
+        anime: [
+         '/css/CSS/anime/animelobby.png',
+         '/css/CSS/anime/animehud.png'
+        ],
+        ayakaganyu: [
+          '/css/CSS/ayaka-and-ganyu/Screenshot 2025-04-13 221506.png',
+          '/css/CSS/ayaka-and-ganyu/Screenshot 2025-04-13 221722.png'
+        ],
+        blackandwhite: [
+          '/css/CSS/blackandwhite/Screenshot 2025-04-01 185127.png',
+          '/css/CSS/blackandwhite/Screenshot 2025-04-01 185240.png'
+        ],
+        zenith: [
+          '/css/CSS/Zenith/image_2025-02-03_201151720.png',
+          '/css/CSS/Zenith/image_2025-02-03_201251830.png'
+        ],
+        wolfey: [
+          '/css/CSS/Wolfey/image_2025-02-03_204500385.png',
+          '/css/CSS/Wolfey/image_2025-02-03_204600495.png'
+        ],
+        uwu: [
+          '/css/CSS/UwU/image_2025-02-03_201655485.png',
+          '/css/CSS/UwU/image_2025-02-03_201755595.png'
+        ],
+        plink: [
+          '/css/CSS/plink/image_2025-02-03_201459409.png',
+          '/css/CSS/plink/image_2025-02-03_201559519.png'
+        ],
+        pink: [
+          '/css/CSS/pink/image_2025-02-03_204325675.png',
+          '/css/CSS/pink/image_2025-02-03_204425785.png'
+        ],
+        jett: [
+          '/css/CSS/Jett/image_2025-02-03_203940844.png',
+          '/css/CSS/Jett/image_2025-02-03_204009826.png'
+        ],
+        japantown: [
+          '/css/CSS/Japan-Town/image_2025-02-03_193717030.png',
+          '/css/CSS/Japan-Town/image_2025-02-03_193817140.png'
+        ],
+        hover: [
+          '/css/CSS/hover/image_2025-02-03_203642444.png',
+          '/css/CSS/hover/image_2025-02-03_203742554.png'
+        ],
+        grey: [
+          '/css/CSS/Grey/image_2025-02-03_201339055.png',
+          '/css/CSS/Grey/image_2025-02-03_201439165.png'
+        ],
+        green: [
+          '/css/CSS/Green/image_2025-02-03_201945486.png',
+          '/css/CSS/Green/image_2025-02-03_202045596.png'
+        ],
+        egirl: [
+          '/css/CSS/Egirl/egirllobby.png',
+          '/css/CSS/Egirl/egirlhud.png'
+        ],
+        blue: [
+          '/css/CSS/Blue/bluelobby.png',
+          '/css/CSS/Blue/bluehud.png'
+        ],
+        irrvlohween: [
+          '/css/CSS/hween2024irrvlo/Screenshot_2024-10-01_092835.png',
+          '/css/CSS/hween2024irrvlo/Screenshot_2024-10-01_093017.png'
+        ]
+      };
 
-      images.forEach((src, index) => {
-        const img = document.createElement('img');
-        img.src = src;
-        img.style.display = index === 0 ? 'block' : 'none';
-        carouselImages.appendChild(img);
-      });
+      if (images[cardId]) {
+        images[cardId].forEach((src, index) => {
+          const img = document.createElement('img');
+          img.src = src;
+          img.style.display = index === 0 ? 'block' : 'none';
+          carouselImages.appendChild(img);
+        });
+      }
 
       modal.style.display = 'block';
       currentSlideIndex = 0;
@@ -824,6 +924,14 @@
       const modal = document.getElementById('image-carousel-modal');
       modal.style.display = 'none';
     }
+
+    // Close modal when clicking outside the modal content
+    document.addEventListener('click', (event) => {
+      const modal = document.getElementById('image-carousel-modal');
+      if (modal.style.display === 'block' && event.target === modal) {
+        closeCarousel();
+      }
+    });
 
     function changeSlide(direction) {
       const modal = document.getElementById('image-carousel-modal');
@@ -866,70 +974,6 @@
       100% {
         transform: rotate(360deg);
       }
-    }
-
-    .modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 10000;
-    }
-
-    .modal-content {
-      position: relative;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      max-width: 80%;
-      max-height: 80%;
-      overflow: hidden;
-    }
-
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    .carousel {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .carousel-images {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      overflow: hidden;
-    }
-
-    .carousel-images img {
-      max-width: 100%;
-      max-height: 100%;
-      display: none;
-    }
-
-    .prev, .next {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      font-size: 18px;
-    }
-
-    .prev:hover, .next:hover {
-      background-color: rgba(0, 0, 0, 0.8);
     }
   </style>
 </body>
