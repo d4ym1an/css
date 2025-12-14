@@ -1,0 +1,1130 @@
+div#left-interface.left-interface > div#lobby-news.lobby-news {
+top: 52px !important;
+left: 145px !important;
+}
+div#left-interface.left-interface > div#lobby-news.lobby-news > div.news-card {
+    background: transparent !important;
+    border-color: #2f0041 !important;
+}
+div#left-interface.left-interface > div#lobby-news.lobby-news > div.news-card > span.badge {
+   background: var(--acc)!important; 
+   background-size: cover !important;
+}
+div#left-interface.left-interface > div#lobby-news.lobby-news > div.news-card > div.news-container > span.news-title {
+  color: white !important;
+}
+/* General */
+:root {
+--prim: #A833D6;
+--sec:  #6B1B9A;
+--bg:   url("https://i.imgur.com/z2FABvV.jpeg");
+--acc:  #E0B0FF;
+}
+*{
+    scrollbar-width: thin;
+    scrollbar-color: var(--acc) #1a0028;
+    box-sizing: border-box;
+    /* background: url('https://i.imgur.com/z2FABvV.jpeg') fixed !important; */
+    background-size: cover !important;
+}
+
+.invite-btn {
+    border-radius: 2rem !important;
+}
+.invite-btn:hover {
+    background: var(--acc) !important;
+}
+#app > div.interface.text-2 > div.vm--container > div.vm--modal > div#mode-selection-modal > div.container-card > .wrapper {
+    background: var(--sec);
+}
+.tab-team-info[data-v-5bb16e52],
+.cont-endurance[data-v-669e4a78],
+.box[data-v-50521862],
+.top-bar[data-v-059c75d8],
+.container[data-v-743871fa]{
+   background: var(--sec)!important;
+}
+#overlay {
+    background: var(--acc)!important;
+    color: var(--acc) !important;
+}
+.select-mod {
+    position: absolute;
+    bottom: 15.2rem;
+    border: .2rem solid var(--acc) !important;
+    background: var(--sec) !important;
+    right: 1.5rem;
+    width: 24rem;
+}
+#join-btn, #leave-btn, #ready-btn, #create-btn {
+    bottom: 2.7rem;
+    position: relative;
+    right: 10px;
+}
+.red[data-v-5bb16e52],
+.blue[data-v-5bb16e52],
+.player-cont[data-v-5bb16e52]{
+   background: var(--acc);
+}
+#create-modal-modal>.container-card>.general-content {
+    width: 40rem !important;
+    height: 40rem !important;
+    max-width: 80vw !important;
+    max-height: 80vh !important;
+    position: relative !important;
+    padding: 1rem 1.5rem 0 1rem !important;
+    overflow-y: scroll;
+    margin-top: 2.2rem;
+}
+.box[data-v-50521862]{
+   border: 0.2rem soild var(--acc) !Important;
+}
+.tab-header[data-v-743871fa]{
+   background: transparent !important;
+}
+#left-interface, .team-section{
+   transform: scale(0.8)!important;
+}
+.cont-endurance {
+    background: var(--sec) !important;
+}
+.endurance-progress {
+   background: var(--acc) !important;
+}
+#view > div > div.container > div.content > div.hub-container > div.news > div.live-streams > div.stream-list,
+#view > div > div.container > div.content > div.hub-container > div.news > div.live-streams > div.stream-list > div.head {
+    background: var(--sec) !important;
+    border: .2rem solid var(--sec) !important;
+}
+.quests {
+  position: absolute;
+  top: -2rem !important;
+  right: -2rem;
+  transform: scale(0.8);
+} 
+#view > div > div.container > div.content > div.hub-container > div.inventory > div.content > div.filters > div.filter-rarity > div.wrapper-input > div.input > div.items {
+    z-index: 9 !important;
+    background: var(--sec);
+}
+.play[data-v-095fb124] {
+  transform: scale(0.8)!Important;
+}
+#view > div > div > div.content > div.quests-container > .quests {
+  height: 867px !important;
+    width: 62rem;
+    border-radius: 2rem !important;
+    position: absolute;
+    left: -6rem;
+}
+.close[data-v-059c75d8] {
+   position: absolute;
+   right: 24rem !important;
+}
+.general-content {
+    width: 100% !important; 
+    height: 87% !important;
+    right: 0% !important;
+    position: absolute !important;
+}
+.left[data-v-059c75d8],
+.border-top, .border-bottom {
+    display: none!important;
+}
+.preview[data-v-a82d3e14]{
+   background: transparent !important;
+}
+.scrollCancel[data-v-1b2bc62f],
+#ready-btn, #join-btn, #leave-btn, #create-btn{
+   background: var(--sec) !important;
+   border: 0.2rem solid var(--acc)!important;
+   border-radius: 0.5rem;
+}
+.card[data-v-4e859258]{
+   background: var(--sec)!important;
+}
+.quests {
+   background: var(--sec)!important;
+   height: 450px !important;
+   border: 0.2rem solid var(--acc)!important;
+}
+.quest[data-v-5392a807]{
+  background: var(--prim)!important;
+}
+.reward[data-v-5392a807]{
+  background: var(--bg)!important;
+  color: var(--acc)!important;
+}
+.tabs .event[data-v-5392a807]{
+  width: 48% !important;
+}
+.range {
+    border-radius: 0.2rem;
+    height: 0.7rem;
+    width: 9.5rem;
+    outline: none;
+    -webkit-appearance: none;
+}
+input[type="range"] {
+    border-radius: 0.2rem;
+    overflow: hidden;
+    width: 9.5rem;
+    -webkit-appearance: none;
+    background-color: var(--bg);
+}
+input[type="range"]::-webkit-slider-thumb {
+    width: 1rem;
+    -webkit-appearance: none;
+    height: 1rem;
+    cursor: ew-resize;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: -5.5rem 0 0 5rem var(--acc);
+}
+@font-face {
+    font-family: gamefont;
+    src: url('https://raw.githubusercontent.com/d4ym1an/windows98/main/Fonts/forza-medium-webfont.woff') format('woff');
+}
+* {
+    font-family: gamefont !important;
+    font-weight: 100 !important;
+    text-shadow: unset !important;
+    box-shadow: unset !important;
+    -webkit-text-stroke: unset !important;
+}
+#view > div > div > div.content > div > div.content > div.bg-progress > div.levels > div > div.levels-circle.text-1 > div > div > div.pick-up,
+#view > div > div > div.content > div > div.content > div.bg-progress > div.levels > div > div.levels-circle.text-1 > div > div,
+.btn-invite,
+.tooltip.copy-text,
+button {
+    background: var(--acc) !important;
+    transform: skew(0deg) !important;
+    border: none !important;
+    --hover-color: var(--acc) !important;
+    color: white !important;
+}
+button .text {
+    transform: skew(0deg) !important;
+}
+.logo,
+#app > div.end-modal > div.content > div.chat > div.chat.chat-position > div.input-wrapper > div,
+#app > div.game-interface > div.container-pre-end .circle,
+#right-interface > div.live-streams,
+#app > div.game-interface > div.desktop-game-interface > div.chat.chat-position > div.input-wrapper > div,
+#app > div.game-interface > div.desktop-game-interface > div.chat.chat-position > div.info,
+#app > div.game-interface > div.desktop-game-interface > div.weapons-cont > div.state-weapon-active.text-1 > div.mWwn,
+.info-icon,
+#app > div.game-interface > div.desktop-game-interface > div.weapons-cont > div.list-weapons,
+#play > div > div.play-content-up > div > div > hr,
+button .triangle,
+button .borders,
+button:after,
+#view > div > div > div.content > div > div.content > div.allo > div > div > div.friend-left > div.level-cont > div,
+#play > div > div.play-content-up > label > span::before,
+#settings-and-socicons > div:nth-child(2),
+#settings-and-socicons > div:nth-child(1),
+#view > div > div > div.content > div > div > div.chat-cont > div.chat-head > div.rules,
+#view > div > div > div.content > div > div.content > div.bottom > div > div > img,
+#view > div > div > div.content > div > div.content > div.head > div > div > img,
+#auth-user > div > div.card-cont.user-info > div.progress-label,
+#left-icons svg,
+#view > div > div > div.content > div > div.clans > div.champions-container > div.background > img,
+#view > div > div > div.content > div > div.clans > div.champions-container > div.background > div.chests,
+#view > div > div > div.content > div > div.clans > div.champions-container > div.background > div.img-grad > img.bg-gradient,
+#view > div > div > div.content > div > div.clans > div.champions-container > div.background > div.img-grad > img.gun-img,
+#app > div.interface.text-2 > div.background > div.pattern-bg,
+#app > div.interface.text-2 > div.background > div.bg-radial,
+#view > div > div > div.content > div > div.leaderboard-cont > div.leaders > div.background-leaders,
+#view > div > div > div.content > div > div.leaderboard-cont > div.leaders > img,
+#view > div > div > div.content > div > div.leaderboard-cont > div.info-awards > div.awards-imgs,
+#view > div > div > div.content > div > div.leaderboard-cont > div.label-top > img,
+#auth-user > div > div.card-cont.avatar-info > div.username,
+#auth-user > div > div.card-cont.user-info > div.progress-lvl > div.progress-top > div.level > span,
+#auth-user > div > div.card-cont.user-info > div.progress-lvl > div.progress-top > div.exp-values,
+#view > div > div > div.top-bar > div.left {
+    display: none !important;
+}
+/* Notifs */
+.alert-default {
+    background: var(--sec) !important;
+    border: 0.2rem solid var(--acc) !important; 
+    border-radius: 1rem;
+}
+/* Accents */
+div.hub-container > div.ranked > div.leaderboard-cont > div.label-top > div.label-primary,
+.head,
+.top-name,
+#view > div > div > div.content > div > div.news > div > div > div.img-cont > div,
+#app > div.game-interface > div.desktop-game-interface > div.weapons-cont > div.state-weapon-active.text-1 > div.ammunition.lack,
+#app > div.end-modal > div.content > div.chat > div.chat.chat-position > div.messages.messages-cont > div > span.lvl,
+#app > div.end-modal > div.content > div.chat > div.chat.chat-position > div.messages.messages-cont > div > span.name,
+#app > div.game-interface > div.esc-interface > div.vm--container > div.vm--modal > div > div > div.settings > div > div.header,
+.list-value,
+#view > div > div > div.content > div > div > div.chat-cont > div.chat.chat > div.messages.messages-cont.small > div > span.name.ml,
+#view > div > div > div.content > div > div.general-content.text-2 > div > div.header,
+#view > div > div > div.content > div > div.general-content.text-2 > div.keybindings-wrap > div.header,
+#view > div > div > div.content > div > div.general-content.text-2 > div.header,
+#view > div > div > div.content > div > div > div.list-cont > div.list > div > div.right > div,
+#view > div > div > div.content > div > div > div.preview.text-2 > div > div.bottom > div > div.online.online-preview,
+#view > div > div > div.content > div > div > div.preview.text-2 > div > div.head > div.mod-name,
+#view > div > div > div.content > div > div > div.list-cont > div.list > div.available-rooms,
+#view > div > div > div.content > div > div > div.chat-cont > div.chat.chat > div.messages.messages-cont.small > div > div > div > div > span,
+#view > div > div > div.content > div > div > div.chat-cont > div.chat.chat > div.messages.messages-cont.small > div > span.lvl,
+#view > div > div > div.content > div > div > div.content > div.top-medium > div.top > div.card.progress > div.progress-text-cont > div.progress-level > div.progress-level-value.text-2,
+div.stat-name.text-2,
+#view > div > div > div.content > div > div.clans > div.my-clan > div.card-cont > div.info > div.left-info > div.all-scores.background > div.all-scores-label,
+#view > div > div > div.content > div > div.clans > div.my-clan > div.card-cont > div.info > div.left-info > div.champions-stat.background > div.champions-labels > div,
+#view > div > div > div.content > div > div.clans > div.my-clan > div.card-cont > div.info > div.left-info > div.champions-stat.background > div.champions-labels > span,
+#view > div > div > div.content > div > div.leaderboard-cont > div.list-champions > div > div.bottom-items > div > div.left > span.number-player,
+#view > div > div > div.content > div > div.clans > div.my-clan > div.list-container > div.head > div div,
+#view > div > div > div.content > div > div.clans > div.champions-container > div.champions-list > div.champions-header > div.list-labels div,
+#view > div > div > div.content > div > div.leaderboard-cont > div.list-champions > div > div.top-items > div.top > div.top-names div,
+#view > div > div > div.content > div > div.leaderboard-cont > div.info-awards > div.awards-label > span,
+#view > div > div > div.content > div > div.leaderboard-cont > div.label-top > div.label-primary {
+    color: var(--acc) !important;
+}
+.selected,
+#app > div.interface.text-2 > div.vm--container > div.vm--modal > div > div > div.content.text-2 > div.elm,
+#kdrElem,
+#view > div > div > div.content > div > div > div.chat-cont > div.chat.chat > div.input-wrapper > div,
+#view > div > div > div.content > div > div.content > div.bg-progress > div.levels > div > div.progress > div,
+#view > div > div > div.content > div > div.content > div.bg-progress > div.levels > div > div.levels-circle.text-1 > div,
+lvl,
+#view > div > div > div.content > div > div.content > div.bg-progress > div.levels > div.progress-helper,
+#view > div > div > div.content > div > div.level-head > div.bg-level > div.level-progress {
+    background: var(--acc) !important;
+    color: white;
+}
+/* Clan Tag */
+.primary,
+.clan,
+#app > div.game-interface > div.esc-interface > div.left-container > div.player-list > div > div.player-left > div.name > div.label,
+div.name.text-2 > div.label,
+.clan-tag {
+    color: var(--acc) !important;
+}
+/* A Fixed Nametag */
+div.inventory > div.left > div#avatar > div.avatar-head > div.player-level,
+div.hub-container > div.ranked > div.leaderboard-cont > div.leaders > div.head-leaders.text-2 > div > div.cont-name > div.nickname,
+#view > div > div > div.content > div > div.leaderboard-cont > div.leaders > div.head-leaders.text-2 > div > div.cont-name > div.nickname {
+    color: white;
+}
+/* Level */
+.lvl,
+.level,
+.level-cont,
+.lvl-leader,
+.levels,
+.level > div {
+    background: var(--sec) !important;
+    color: white !important;
+    border-radius: 1rem !important;
+    padding: 0.3rem !important;
+    border: none !important;
+}
+/* Main Menu */
+#settings-and-socicons > div.card-cont.settings.card-1 {
+    margin: 0 !important;
+    position: relative !important;
+    right: 30rem !important;
+    top: 3rem;
+}
+#left-interface {
+    margin: 0.5rem;
+    flex-direction: row;
+    align-items: center;
+}
+#auth-user > div > div > button {
+    margin-left: 0.5rem;
+    width: 7rem;
+}
+#play > div {
+    flex-direction: row-reverse;
+    position: absolute;
+    left: -22rem;
+    top: -13rem;
+}
+#play > div > div.play-content-up {
+    display: flex;
+    flex-direction: row !important;
+    height: 4rem;
+    width: 28rem !important;
+    position: absolute !important;
+    left: -1.2rem;
+    top: -4.2rem;
+}
+#play-btn > div.text {
+    font-size: 6rem;
+}
+#play-btn:hover {
+    background: var(--acc) !important;
+}
+#play > div > div.select-region {
+    display: flex;
+    position: absolute;
+    top: 0.05rem;
+    height: 7rem;
+    left: -10rem;
+    width: 9.5rem;
+    max-width: 9.5rem !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+#select-regions-cont {
+    margin-bottom: 3rem;
+    margin-right: 24rem !important;
+    background: var(--sec);
+    border: 0.2rem solid var(--acc);
+}
+#play > div > div.play-content-up > div {
+    margin: 0 !important;
+}
+#play > div > div.play-content-up > label > span,
+#play > div > div.play-content-up > div,
+#play > div > div.select-region {
+    background: var(--sec) !important;
+    border: 0.2rem solid var(--acc);
+}
+#play > div > div.play-content-up > label > span {
+    padding: 0.2rem 0.9rem;
+    border-radius: 0.3rem;
+    height: 4rem;
+    margin-right: 0.2rem;
+    width: 10.3rem;
+    display: flex !important;
+    float: none;
+    align-items: center !important;
+    justify-content: center !important;
+}
+#play > div > div.play-content-up > div {
+    display: flex !important;
+    align-items: center !important;
+    width: 13.45rem;
+}
+#play-btn {
+    height: 15rem;
+    margin: 0 !important;
+}
+.moneys > div {
+    background: transparent !important;
+    border: none !important;
+}
+#app > div.interface.text-2 > div.background {
+    background: var(--bg) !important;
+}
+#left-icons {
+    flex-direction: row;
+    align-items: center;
+    height: 4rem !important;
+    width: 40%;
+    padding: 0rem 1rem;
+    left: 29.8% !important;
+    top: 3rem !important;
+    border-radius: 0.5rem;
+    background: var(--prim) !important;
+}
+.icon-btn.text-1 .text-icon {
+    font-weight: 700 !important;
+    letter-spacing: 0.05rem;
+    transition: 0.2s ease;
+}
+.icon-btn.text-1:hover .text-icon {
+    letter-spacing: 0.1rem;
+}
+.icon-btn.text-1 .wrapper {
+    transition: none !important;
+    transform: none !important;
+}
+.icon-btn.text-1:hover {
+    background: var(--prim);
+    padding: 0.5rem 0.75rem !important;
+}
+#auth-user > div > div.card-cont.user-info > div.progress-lvl > div.progress-top > div.level {
+    padding: 0.05rem !important;
+    margin-right: 0.5rem;
+}
+#left-interface > div.moneys {
+    margin: 0rem 0.2rem !important;
+    margin-top: -7.6rem !important;
+    background: var(--sec);
+    border: 0.2rem solid var(--acc);
+    border-radius: 0.5rem;
+}
+.moneys > div {
+    height: 2.5rem !important;
+    padding: 0rem !important;
+    margin: 0rem 0.2rem !important;
+}
+#auth-user > div > div.card-cont.avatar-info > div.avatar.avatar {
+    border-radius: 1rem;
+    transition: 0.2s ease;
+    scale: 1.3;
+    border: 0.3rem solid var(--prim);
+}
+#auth-user > div > div.card-cont.avatar-info > div.avatar.avatar:hover {
+    border-radius: 0.5rem;
+}
+#auth-user > div > div.card-cont.avatar-info {
+    background: transparent;
+    border: none;
+}
+#auth-user > div > div.card-cont.user-info > div.progress-lvl > div.progress-line {
+    width: 5rem;
+    height: 0.7rem !important;
+    background: var(--acc) !important;
+}
+.progress-line {
+    background: var(--sec) !important;
+}
+.progress-line > div {
+    background: var(--acc) !important;
+}
+#auth-user > div > div.card-cont.user-info > div.progress-lvl > div.progress-line > div {
+    height: 0.5rem !important;
+}
+#auth-user > div > div.card-cont.user-info > div.progress-lvl {
+    display: flex;
+    align-items: center;
+    width: 8rem !important;
+    flex-direction: row !important;
+}
+#auth-user > div > div.card-cont.user-info > div.progress-lvl > div.progress-top {
+    margin: 0 !important;
+}
+#auth-user {
+    background: var(--sec);
+    border: 0.2rem solid var(--acc);
+    border-radius: 0.5rem;
+}
+#auth-user > div {
+    flex-direction: column !important;
+    width: 8.9rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background: transparent !important;
+    border: none !important;
+}
+#auth-user > div > div.card-cont.user-info {
+    height: 2rem;
+    justify-content: center !important;
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding: 0rem;
+}
+#settings-and-socicons {
+    width: 5.5rem !important;
+    margin: 0.5rem;
+}
+#settings-and-socicons > div.card-cont.settings.card-1 {
+    background: rgba(255, 0, 0, 0);
+    border: none;
+}
+/* Daily Quests */
+#dailyQuests {
+    background: var(--sec);
+    border: 0.2rem solid var(--acc);
+    position: absolute;
+    left: -17.74rem;
+    top: 0.5rem;
+    border-radius: 0.5rem;
+}
+#dailyQuests > div.tip-wrapper > div {
+    background: var(--sec);
+}
+#dailyQuests > div.subjects > div.subject > div {
+    background: var(--prim);
+}
+#dailyQuests > div.subjects > div.subject > div > div.right > div.rewards > div.list > div > div,
+#dailyQuests > div.subjects > div.subject > div > div.right > div.rewards > div.list > div {
+    background: var(--sec);
+    border: none !important;
+    color: var(--acc);
+}
+/* Mode Select */
+#play > div > div.play-content-up > div > div {
+    margin-bottom: -8.5rem !important;
+    margin-right: 2.8rem;
+    background: var(--sec);
+    border: 0.2rem solid var(--acc);
+    width: 24rem;
+}
+input[type=checkbox],
+.custom-checkbox > span:before {
+    border-radius: 50% !important;
+    background-color: var(--prim) !important;
+    ;
+    border: none !important;
+}
+input[type=checkbox] input:checked,
+.custom-checkbox > input:checked + span:before {
+    background-color: var(--acc) !important;
+}
+/* Profile */
+div.profile-cont > div.profile > div.content > div.top-medium > div.card,
+#view > div > div > div.content > div > div > div.content > div.top-medium > div.medium div,
+#view > div > div > div.content > div > div > div.content > div.top-medium > div.top div {
+    background: var(--sec);
+}
+#view > div > div > div.content > div > div > div.content > div.top-medium > div.top > div.card.card-profile > div.avatar {
+    border-radius: 1rem;
+    transition: 0.2s ease;
+    border: 0.3rem solid var(--prim);
+}
+#view > div > div > div.content > div > div > div.content > div.top-medium > div.top > div.card.card-profile > div.avatar:hover {
+    border-radius: 0.5rem;
+}
+/* Level Rewards */
+#view > div > div > div.content > div > div.content > div.bg-progress > div.levels > div > div.levels-circle.text-1 > div > div > div.triangle {
+    border-top: 0.625rem solid var(--acc);
+}
+#view > div > div > div.content > div > div.content > div.bg-progress > div.levels > div > div.progress,
+#view > div > div > div.content > div > div.content > div.bottom > div > div,
+#view > div > div > div.content > div > div.content > div.head > div > div {
+    background: var(--acc) !important;
+    box-shadow: none !important;
+}
+#view > div > div > div.content > div > div.content > div.bg-progress > div.levels > div > div.progress {
+    margin-top: -0.3rem !important;
+}
+#view > div > div > div.content > div > div.content > div.head > div > div > div.disable,
+#view > div > div > div.content > div > div.content > div.bottom > div > div > div.disable {
+    border: none !important;
+    color: var(--acc) !important;
+}
+#view > div > div > div.content > div > div.content > div.bg-progress > div.levels > div.progress-helper {
+    z-index: 1;
+}
+#view > div > div > div.content > div > div.content > div.bg-progress > div.levels > div > div.levels-circle.text-1 > div {
+    margin-top: -0.6rem;
+}
+#view > div > div > div.content > div > div.content > div.bg-progress > div.levels > div,
+#view > div > div > div.content > div > div.content > div.bg-progress > div.levels > div > div.levels-circle.text-1 > div.no-active,
+#view > div > div > div.content > div > div.content > div.bg-progress > div.decor-bg {
+    background: var(--prim) !important;
+}
+#view > div > div > div.content > div > div.content > div.bg-progress,
+#view > div > div > div.content > div > div.content > div.bottom > div > div > div.box-border,
+#view > div > div > div.content > div > div.content > div.head > div > div > div.box-border,
+#view > div > div > div.content > div > div.level-head > div.description,
+#view > div > div > div.content > div > div.level-head > div.bg-level,
+#view > div > div > div.content > div > div.content > div.bg-progress > div.levels > div > div.levels-circle.text-1 {
+    background: transparent !important;
+    border: none;
+}
+#view > div > div > div.content > div > div.level-head > div.bg-level {
+    background: rgba(255, 255, 255, .4) !important;
+}
+#view > div > div > div.content > div > div.content > div.bg-progress > div.levels > div {
+    border-radius: 0rem !important;
+}
+/* Level Up */
+#app > div.interface.text-2 > div.vm--container > div.vm--modal > div > div > img {
+    opacity: 0;
+}
+/* Nav */
+#view > div > div > div.content > div > div.content > div.tab-bar {
+    align-items: center;
+    height: 4rem !important;
+    padding: 1rem;
+    left: 29.8% !important;
+    top: 3rem !important;
+    border-radius: 0.5rem;
+    background: var(--bg) !important;
+}
+#view > div > div > div.content > div > div.clans > div.pages-nav.text-2 > div {
+    height: 2.5rem;
+    padding: 0.5rem !important;
+    margin: 0rem 0.15rem;
+    width: 9rem;
+    background: var(--sec);
+    border: none;
+    border-radius: 0.5rem;
+    transition: 0.2s ease;
+}
+.hub-container > .ranked > .pages-nav > div:hover,
+.hub-container > .ranked > .pages-nav > div.active {
+    background: var(--sec) !important;
+    width: 15rem !important;
+    border-radius: 2rem;
+    color: white !important;
+    border: none !important;
+}
+#view > div > div > div.content > div > div.content > div.tabs.text-2 > div.left > div.tab.active-tab,
+#view > div > div > div.content > div > div.clans > div.pages-nav.text-2 > div.active,
+#view > div > div > div.content > div > div.clans > div.pages-nav.text-2 > div:hover,
+.tab:hover,
+.tab.active {
+    background: var(--sec) !important;
+    width: 9.5rem !important;
+    color: white !important;
+    border: none !important;
+}
+#view > div > div > div.content > div > div.content > div.tabs.text-2 > div.left > div.tab,
+.tab,
+.icon-btn.text-1 {
+    height: 2.5rem;
+    padding: 0.5rem !important;
+    margin: 0rem 0.15rem;
+    width: 7rem;
+    background: var(--acc) !important;
+    border: none;
+    border-radius: 0.5rem;
+    transition: 0.2s ease;
+    transform: skew(0deg) !important;
+}
+#view > div > div > div.content > div > div.content > div.tab-bar > div > div {
+    transform: skew(0deg) !important;
+}
+/* Container */
+#view > div > div > div.top-bar {
+    justify-content: center;
+    background: transparent;
+}
+#view > div > div > div.top-bar > div.close {
+    background: var(--acc);
+    border-radius: 50%;
+}
+#view > div > div > div.content > div > div.tabs > div:nth-child(1) {
+    width: 9rem;
+}
+#view > div > div {
+    border: none !important;
+    background: transparent;
+    box-shadow: none !important;
+}
+#view > div {
+    background: var(--prim);
+    border: 0.2rem solid var(--acc);
+    border-radius: 1.5rem;
+    padding-top: 1rem;
+    box-shadow: none !important;
+}
+#view {
+    background: var(--acc);
+}
+.tabs {
+    justify-content: center !important;
+    align-items: center !important;
+    background: transparent !important;
+    margin-bottom: 2rem !important;
+}
+#view > div > div > div.content > div > div.general-content.text-2 > div {
+    background: transparent;
+    border: none;
+}
+/* Container Card */
+#app > div.interface.text-2 > div.vm--container > div.vm--modal > div > div > div.general-content.text-2 > div.header {
+    color: var(--acc);
+}
+.container-card .close {
+    border-radius: 50%;
+    margin: 0.1rem;
+    scale: 0.8;
+}
+.container-card .name,
+.container-card {
+    background: var(--sec) !important;
+    border: none !important;
+}
+#app > div.interface.text-2 > div.vm--container > div.vm--modal > div > div > div.general-content.text-2 > div > div.right > label > div > div.items {
+    background: var(--acc);
+}
+#app > div.interface.text-2 > div.vm--container > div.vm--modal > div > div > div.general-content.text-2 > div > div.right > label > div > div.items > div:hover {
+    background: var(--prim);
+}
+/* Leaderboard */
+#view > div > div > div.content > div > div.leaderboard-cont > div.info-awards {
+    background: transparent;
+}
+div.hub-container > div.ranked > div.leaderboard-cont > div.info-awards > div.awards-label > span.awards-span {
+    color: var(--acc);
+}
+.hub-container > .ranked,
+div.hub-container > div.ranked > div.leaderboard-cont > div.info-awards,
+div.hub-container > div.ranked > div.leaderboard-cont > div.leaders > div.head-leaders > div.head > div.lvl-leader,
+div.hub-container > div.ranked > div.leaderboard-cont > div.list-champions > div.list-cont > div.bottom-items > div.item,
+div.hub-container > div.ranked > div.leaderboard-cont > div.list-champions > div.list-cont > div.top-items > div.items > div.item,
+div.hub-container > div.ranked > div.leaderboard-cont > div.list-champions > div.list-cont > div.top-items {
+    background: none;
+}
+#view > div > div > div.content > div > div.leaderboard-cont > div.list-champions > div > div.top-items {
+    background: var(--sec);
+    border-radius: 1rem;
+}
+div.hub-container > div.ranked > div.leaderboard-cont > div.list-champions > div.list-cont,
+#view > div > div > div.content > div > div.leaderboard-cont > div.list-champions > div,
+#view > div > div > div.content > div > div.leaderboard-cont > div.list-champions > div > div.bottom-items {
+    background: var(--sec);
+}
+div.hub-container > div.ranked > div.leaderboard-cont > div.list-champions > div.list-cont > .top-items > .items > .item,
+div.hub-container > div.ranked > div.leaderboard-cont > div.list-champions > div.list-cont > .bottom-items > .item,
+#view > div > div > div.content > div > div.leaderboard-cont > div.list-champions .item {
+    background: var(--acc) !important
+}
+/* Clans */
+#view > div > div > div.content > div > div.clans > div.champions-container > div.background > div.img-grad > div,
+#view > div > div > div.content > div > div.clans > div.my-clan > div.list-container,
+#view > div > div > div.content > div > div.clans > div.my-clan > div.card-cont,
+#view > div > div > div.content > div > div.clans > div.champions-container > div.champions-list,
+#view > div > div > div.content > div > div.clans {
+    background: transparent;
+}
+#view > div > div > div.content > div > div.clans > div.my-clan > div.list-container > div.list > div > div.item-content,
+#view > div > div > div.content > div > div.clans > div.my-clan > div.card-cont > div.info > div.right-info > div.description.background,
+#view > div > div > div.content > div > div.clans > div.my-clan > div.card-cont > div.info > div.left-info > div.all-scores.background,
+#view > div > div > div.content > div > div.clans > div.my-clan > div.card-cont > div.info > div.left-info > div.champions-stat.background,
+#view > div > div > div.content > div > div.clans > div.champions-container > div.awards-cont > div.cards > div,
+#view > div > div > div.content > div > div.clans > div.champions-container > div.champions-list > div.lists > div > div > div.items > div {
+    background: var(--sec);
+}
+/* Market */
+div.subjects,
+.loader,
+.input {
+    background: transparent !important;
+    border: none !important;
+}
+#view > div > div > div.content > div > div.general-content.text-2 > div > div.right > label > div > div.items > div,
+#view > div > div > div.content > div > div.inventory > div > div.filters > div.filter-rarity > label > div > div.items {
+    background: var(--sec) !important;
+    z-index: 2 !important;
+}
+#view > div > div > div.content > div > div.general-content.text-2 > div > div.right > label > div > div.items > div:hover,
+#view > div > div > div.content > div > div.inventory > div > div.filters > div.filter-rarity > label > div > div.items > div:hover {
+    background: var(--prim) !important;
+}
+/* Market/Inv */
+.rar-skin {
+    z-index: -0 !important;
+    width: 100% !important;
+    opacity: 0.6;
+    border-radius: 0.79rem;
+}
+.bottom-subj,
+.subjects > div > div.hover-btns-group,
+.subjects > div > img {
+    z-index: 1
+}
+.subjects > div {
+    background: transparent !important;
+}
+.subjects > div > div.bottom-subj > div {
+    background: transparent !important;
+}
+.subjects > div * {
+    font-weight: 700 !important;
+}
+/* Videos/News */
+#view > div > div > div.content > div > div.news > div > div > div.info > div > div.description > div.list.text-2 > div > div,
+#view > div > div > div.content > div > div.news > div.card-list > div:nth-child(2) > div.info > div > div > div.list.text-2 > div > div,
+#view > div > div > div.content > div > div.news > div.card-list,
+#view > div > div > div.content > div > div.news > div.card-list > div.title,
+#view > div > div > div.content > div > div.news > div.live-streams > div.head,
+#view > div > div > div.content > div > div.news > div.live-streams {
+    background: transparent;
+    border: none;
+}
+#view > div > div > div.content > div > div.news > div.card-list > div > div.info > h1,
+#view > div > div > div.content > div > div.news > div.card-list > div {
+    background: var(--sec);
+    border-radius: 1rem;
+}
+#view > div > div > div.content > div > div.news > div.card-list > div > div.info > div > div > div.list.text-2 > div {
+    background: var(--prim);
+    border-radius: 1rem;
+    border: 0.2rem solid var(--acc);
+}
+#view > div > div > div.content > div > div.news > div > div > div.info > div > div.bottom > button {
+    margin-bottom: 1.5rem;
+}
+/* Terms */
+#view > div > div > div.content > div > div.terms > div > h1,
+#view > div > div > div.content > div > div.terms > div {
+    background: transparent;
+    border: none;
+}
+/* Servers */
+#view > div > div > div.content > div > div > div.chat-cont > div.chat.chat > div.messages.messages-cont.small > div > span.lvl {
+    background: transparent !important;
+}
+#view > div > div > div.content > div > div > div.list-cont > div.list > div > div.right > div {
+    background: var(--sec);
+    padding: 0.1rem;
+    border-radius: 0.5rem;
+}
+#view > div > div > div.content > div > div > div.preview.text-2 > div > div.head {
+    width: 10rem;
+    background: var(--sec);
+    padding: 0.5rem;
+    align-items: center !important;
+    border-radius: 1rem;
+}
+#view > div > div > div.content > div > div > div.preview.text-2 > div > div.bottom {
+    background: var(--sec);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: 95.4%;
+}
+#view > div > div > div.content > div > div > div.chat-cont > div.chat.chat > div.messages.messages-cont.small {
+    background: transparent !important;
+}
+#view > div > div > div.content > div > div > div.list-cont > div.list > div {
+    background: var(--sec);
+}
+#view > div > div > div.content > div > div > div.chat-cont > div.chat-head > div.no-auth.text-2 {
+    background: var(--sec);
+    color: var(--acc);
+}
+/* Quests */
+#view > div > div > div.content > div.quests-container {
+    height: 50rem;
+}
+#view > div > div > div.content > div > div.tabs > div:nth-child(2) {
+    width: 8rem;
+}
+#view > div > div > div.content > div > div.quests > div.subjects > div.subject {
+    background: var(--prim) !important;
+    margin: 0.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: row !important;
+}
+#view > div > div > div.content > div > div.quests > div.subjects > div.subject > div.quest {
+    background-color: transparent !important;
+}
+#view > div > div > div.content > div > div.quests > div.subjects > div.subject > div.quest > div.left {
+    border-radius: 1rem;
+    outline: 0.2rem solid var(--sec) !important;
+}
+#view > div > div > div.content > div > div.quests > div.subjects > div.subject > div.quest > div.right {
+    width: 45rem !important;
+}
+#view > div > div > div.content > div > div.quests > div.subjects > div.subject > div.quest > div.right > div.rewards > div.list div,
+#view > div > div > div.content > div > div.quests > div.subjects > div.subject > div.quest > div.right > div.rewards > div.list div,
+#view > div > div > div.content > div > div.quests > div.subjects > div.subject > div.quest > div.right > div.rewards,
+#view > div > div > div.content > div > div.quests > div.subjects > div.subject > div.time-left {
+    background: transparent;
+    color: white;
+}
+/* Friends */
+#view > div > div > div.content > div > div.content > div.tabs.text-2 > div.limit,
+#view > div > div > div.content > div > div.content > div.tabs.text-2,
+#view > div > div > div.content > div > div.content > div.allo > div > div > div.friend-right > div > div,
+#view > div > div > div.content > div > div.add-friends.text-2 > div.head-text,
+#view > div > div > div.content > div > div.add-friends.text-2 {
+    background: transparent;
+    border: none;
+}
+#view > div > div > div.content > div > div.content > div.allo > div > div {
+    background: var(--sec);
+}
+/* Inv */
+#view > div > div > div.content > div > div.left > div.bottom,
+#view > div > div > div.content > div > div.left {
+    background: transparent;
+    border: none;
+}
+/* Chest */
+#view > div > div > div.content > div > div.vm--container > div.vm--modal > div > div > div > div.chest-wrapper {
+    border: none;
+}
+#view > div > div > div.content > div > div.vm--container > div.vm--modal > div > div > div > div.bottom.text-2 > button {
+    border-radius: 1rem;
+}
+/* Loading Game/ Game Found */
+#app > div.interface.text-2 > div.searching-game > div.center > div.time {
+    color: white;
+    opacity: 0.7;
+}
+#app > div.interface.text-2 > div.searching-game > div.bottom,
+#app > div.interface.text-2 > div.searching-game > div.top,
+#app > div.interface.text-2 > div.searching-game > div.center {
+    background: linear-gradient(90.02deg, rgba(23, 22, 66, 0) .02%, var(--acc) 19.8%, var(--acc) 81.76%, rgba(22, 26, 66, 0) 99.98%);
+}
+/* Loading Screen */
+#app > div.loading-scene > div.content {
+    margin-top: 15rem;
+}
+#app > div.loading-scene > div.content > div > div,
+#app > div.loading-scene > div.content.team > div > div {
+    background: var(--sec);
+    border-radius: 1rem;
+}
+#app > div.loading-scene > div.content > div > div > div.player-left > div.avatar,
+#app > div.loading-scene > div.content.team > div > div > div.player-left > div.avatar {
+    border: 0.25rem solid var(--bg);
+}
+#app > div.loading-scene > div.background-cont > div.background {
+    background: rgba(47, 47, 47, .45);
+}
+#app > div.loading-scene > div.progress {
+    background: var(--acc);
+}
+/* In Game */
+#app > div.game-interface > div.ach-cont > div > svg > path {
+    fill: var(--acc) !important;
+}
+.mod.text-1 {
+    display: flex
+}
+.selected {
+    box-shadow: 0 0 0.2rem 0.1rem var(--acc) !important;
+}
+#app > div.game-interface > div.desktop-game-interface > div.state-cont > div.left > div,
+#app > div.game-interface > div.desktop-game-interface > div.state-cont > div.kill-death > div {
+    background: var(--acc) !important;
+}
+.kill-bar-item {
+    background: var(--acc) !important;
+}
+/* In Game Chat */
+#app > div.game-interface > div.desktop-game-interface > div.chat.chat-position > div.messages.messages-cont > div > span.name,
+#app > div.game-interface > div.desktop-game-interface > div.chat.chat-position > div.messages.messages-cont > div > span.lvl {
+    background: transparent !important;
+    color: var(--acc) !important;
+}
+#app > div.game-interface > div.desktop-game-interface > div.chat.chat-position > div.messages.messages-cont {
+    background: rgba(0, 0, 0, .56) !important;
+}
+#app > div.game-interface > div.desktop-game-interface > div.state > div.hp > div,
+#app > div.game-interface > div.desktop-game-interface > div.state > div.cont-endurance {
+    background: var(--acc);
+}
+#app > div.game-interface > div.desktop-game-interface > div.state > div.hp > div.cont-hp > div,
+#app > div.game-interface > div.desktop-game-interface > div.state > div.cont-endurance > div {
+    background: var(--acc) !important;
+}
+/* Tab Menu */
+#app > div.game-interface > div.desktop-game-interface > div.tab-info > div.head.text-2 {
+    background: transparent;
+    border: none;
+}
+#app > div.game-interface > div.desktop-game-interface > div.tab-info {
+    background: #00000075;
+    backdrop-filter: blur(1rem);
+}
+#app > div.game-interface > div.desktop-game-interface > div.tab-info > div.players > div > div.player-list > div.player,
+#app > div.game-interface > div.desktop-game-interface > div.tab-info > div.players > div.player-list > div.player {
+    background: var(--acc);
+}
+#app > div.game-interface > div.desktop-game-interface > div.tab-info > div.head.text-2 > div.label {
+    color: white !important;
+}
+/* Death */
+#app > div.game-interface > div.death-cont > div {
+    background: #3737379e;
+    border: 0.2rem solid var(--acc);
+    border-radius: 1rem;
+}
+/* Esc Menu */
+#app > div.game-interface > div.esc-interface > div.right-container {
+    background: #37373775;
+}
+#app > div.game-interface > div.death-cont > div > div.top > div.top-left > div.avatar {
+    border: 0.25rem solid var(--acc);
+    border-radius: 0.5rem;
+}
+#app > div.game-interface > div.esc-interface > div.left-container > div.player-list > div > div.player-left > div.avatar {
+    border: 0.2rem solid var(--acc);
+    border-radius: 0.5rem;
+}
+#app > div.game-interface > div.esc-interface > div.left-container > div.player-list > div {
+    background: var(--sec);
+    border-radius: 0.75rem;
+}
+/* End Game Popup */
+#app > div.game-interface > div.container-pre-end > div.center-cont > div,
+#app > div.game-interface > div.container-pre-end > div.right-cont,
+#app > div.game-interface > div.container-pre-end > div.right-cont > div,
+#app > div.game-interface > div.container-pre-end > div.center-cont,
+#app > div.game-interface > div.container-pre-end > div.left-cont,
+#app > div.game-interface > div.container-pre-end > div.left-cont > div {
+    background: var(--acc);
+    opacity: 0.8 !important;
+    border: none !important;
+}
+/* End Screen */
+#app > div.end-modal > div.content > div.chat > div.chat.chat-position > div.messages.messages-cont > div > span.lvl,
+#app > div.end-modal > div.content > div.chat > div.chat.chat-position > div.messages.messages-cont,
+#app > div.end-modal > div.bottom,
+#app > div.end-modal > div.content > div.right-cont-content > div.next-round.text-2 > div.level {
+    background: transparent !important;
+}
+#app > div.end-modal {
+    background: var(--bg);
+}
+#app > div.end-modal > div.content > div.right-cont-content > div.list-cont.list-players > div.top-items {
+    background: var(--prim);
+}
+#app > div.end-modal > div.content > div.right-cont-content > div.list-cont.list-players {
+    background: var(--sec);
+}
+#app > div.end-modal > div.content > div.right-cont-content > div.list-cont.list-players div.item {
+    background: var(--acc) !important;
+}
+/* Gun */
+.gun {
+    background: var(--sec) !important;
+    border-radius: 0.75rem !important;
+    border: none !important;
+}
+/* BKC Fixes */
+#gui {
+    background-color: var(--sec) !important;
+    border: 0.2rem solid var(--acc) !important;
+    padding: 2rem !important;
+    border-radius: 1rem !important;
+}
+#gui .heading,
+#gui .footer {
+    background-color: transparent !important;
+    border: none !important;
+}
+#clientJoinButton {
+    background: var(--sec) !important;
+    border: 0.2rem solid var(--acc) !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    bottom: 0.1rem !important;
+    height: 7.5rem !important;
+    width: 9.5rem !important;
+    left: -10rem;
+}
+
+.right-interface[data-v-5edaad78] {
+    padding-top: 400px;
+    align-items: flex-end;
+    right: 0;
+    transform-origin: top right;
+}
+
+#settings-and-socicons.settings-and-socicons[data-v-5edaad78] {
+    display: flex;
+    pointer-events: auto;
+    margin-bottom: 8px;
+    width: 37px;
+    width: 5.5rem !important;
+    margin: 0.5rem;
+}
+.wMwWWnm .right {
+    background-color: var(--acc) !important;
+}
+#\31 f45d931-48c5-4f42-b54b-a946cb4e8502 .right {
+        background-color: var(--acc);
+}
+#\36 cfd8ef0-ae25-4c44-814c-c7eb399a65ba .right {
+            background-color: var(--acc);
+}
+.content .tabs, #top, .tab-header, .settings .container{
+            background-color: #30132f !important;
+    background: #30132f !important;
+}
+.box {
+    background-color: #5f145c !important;
+    border: #30132f !important;
+}
+.view {
+    
+}
