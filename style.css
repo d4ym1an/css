@@ -200,6 +200,29 @@ body {
     background-color: var(--hover-clr);
 }
 
+@media(max-width: 800px) {
+    #toggle-btn {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 60px;
+        margin: 0;
+        padding: 0;
+        z-index: 21;
+        background-color: var(--base-clr);
+        border-bottom: 1px solid var(--line-clr);
+    }
+
+    #sidebar:not(.close) #toggle-btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        border-bottom: none;
+    }
+}
+
 main {
     padding: min(30px, 7%);
 }
@@ -453,78 +476,117 @@ main p {
 @media(max-width: 800px) {
     body {
         grid-template-columns: 1fr; /* Single column layout */
+        grid-template-rows: auto 1fr;
     }
 
     #sidebar {
-        height: 60px;
+        height: 100vh;
         width: 100%;
+        padding: 1em;
         border-right: none;
-        border-top: 1px solid var(--line-clr);
-        padding: 0;
+        border-top: none;
         position: fixed;
-        top: unset;
+        top: 0;
+        left: 0;
         bottom: 0;
         z-index: 20; /* Ensure it stays above other content */
+        transform: translateX(-100%);
+        transition: transform 300ms ease-in-out;
+        overflow-y: auto;
+        background-color: var(--base-clr);
+    }
 
-        > ul {
-            padding: 0;
-            display: grid;
-            grid-auto-columns: 60px;
-            grid-auto-flow: column;
-            align-items: center;
-            overflow-x: auto; /* Allow horizontal scrolling */
-        }
+    #sidebar:not(.close) {
+        transform: translateX(0);
+    }
 
-        ul li {
-            height: 100%;
-        }
-
-        ul a,
-        ul .dropdown-btn {
-            width: 60px;
-            height: 60px;
-            padding: 0;
-            border-radius: 0;
-            justify-content: center;
-        }
-
-        ul li span,
-        ul li:first-child,
-        .dropdown-btn svg:last-child {
-            display: none;
-        }
-
-        ul li .sub-menu.show {
-            position: fixed;
-            bottom: 60px;
-            left: 0;
-            box-sizing: border-box;
-            height: 60px;
-            width: 100%;
-            background-color: var(--hover-clr);
-            border-top: 1px solid var(--line-clr);
-            display: flex;
-            justify-content: center;
-
-            > div {
-                overflow-x: auto;
-            }
-
-            li {
-                display: inline-flex;
-            }
-
-            a {
-                box-sizing: border-box;
-                padding: 1em;
-                width: auto;
-                justify-content: center;
-            }
-        }
+    #sidebar.close {
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid var(--line-clr);
+        transform: none;
     }
 
     main {
         padding: 1em; /* Reduce padding for smaller screens */
+        grid-column: 1;
+        padding-top: 80px;
+    }
+
+    #sideba.close ~ main {
+        padding-top: 80px;
+    }
+
+    #sidebar > ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #sidebar.close > ul {
+        display: none;
+    }
+
+    #sidebar:not(.close) > ul > li:first-child {
+        margin-bottom: 1em;
+    }
+
+    #sidebar ul li {
+        height: auto;
+    }
+
+    #sidebar ul a,
+    #sidebar ul .dropdown-btn {
+        width: 100%;
+        padding: 0.85em;
+        border-radius: 0;
+        justify-content: flex-start;
+    }
+
+    #sidebar:not(.close) ul li span {
+        display: inline;
+    }
+
+    #sidebar.close ul li span,
+    #sidebar.close ul li:first-child {
+        display: none;
+    }
+
+    #sidebar ul li .sub-menu.show {
+        position: static;
+        bottom: auto;
+        left: 0;
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        background-color: transparent;
+        border-top: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        > div {
+            overflow: visible;
+            display: flex;
+            flex-direction: column;
+        }
+
+        li {
+            display: flex;
+        }
+
+        a {
+            box-sizing: border-box;
+            padding: 0.85em;
+            padding-left: 2em;
+            width: 100%;
+            justify-content: flex-start;
+        }
     }
 
     .hero {
