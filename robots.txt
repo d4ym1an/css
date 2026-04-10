@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /css/
+Allow: /index.html
+Allow: /css/index.html
+
+Disallow: /imgs/
+
+Sitemap: https://cssarena.daymian.xyz/sitemap.xml

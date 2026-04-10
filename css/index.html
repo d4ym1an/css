@@ -4,9 +4,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSSArena // CSS</title>
+  <meta name="description" content="Browse all Kirka CSS themes on CSSArena. Hundreds of free CSS skins for Kirka.io. Easy to install and customize your Kirka.io experience.">
+  <meta name="keywords" content="kirka css list, kirka css themes, free kirka skins, kirka css gallery, kirka customization, css for kirka.io">
+  <meta name="author" content="daymian">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph Tags for Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kirka CSS Themes & Skins - CSSArena CSS Gallery">
+  <meta property="og:description" content="Browse hundreds of free Kirka CSS themes and skins. Find the perfect CSS design for your Kirka.io gameplay.">
+  <meta property="og:url" content="https://cssarena.daymian.xyz/css/">
+  <meta property="og:image" content="https://cssarena.daymian.xyz/imgs/icon.png">
+  
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kirka CSS Themes & Skins Gallery">
+  <meta name="twitter:description" content="Discover free CSS designs for Kirka.io on CSSArena.">
+  <meta name="twitter:image" content="https://cssarena.daymian.xyz/imgs/icon.png">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://cssarena.daymian.xyz/css/">
+  
+  <title>Kirka CSS Themes Gallery | Browse Free Skins | CSSArena</title>
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="app.js" defer></script>
+  <link rel="icon" type="image/x-icon" href="/imgs/icon.png">
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Kirka CSS Themes Gallery",
+      "description": "A comprehensive gallery of free CSS themes and skins for Kirka.io",
+      "url": "https://cssarena.daymian.xyz/css/",
+      "creator": {
+          "@type": "Person",
+          "name": "daymian"
+      }
+  }
+  </script>
 </head>
 
 <body>
@@ -573,6 +611,22 @@
         <a href="/css/CSS/MLPurple/purp.css" download="purp.css">Download</a>
       </div>
 
+      <div class="css-card" data-id="monochrome" data-filters="black">
+        <img src="/css/CSS/monochrome/monochromeMenu.png" alt="Monochrome Preview" onclick="openCarousel(this)">
+        <h2>monochrome</h2>
+        <div class="buttons">
+          <button class="favorite" onclick="toggleFavorite(this)">
+            <img src="/favorite.svg" alt="Favorite">
+          </button>
+          <button onclick="viewCode(this)" class="code">
+            <img src="/code.svg" alt="View Code">
+          </button>
+          <button onclick="copyURL(this)" class="copy">
+            <img src="/copy.svg" alt="Copy URL">
+          </button>
+        </div>
+        <a href="/css/CSS/MLPurple/purp.css" download="purp.css">Download</a>
+      </div>
 
     </section>
     <div id="popup-overlay" class="overlay-popup" style="display: none;">
@@ -786,6 +840,10 @@
         purp: [
           '/css/CSS/MLPurple/purpMenu.png',
           '/css/CSS/MLPurple/purpGame.png'
+        ]
+        monochrome: [
+          '/css/CSS/monochrome/monochromeMenu.png',
+          '/css/CSS/monochrome/monochromeGame.png'
         ]
       };
 
