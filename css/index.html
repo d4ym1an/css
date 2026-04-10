@@ -69,6 +69,7 @@
                 <img src="/imgs/kirka-logo.png" width="16px" height="16px">
                 <span>Kirka Clients</span>
               </a>
+            </li>
           </div>
         </ul>
       </li>
@@ -117,8 +118,8 @@
         </div>
         <p><strong>Feel free to fix any of the CSS and send it to me via Discord (@d4ym1an). Once tested, I will
             compensate you with 10,000 coins.</strong></p>
-        <p>CSS being loaded into <a href="https://github.com/zVipexx/dawn-client" target="_blank" rel="noopener noreferrer"
-            style="text-decoration: underline;" class="dawnText">Dawn Client</a></p>
+        <p>CSS being loaded into <a href="https://github.com/zVipexx/dawn-client" target="_blank"
+            rel="noopener noreferrer" style="text-decoration: underline;" class="dawnText">Dawn Client</a></p>
       </div>
     </header>
 
@@ -537,6 +538,7 @@
         </div>
         <a href="/css/CSS/BetterDefault/BetterDefault.css" download="BetterDefault.css">Download</a>
       </div>
+
       <div class="css-card" data-id="banshee" data-filters="purple">
         <img src="/css/CSS/banshee/bansheeMenu.png" alt="Banshee Preview" onclick="openCarousel(this)">
         <h2>Banshee</h2>
@@ -553,6 +555,25 @@
         </div>
         <a href="/css/CSS/banshee/banshee.css" download="banshee.css">Download</a>
       </div>
+
+      <div class="css-card" data-id="purp" data-filters="purple">
+        <img src="/css/CSS/MLPurple/purpMenu.png" alt="Purp Preview" onclick="openCarousel(this)">
+        <h2>Purp</h2>
+        <div class="buttons">
+          <button class="favorite" onclick="toggleFavorite(this)">
+            <img src="/favorite.svg" alt="Favorite">
+          </button>
+          <button onclick="viewCode(this)" class="code">
+            <img src="/code.svg" alt="View Code">
+          </button>
+          <button onclick="copyURL(this)" class="copy">
+            <img src="/copy.svg" alt="Copy URL">
+          </button>
+        </div>
+        <a href="/css/CSS/MLPurple/purp.css" download="purp.css">Download</a>
+      </div>
+
+
     </section>
     <div id="popup-overlay" class="overlay-popup" style="display: none;">
       <div class="popup-content">
@@ -761,6 +782,10 @@
         enwa: [
           '/css/CSS/enwa/Screenshot 2025-04-13 221849.png',
           '/css/CSS/enwa/game.png'
+        ]
+        purp: [
+          '/css/CSS/MLPurple/purpMenu.png',
+          '/css/CSS/MLPurple/purpGame.png'
         ]
       };
 
