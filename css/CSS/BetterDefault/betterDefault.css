@@ -1,4 +1,9 @@
-@import url('https://drift.daymian.xyz/assets/font/font.css');
+@font-face {
+    font-family: 'forza';
+    src: url('https://drift.daymian.xyz/assets/font/Forza-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 
 :root {
     --logo: url("https://client.kirka.io/images/icon.png");
