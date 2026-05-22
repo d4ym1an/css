@@ -1,0 +1,569 @@
+/* ============================================================
+   KrunkerStyle.css  —  Kirka.io CSS inspired by Krunker's UI
+   Font: krunker.io/css/fonts/font2.ttf
+   ============================================================ */
+
+@font-face {
+    font-family: 'krunker';
+    src: url('https://krunker.io/css/fonts/font2.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --logo: url("https://client.kirka.io/images/icon.png");
+    --topbar-h:     64px;
+
+    /* Krunker palette */
+    --bg-dark:      #1c1c1c;
+    --bg-topbar:    #202020;
+    --bg-panel:     #252525;
+    --bg-panel2:    #2e2e2e;
+    --border:       #383838;
+    --border-light: #4a4a4a;
+    --text:         #e0e0e0;
+    --text-dim:     #888888;
+    --accent-gold:  #f5c518;
+    --accent-green: #2ecc71;
+    --accent-blue:  #3498db;
+    --accent-red:   #e74c3c;
+    --accent-kr:    #ffcc00;
+}
+
+/* ── Global reset ─────────────────────────────────────────── */
+* {
+    font-family: 'krunker', monospace !important;
+    border-radius: 0px !important;
+    letter-spacing: 0.5px;
+}
+
+/* ── Background ───────────────────────────────────────────── */
+.background {
+    background: var(--bg-dark) !important;
+}
+
+.pattern-bg {
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent, transparent 30px,
+            rgba(255,255,255,0.012) 30px,
+            rgba(255,255,255,0.012) 31px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent, transparent 30px,
+            rgba(255,255,255,0.012) 30px,
+            rgba(255,255,255,0.012) 31px
+        ) !important;
+}
+
+.bg-radial {
+    background: radial-gradient(ellipse at 50% 0%, rgba(40,40,40,0.7) 0%, transparent 60%) !important;
+}
+
+/* ══════════════════════════════════════════════════════════
+   TOP BAR — replaces the left-interface vertical layout
+   ══════════════════════════════════════════════════════════ */
+
+/* Push game content down so topbar doesn't overlap */
+.interface {
+    padding-top: var(--topbar-h) !important;
+}
+
+/* The whole left-interface becomes a fixed top bar */
+#left-interface,
+.left-interface {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
+    height: var(--topbar-h) !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    padding: 0 10px !important;
+    gap: 0 !important;
+    z-index: 9999 !important;
+    transform: none !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
+/* ── Auth / profile section (left side) ──────────────────── */
+#auth-user,
+.auth-user {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 6px !important;
+    height: 100% !important;
+    flex-shrink: 0 !important;
+    padding-right: 10px !important;
+    border-right: 1px solid var(--border) !important;
+}
+
+/* Profile card — row layout */
+.profile {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 6px !important;
+    height: 100% !important;
+}
+
+/* Avatar + username card */
+.card-cont.avatar-info {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 6px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    height: 100% !important;
+}
+
+/* Avatar thumbnail */
+.avatar {
+    width: 59px !important;
+    height: 59px !important;
+    flex-shrink: 0 !important;
+    border: 1px solid var(--border-light) !important;
+    margin: 2px !important;
+}
+
+/* Username */
+.username {
+    color: var(--text) !important;
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+}
+
+/* XP / level card — inline next to avatar */
+.card-cont.user-info {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    gap: 5px !important;
+    height: 100% !important;
+}
+
+.progress-lvl {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
+}
+
+.progress-top {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 4px !important;
+}
+
+.level-cont {
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 1px !important;
+}
+
+.level-value {
+    color: var(--accent-gold) !important;
+    font-size: 13px !important;
+}
+
+.level-text {
+    color: var(--text-dim) !important;
+    font-size: 9px !important;
+    text-transform: uppercase !important;
+}
+
+.exp-values {
+    color: var(--text-dim) !important;
+    font-size: 9px !important;
+    white-space: nowrap !important;
+}
+
+/* XP bar — slim horizontal bar */
+.progress-line {
+    width: 190px !important;
+    height: 4px !important;
+    background: var(--border) !important;
+    flex-shrink: 0 !important;
+}
+
+.progress-line .progress {
+    height: 100% !important;
+    background: linear-gradient(90deg, var(--accent-gold), #ffaa00) !important;
+    box-shadow: 0 0 4px rgba(245,197,24,0.5) !important;
+}
+
+/* ── Money section — inline chips ────────────────────────── */
+.moneys {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 4px !important;
+    height: 100% !important;
+    padding: 0 10px !important;
+    border-right: 1px solid var(--border) !important;
+    flex-shrink: 0 !important;
+    margin-left: 0 !important;
+}
+
+.card-cont.money {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: var(--accent-kr) !important;
+    font-size: 12px !important;
+    padding: 0 6px !important;
+    white-space: nowrap !important;
+    height: 26px !important;
+}
+
+.card-cont.money.diamonds {
+    color: #a78bfa !important;
+}
+
+.coin-icon {
+    width: 14px !important;
+    height: 14px !important;
+    flex-shrink: 0 !important;
+}
+
+
+/* ── Logo — hide from main position (top bar has no room) ── */
+#logo.logo {
+    display: none !important;
+}
+
+/* ── Right interface — float above everything ─────────────── */
+#right-interface,
+.right-interface {
+    z-index: 9998 !important;
+    position: fixed !important;
+}
+
+/* ── Social links — hidden ───────────────────────────────── */
+.soc-group,
+#juice-discord-btn {
+    display: none !important;
+}
+
+/* ── Quests — font fix so all text is visible ────────────── */
+#wNWmwMn,
+.quests {
+    font-size: 11px !important;
+    letter-spacing: 0 !important;
+    height: 330px !important;
+    background: rgba(37, 37, 37, 0.75) !important;
+    border: 1px solid var(--border) !important;
+}
+
+.quests .subject,
+.quests .quest,
+.quests .tabs-wrapper,
+.quests .tabs {
+    background: rgba(37, 37, 37, 0.75) !important;
+}
+
+.quests .tab.selected {
+    background: rgba(46, 46, 46, 0.85) !important;
+}
+
+.quests .description {
+    font-size: 15px !important;
+}
+
+.quests .progress2,
+.quests .label,
+.quests .amount,
+.quests .expire,
+.quests .tab {
+    font-size: 10px !important;
+    letter-spacing: 0 !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+}
+
+.rewards,
+.rewards .list,
+.reward .item,
+.amount .item, {
+    background: var(--bg-panel) !important;
+    border: 1px solid var(--border) !important;
+}
+
+.reward{
+    background: none !important;
+}
+
+/* ══════════════════════════════════════════════════════════
+   BUTTONS
+   ══════════════════════════════════════════════════════════ */
+.button {
+    background: var(--bg-panel2) !important;
+    color: var(--text) !important;
+    border: 1px solid var(--border-light) !important;
+    text-transform: uppercase !important;
+    font-size: 12px !important;
+    letter-spacing: 2px !important;
+    transition: background 0.1s, color 0.1s !important;
+}
+
+.button:hover {
+    background: var(--border-light) !important;
+    color: #ffffff !important;
+}
+
+/* Play — gold */
+.play-btn .border-top,
+.play-btn .border-bottom {
+    background: var(--accent-gold) !important;
+}
+
+.button.play-btn {
+    background: #2a2400 !important;
+    color: var(--accent-gold) !important;
+    border: 1px solid var(--accent-gold) !important;
+}
+
+.button.play-btn:hover {
+    background: #3a3200 !important;
+}
+
+/* Create / Join — blue */
+.create-btn .border-top,
+.create-btn .border-bottom,
+.join-btn .border-top,
+.join-btn .border-bottom {
+    background: var(--accent-blue) !important;
+}
+
+.button.create-btn,
+.button.join-btn {
+    background: #0d1e35 !important;
+    color: var(--accent-blue) !important;
+    border: 1px solid var(--accent-blue) !important;
+}
+
+.text-icon{
+    display: none !important;
+    border: none !important;
+}
+
+#left-icons,
+.left-icons,
+.icon-btn {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.left-icons .icon-btn:hover {
+    border-top: transparent !important;
+}
+
+.daily-rewards-btn{
+    display: none !important;
+}
+
+/* ── Escape / pause screen ────────────────────────────────── */
+.esc-interface {
+    background: rgba(0, 0, 0, 0.85) !important;
+    border: 1px solid var(--border-light) !important;
+}
+
+/* ── Card containers (general) ───────────────────────────── */
+.card-cont {
+    background: var(--bg-panel) !important;
+    border: 1px solid var(--border) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5) !important;
+}
+
+.card-cont:hover {
+    border-color: var(--border-light) !important;
+}
+
+/* ── HUD FPS / Ping ───────────────────────────────────────── */
+#fps, #ping {
+    color: var(--accent-green) !important;
+    font-size: 11px !important;
+    text-shadow: 0 0 6px rgba(46, 204, 113, 0.5) !important;
+}
+
+/* ── Chat ─────────────────────────────────────────────────── */
+.chat-position {
+    bottom: 1rem !important;
+    left: 1rem !important;
+    transform-origin: bottom left !important;
+    transform: scale(0.88) !important;
+}
+
+.messages {
+    min-height: unset !important;
+}
+
+/* ── In-game HUD ─────────────────────────────────────────── */
+.instruction {
+    display: none !important;
+}
+
+.mini-map-cont,
+.desktop-game-interface .info-key-cont,
+.mWwn,
+.instruction {
+    display: none !important;
+}
+
+.state-cont {
+    justify-content: center !important;
+}
+
+#state-cont {
+    position: fixed !important;
+    left: 50vw !important;
+    bottom: 1em !important;
+    transform: translateX(-50%) !important;
+}
+
+.state-weapon-active.text-1 {
+    position: fixed !important;
+    left: -35.31vw !important;
+    bottom: 5rem !important;
+    transform: none !important;
+    font-size: 8px !important;
+}
+
+/* ── Weapon list ─────────────────────────────────────────── */
+.list-weapons > .weapon-cont > .weapon-name {
+    display: none !important;
+}
+
+.list-weapons > .weapon-cont > .bottom:not(.is-selected) {
+    display: none !important;
+}
+
+.list-weapons > .weapon-cont > .bottom > img {
+    position: fixed !important;
+    right: 38.31vw !important;
+    top: 24rem !important;
+    transform: none !important;
+    font-size: 8px !important;
+}
+
+/* ── Ammo ─────────────────────────────────────────────────── */
+.ammunition {
+    position: fixed !important;
+    top: 15% !important;
+    left: -10em !important;
+    font-size: 7em !important;
+    color: var(--text) !important;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.8) !important;
+}
+
+#bottom-left {
+    height: 250px !important;
+}
+
+/* ── Tab bar / title ──────────────────────────────────────── */
+.tab-bar .tab,
+.title {
+    transform: skew(0deg) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+}
+
+/* ── Hover button grid ───────────────────────────────────── */
+.hover-btns-group {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 5px !important;
+    width: 100% !important;
+}
+
+.hover-btns-group .button {
+    width: 100% !important;
+}
+
+/* ── Select region ───────────────────────────────────────── */
+.select-region {
+    width: 94% !important;
+    text-align: center !important;
+    background: var(--bg-panel) !important;
+    color: var(--text) !important;
+    border: 1px solid var(--border-light) !important;
+    padding: 4px 8px !important;
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+}
+
+/* ── Lobby / player list ─────────────────────────────────── */
+.left-container .player-cont {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-content: flex-start !important;
+    flex-direction: column !important;
+    width: 70% !important;
+}
+
+/* ── Rarity colors ───────────────────────────────────────── */
+.PARANORMAL {
+    background: #111 !important;
+    border: 1px solid #fff !important;
+    margin: 0 3px !important;
+    box-shadow: 0 0 6px rgba(255,255,255,0.2) !important;
+}
+.MYTHICAL {
+    background: #2a0000 !important;
+    border: 1px solid #ff2222 !important;
+    margin: 0 3px !important;
+    box-shadow: 0 0 6px rgba(255,0,0,0.3) !important;
+}
+.LEGENDARY {
+    background: #2a1a00 !important;
+    border: 1px solid var(--accent-gold) !important;
+    margin: 0 3px !important;
+    box-shadow: 0 0 6px rgba(245,197,24,0.3) !important;
+}
+.EPIC {
+    background: #1a0030 !important;
+    border: 1px solid #9b59b6 !important;
+    margin: 0 3px !important;
+    box-shadow: 0 0 6px rgba(155,89,182,0.3) !important;
+}
+.RARE {
+    background: #001a2a !important;
+    border: 1px solid var(--accent-blue) !important;
+    margin: 0 3px !important;
+    box-shadow: 0 0 6px rgba(52,152,219,0.3) !important;
+}
+.COMMON {
+    background: #001a0a !important;
+    border: 1px solid var(--accent-green) !important;
+    margin: 0 3px !important;
+    box-shadow: 0 0 4px rgba(46,204,113,0.3) !important;
+}
+
+/* ── Scrollbars ──────────────────────────────────────────── */
+::-webkit-scrollbar {
+    width: 4px !important;
+    background: var(--bg-dark) !important;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-light) !important;
+}
