@@ -19,15 +19,23 @@ includes styling for dawn client buttons
   --red: 231, 49, 49;
   --yellow: 255, 185, 20;
   --blue: 47, 128, 237;
-  --accent: 152, 255, 170;
-  --accent-dark: 72, 124, 81;
+  --accent: 255, 80, 50;
+  --accent-dark: 160, 40, 20;
   --shadow: 0, 0, 0, .4;
   --shadow-rgb: 0, 0, 0;
   --box-shadow: 0 8px 32px 0 rgba(var(--shadow));
   --shadow-inset: 0 8px 32px 0 rgba(var(--shadow-rgb), 0), inset 0 4px 8px 0 rgba(var(--shadow-rgb), 0.5);
   --border: 255, 255, 255, 0.2;
   --border-hover: 255, 255, 255, 0.8;
-  --glass-gradient: 135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0);
+  --glass-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+
+  --bg-color-rotate: 10deg;
+  /*
+  10deg: red;
+  -110deg: purple;
+  -140deg: blue;
+  -240deg: green (ugly as fuck);
+  */
 }
 
 /* Font (and disabling scrollbar for newer chromium versions) */
@@ -49,7 +57,8 @@ includes styling for dawn client buttons
 .triangle,
 .border,
 .special-message-home,
-.daily-rewards-btn {
+.daily-rewards-btn,
+.loading-scene {
   display: none !important;
 }
 
@@ -95,7 +104,7 @@ includes styling for dawn client buttons
 
 /* Top bar */
 .container .top-bar {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border-bottom: 1px solid rgba(var(--border)) !important;
   box-shadow: none !important;
 }
@@ -108,7 +117,7 @@ includes styling for dawn client buttons
 }
 
 .container .top-bar .home {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border-radius: 8px 0 0 0;
   border-right: 1px solid rgba(var(--border)) !important;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, .8)) !important;
@@ -160,7 +169,7 @@ includes styling for dawn client buttons
 
 /* Progress bars */
 .progress-line {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
   box-shadow: var(--box-shadow) !important;
 }
@@ -227,7 +236,7 @@ includes styling for dawn client buttons
 .room-presets-sidebar,
 .container-card {
   border-radius: 12px !important;
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
   box-shadow: var(--box-shadow) !important;
   backdrop-filter: blur(20px);
@@ -308,7 +317,7 @@ input[type="range"].range::-webkit-slider-thumb {
   background: transparent !important;
   transform: none !important;
   border: none !important;
-  transition: 0.3s !important;
+  transition: all 0.3s ease !important;
   text-shadow: 0 0 4px black !important;
 }
 
@@ -322,6 +331,7 @@ input[type="range"].range::-webkit-slider-thumb {
 #app .tab:hover:active {
   transform: translateY(1px) !important;
   filter: brightness(0.8);
+  transition: all 0.3s ease !important;
 }
 
 .nav.active,
@@ -374,7 +384,7 @@ input[type="range"].range::-webkit-slider-thumb {
 
 .nickname-modal {
   border-radius: 12px !important;
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
   box-shadow: var(--box-shadow) !important;
   backdrop-filter: blur(20px);
@@ -422,8 +432,10 @@ Lobby
 }
 
 .interface .background {
-  background: url(https://i.imgur.com/Qoowylq.jpeg) !important;
+  /* background: url(https://i.imgur.com/Qoowylq.jpeg) !important; */
+  background: url(https://i.imgur.com/TVGzmmV.gif) !important;
   background-size: cover !important;
+  filter: hue-rotate(var(--bg-color-rotate)) brightness(0.8);
 }
 
 /* Juice news */
@@ -436,7 +448,7 @@ Lobby
 
 .lobby-news .news-card {
   border: 4px solid rgba(var(--border)) !important;
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border-radius: 8px;
 }
 
@@ -450,7 +462,7 @@ Lobby
 
 /* Player */
 .player-cont .levels {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border));
   box-shadow: var(--box-shadow);
   color: rgba(var(--accent)) !important;
@@ -528,7 +540,7 @@ Lobby
 }
 
 .auth-user .avatar {
-  border: 4px solid #9eb6ac !important;
+  border: 4px solid #cb7980 !important;
   background-color: transparent !important;
 }
 
@@ -538,7 +550,7 @@ Lobby
   transition: 0.3s !important;
   width: 150px !important;
   transform: translate(0%, -5%) !important;
-  background: linear-gradient(var(--glass-gradient));
+  background: var(--glass-gradient);
   border: 1px solid rgba(var(--border));
   box-shadow: var(--box-shadow);
   transform: translate(20px, 15%) !important;
@@ -566,7 +578,7 @@ Lobby
 }
 
 .auth-user .user-info .level-cont .level-value {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
   box-shadow: var(--box-shadow) !important;
 }
@@ -634,7 +646,7 @@ Lobby
 }
 
 .settings-and-socicons .settings {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
   border-radius: 10px !important;
   width: 50px !important;
@@ -688,20 +700,21 @@ Lobby
 }
 
 .quests {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
   box-shadow: var(--box-shadow) !important;
   overflow: show !important;
   height: 50px !important;
   border-radius: 10px !important;
   margin-right: 15px !important;
-  transition: 0.7s !important;
+  transition: 0.7s ease-out !important;
   margin-top: -58px !important;
   text-shadow: 0 0 4px black !important;
 }
 
 .quests:hover {
   height: 450px !important;
+  transition: 0.3s !important;
 }
 
 .quest .progress-line {
@@ -824,13 +837,16 @@ Lobby
 }
 
 .play-btn {
-  --hover-color: linear-gradient(135deg, rgba(var(--accent), 0.3), rgba(var(--accent), 0.1)) !important;
+  --hover-color: linear-gradient(135deg, rgba(var(--accent-dark), 0.3), rgba(var(--accent-dark), 0.1)) !important;
 
   font-style: normal !important;
-  background: linear-gradient(135deg, rgba(var(--accent), 0.3), rgba(var(--accent), 0.1)) !important;
+  background: linear-gradient(135deg, rgba(var(--accent-dark), 0.3), rgba(var(--accent-dark), 0.1)) !important;
   border: 1px solid rgba(var(--border)) !important;
-  box-shadow: var(--box-shadow) !important;
   transition: 0.3s;
+}
+
+.play-btn[data-v-99970ce6] {
+  box-shadow: var(--box-shadow) !important;
 }
 
 .play-btn:hover {
@@ -865,9 +881,9 @@ Lobby
 }
 
 .play-content .create-btn {
-  --hover-color: linear-gradient(var(--glass-gradient)) !important;
+  --hover-color: var(--glass-gradient) !important;
 
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
   box-shadow: var(--box-shadow) !important;
   transform: translate(398px, 125px) !important;
@@ -888,9 +904,9 @@ Lobby
 }
 
 .play-content .join-btn {
-  --hover-color: linear-gradient(var(--glass-gradient)) !important;
+  --hover-color: var(--glass-gradient) !important;
 
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
   box-shadow: var(--box-shadow) !important;
   transform: translate(142px, 190px) !important;
@@ -957,7 +973,7 @@ Lobby
 }
 
 .select-region {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
   box-shadow: var(--box-shadow) !important;
   transform: translate(-424px, 181px);
@@ -986,11 +1002,11 @@ Lobby
 }
 
 .quickjoin-btn {
-  --hover-color: linear-gradient(var(--glass-gradient)) !important;
+  --hover-color: var(--glass-gradient) !important;
 
   position: absolute !important;
   margin-top: 0 !important;
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
   box-shadow: var(--box-shadow) !important;
   transform: translate(-550px, 246px) !important;
@@ -1014,9 +1030,9 @@ Lobby
 }
 
 .lobby-group .invite-btn {
-  --hover-color: linear-gradient(var(--glass-gradient)) !important;
+  --hover-color: var(--glass-gradient) !important;
 
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   backdrop-filter: blur(20px);
   border: 1px solid rgba(var(--border)) !important;
   box-shadow: var(--box-shadow) !important;
@@ -1198,7 +1214,7 @@ Lobby
 }
 
 .create-modal .room-preset-item {
-  background: linear-gradient(var(--glass-gradient));
+  background: var(--glass-gradient);
   border: 1px solid rgba(var(--border));
 }
 
@@ -1211,7 +1227,7 @@ Lobby
 }
 
 .create-modal .member-level {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border));
   color: white;
   animation: glow 2s ease-in-out infinite alternate;
@@ -1219,7 +1235,7 @@ Lobby
 
 .create-modal .messages,
 .create-modal .bots-right .value {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
 }
 
@@ -1328,20 +1344,20 @@ Lobby
 }
 
 .friend-row .friend-level {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border));
   color: white;
   animation: glow 2s ease-in-out infinite alternate;
 }
 
 .container-card>.details {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border));
 }
 
 /* Login */
 .auth-form {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 3px solid rgba(var(--border)) !important;
   box-shadow: var(--box-shadow);
 }
@@ -1372,7 +1388,7 @@ Lobby
 .loading {
   border: 4px solid rgba(var(--border)) !important;
   border-left: none !important;
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
 }
 
 /* Profile */
@@ -1384,7 +1400,7 @@ Lobby
 }
 
 .profile-cont .levels {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border));
   backdrop-filter: blur(5px);
   box-shadow: var(--box-shadow);
@@ -1413,7 +1429,7 @@ Lobby
 }
 
 .profile-cont .matches {
-  background: linear-gradient(var(--glass-gradient));
+  background: var(--glass-gradient);
   border: 4px solid rgba(var(--border)) !important;
   border-radius: 8px;
 }
@@ -1466,12 +1482,12 @@ Lobby
 
 /* Levels */
 .content>.levels .description {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border));
 }
 
 .content>.levels .bg-level {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 3px solid rgba(var(--border)) !important;
   box-shadow: var(--box-shadow);
   transform: translateY(2px);
@@ -1502,7 +1518,7 @@ Lobby
 }
 
 .content>.levels .energy-icon {
-  filter: hue-rotate(45deg);
+  filter: hue-rotate(var(--bg-color-rotate));
 }
 
 .content>.levels .taken {
@@ -1569,7 +1585,7 @@ Lobby
 }
 
 .hub-container .lvl-leader {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border));
   box-shadow: var(--box-shadow);
   color: white !important;
@@ -1578,7 +1594,7 @@ Lobby
 }
 
 .hub-container .info-awards {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border));
 }
 
@@ -1588,27 +1604,27 @@ Lobby
 .hub-container .list-container,
 .hub-container .champions-list,
 .hub-container .list-cont {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 2px solid rgba(var(--border));
   box-shadow: var(--box-shadow);
 }
 
 .hub-container .reset-time {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border));
   box-shadow: var(--box-shadow) !important;
   backdrop-filter: blur(3px);
 }
 
 .hub-container .list-cont .top-items {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border-bottom: 1px solid rgba(var(--border));
 }
 
 .hub-container .list-container .item-content,
 .hub-container .champions-list .item,
 .hub-container .list-cont .item {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border));
   transition: 0.2s;
 }
@@ -1669,7 +1685,7 @@ Lobby
 }
 
 .hub-container .card-cont .background {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border));
   box-shadow: var(--box-shadow);
 }
@@ -1702,7 +1718,7 @@ Lobby
 }
 
 .live-streams {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
   border-radius: 5px;
   box-shadow: var(--box-shadow) !important;
@@ -1710,7 +1726,7 @@ Lobby
 
 .live-streams .head {
   border-bottom: 1px solid rgba(var(--border)) !important;
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   text-shadow: 0 0 4px black !important;
 }
 
@@ -1732,7 +1748,7 @@ Lobby
 }
 
 .hub-container .news .special-message-box {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 4px solid rgba(var(--border)) !important;
 }
 
@@ -1751,7 +1767,7 @@ Lobby
 
 .hub-container .news .card-list .title {
   border: 1px solid rgba(var(--border)) !important;
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border-radius: 5px;
   text-shadow: 0 0 4px black !important;
   box-shadow: var(--box-shadow) !important;
@@ -1763,7 +1779,7 @@ Lobby
 
 .hub-container .news .info {
   border: 1px solid rgba(var(--border)) !important;
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border-radius: 0 10px 10px 0;
 }
 
@@ -1776,7 +1792,7 @@ Lobby
 }
 
 .hub-container .news .info .head {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
 }
 
 .hub-container .news .info-content {
@@ -1794,7 +1810,7 @@ Lobby
 
 .hub-container .news .changelog-item {
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
 }
 
 .hub-container .news .bottom .button {
@@ -1811,7 +1827,7 @@ Lobby
 }
 
 .hub-container .terms .head {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border-bottom: 2px solid rgba(var(--border));
   box-shadow: none !important
 }
@@ -2201,7 +2217,7 @@ Lobby
 }
 
 .servers .messages {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border));
 }
 
@@ -2278,7 +2294,7 @@ Lobby
 }
 
 .servers .server {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border));
   transition: 0.3s;
   border-radius: 8px !important;
@@ -2374,6 +2390,8 @@ Lobby
   background: transparent !important;
   box-shadow: none !important;
   transform: translateX(5px);
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .quests-container .quest {
@@ -2381,7 +2399,6 @@ Lobby
   border: 2px solid rgba(var(--border)) !important;
   border-radius: 8px;
   overflow: hidden !important;
-  transform: translateY(40px);
 }
 
 .quests-container .quest .left {
@@ -2395,13 +2412,13 @@ Lobby
   background-color: transparent !important;
   text-shadow: 0 0 4px black !important;
   place-content: center center !important;
-  transform: translateY(-232px);
+  padding: .6rem 1rem 0 !important;
 }
 
 .quests-container .time-left2 {
   display: flex !important;
   width: fit-content;
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
   border-radius: 8px 8px 0 0;
   padding-left: 10px;
@@ -2447,7 +2464,7 @@ Lobby
 }
 
 .lookup-history div {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border));
   transition: 0.3s;
 }
@@ -2493,7 +2510,7 @@ Lobby
 }
 
 .friends .friend {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border));
   width: calc(100% - 5px) !important;
   transition: 0.3s !important;
@@ -2555,7 +2572,7 @@ Lobby
 }
 
 .inventory .gun {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border));
   transform: translateY(4px);
 }
@@ -2654,7 +2671,7 @@ Lobby
 
 .settings .info-icon {
   display: inline-block !important;
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 3px solid rgba(var(--border)) !important;
 }
 
@@ -2692,19 +2709,19 @@ Lobby
 }
 
 .settings .crosshair-preview-container {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 2px solid rgba(var(--border)) !important;
 }
 
 .box {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 4px solid rgba(var(--border)) !important;
   box-shadow: var(--box-shadow) !important;
 }
 
 /* Private Trade */
 .trade-window {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
   box-shadow: var(--box-shadow) !important;
   backdrop-filter: blur(20px);
@@ -2719,7 +2736,7 @@ Lobby
 .trade-chat,
 .offer-panel,
 .trade-inv {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border));
 }
 
@@ -2834,12 +2851,12 @@ Ingame
 /* Pre-end */
 .container-pre-end .left-cont,
 .container-pre-end .right-cont {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
 }
 
 .container-pre-end .left-cont .left,
 .container-pre-end .right-cont .right {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
 }
 
 .container-pre-end .center-cont {
@@ -2920,7 +2937,7 @@ Ingame
 .desktop-game-interface .chat>.messages {
   min-height: 11rem !important;
   margin: unset;
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
   transition: 0.2s;
   border-radius: 0.25rem 0.25rem 0 0;
@@ -2928,7 +2945,7 @@ Ingame
 }
 
 .desktop-game-interface .chat>.messages .JOIN {
-  color: rgba(var(--accent));
+  color: greenyellow;
 }
 
 .desktop-game-interface .chat>.messages .LEAVE {
@@ -2937,7 +2954,7 @@ Ingame
 
 .desktop-game-interface .chat .message .lvl,
 .desktop-game-interface .chat .message .author-name {
-  color: rgba(var(--blue)) !important;
+  color: rgba(var(--accent)) !important;
 }
 
 .desktop-game-interface>.chat:not(:focus-within) .messages {
@@ -2954,7 +2971,7 @@ Ingame
 }
 
 .desktop-game-interface .chat .input:focus {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
 }
 
@@ -3134,6 +3151,12 @@ Ingame
 
 .kill-bar-item {
   border: 1px solid rgba(var(--border));
+  background: linear-gradient(135deg, rgba(100, 100, 100, .4), rgba(100, 100, 100, .2)) !important;
+
+
+
+  --blue-kill: linear-gradient(135deg, rgba(var(--blue), .4), rgba(var(--blue), .2)) !important;
+  --red-kill: linear-gradient(135deg, rgba(var(--red), .4), rgba(var(--red), .2)) !important;
 }
 
 .tab-info {
@@ -3202,7 +3225,7 @@ Ingame
   padding: 1rem;
   border-radius: 0.25rem !important;
   max-width: 37.5rem;
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
   box-shadow: var(--box-shadow) !important;
 }
@@ -3246,7 +3269,7 @@ Ingame
 
 .list-controls,
 .infos {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
   box-shadow: var(--box-shadow) !important;
   text-shadow: 0 0 4px black !important;
@@ -3282,7 +3305,7 @@ Ingame
 .esc-interface .continue,
 .esc-interface .right-btn,
 .esc-interface .player-list .player-right>div {
-  background: linear-gradient(var(--glass-gradient));
+  background: var(--glass-gradient);
   border: 1px solid rgba(var(--border)) !important;
   box-shadow: var(--box-shadow);
   transition: 0.3s;
@@ -3306,7 +3329,7 @@ Ingame
 }
 
 .esc-interface .right-container {
-  background: linear-gradient(var(--glass-gradient));
+  background: var(--glass-gradient);
   border: 1px solid rgba(var(--border));
   box-shadow: var(--box-shadow);
 }
@@ -3359,8 +3382,10 @@ Ingame
 
 /* End Modal */
 .end-modal {
-  background: url(https://i.imgur.com/gpfTqex.jpeg) !important;
+  /* background: url(https://i.imgur.com/gpfTqex.jpeg) !important; */
+  background: url(https://i.imgur.com/TVGzmmV.gif) !important;
   background-size: cover !important;
+  filter: hue-rotate(var(--bg-color-rotate)) brightness(0.8);
 }
 
 .end-modal .button {
@@ -3383,7 +3408,7 @@ Ingame
 }
 
 .end-modal .card-cont {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(var(--border)) !important;
   box-shadow: none !important;
@@ -3406,8 +3431,9 @@ Ingame
   transform: translateY(-5px);
 }
 
+.end-modal .list-cont,
 .end-modal .lvl-leader {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(var(--border)) !important;
   box-shadow: var(--box-shadow);
@@ -3443,7 +3469,7 @@ Ingame
 }
 
 .end-modal .messages {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 1px solid rgba(var(--border)) !important;
   backdrop-filter: blur(10px);
 }
@@ -3454,7 +3480,7 @@ Ingame
 
 /* Connection Lost */
 .reconnection-modal {
-  background: linear-gradient(var(--glass-gradient)) !important;
+  background: var(--glass-gradient) !important;
   border: 3px solid rgba(var(--border)) !important;
   backdrop-filter: blur(5px);
   box-shadow: var(--box-shadow);
